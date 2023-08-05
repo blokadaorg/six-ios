@@ -19,7 +19,7 @@ struct PaymentView: View {
     var body: some View {
         return VStack {
             ZStack {
-                ButtonView(enabled: .constant(true), plus: .constant(self.vm.product.type == "plus"))
+                ButtonView(enabled: .constant(true), plus: .constant(self.vm.product.type == "plus" || self.vm.product.type == "family"))
 
                 VStack {
                     if self.vm.product.trial {

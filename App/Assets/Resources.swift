@@ -15,7 +15,6 @@ import SwiftUI
 extension Color {
     static let cError = Color.red
     static let cOk = Color.green
-    static let cAccent = Color("Orange")
 
     static let cActive = Color.blue
     static let cActivePlus = Color("Orange")
@@ -41,7 +40,6 @@ extension Color {
 }
 
 extension Image {
-    static let iBlokada = "Blokada"
     static let iBlokadaPlus = "BlokadaPlus"
     static let iHeader = "Header"
     static let iLisek = "Lisek"

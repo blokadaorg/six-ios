@@ -5,7 +5,7 @@
 //  License, v. 2.0. If a copy of the MPL was not distributed with this
 //  file, You can obtain one at https://mozilla.org/MPL/2.0/.
 //
-//  Copyright © 2020 Blocka AB. All rights reserved.
+//  Copyright © 2023 Blocka AB. All rights reserved.
 //
 //  @author Karol Gusak
 //
@@ -34,9 +34,9 @@ struct PaymentGatewayView: View {
                                 }
                             }) {
                                 Text(L10n.paymentActionCompare)
-                                .foregroundColor(Color.cActivePlus)
+                                .foregroundColor(Color.cAccent)
                                 .sheet(isPresented: self.$showPlusFeaturesSheet) {
-                                    PlusFeaturesView(showSheet: self.$showPlusFeaturesSheet)
+                                    PaymentFeaturesView(showSheet: self.$showPlusFeaturesSheet)
 
                                 }
                                 .padding(.top, 12)
@@ -49,69 +49,29 @@ struct PaymentGatewayView: View {
                                     Text("BLOKADA")
                                         .fontWeight(.heavy).kerning(2).font(.system(size: 15))
 
-                                    Text("CLOUD")
+                                    Text("FAMILY")
                                         .fontWeight(.heavy).kerning(2).font(.system(size: 15))
-                                        .foregroundColor(Color.cActive)
+                                        .foregroundColor(Color.cAccent)
                                     Spacer()
                                 }
                                 .padding(.bottom, 2)
 
-                                Text(L10n.paymentPlanSluglineCloud)
+                                Text("Protect your entire family")
                                    .multilineTextAlignment(.center)
                                    .lineLimit(2)
                                    .font(.system(size: 13))
                                    .foregroundColor(Color.secondary)
                                    .padding(.bottom, 24)
 
-                                PaymentListView(vm: vm, showType: "cloud")
+                                PaymentListView(vm: vm, showType: "family")
                             }
                             .padding()
                             .background(
                                 ZStack {
-                                    RoundedRectangle(cornerRadius: 10).fill(Color.cActive)
+                                    RoundedRectangle(cornerRadius: 10).fill(Color.cAccent)
                                     RoundedRectangle(cornerRadius: 10).fill(Color.cSemiTransparent)
                                 }
                             )
-
-                            ZStack {
-                                VStack {
-                                    HStack {
-                                        Spacer()
-                                        Text("BLOKADA")
-                                            .fontWeight(.heavy).kerning(2).font(.system(size: 15))
-
-                                        Text("PLUS")
-                                            .fontWeight(.heavy).kerning(2).font(.system(size: 15))
-                                            .foregroundColor(Color.cActivePlus)
-                                        Spacer()
-                                    }
-                                    .padding(.bottom, 2)
-
-                                    Text(L10n.paymentPlanSluglinePlus)
-                                       .multilineTextAlignment(.center)
-                                       .lineLimit(2)
-                                       .font(.system(size: 13))
-                                       .foregroundColor(Color.secondary)
-                                       .padding(.bottom, 1)
-
-                                    Text(L10n.paymentPlanSluglineCloudDetail)
-                                       .multilineTextAlignment(.center)
-                                       .lineLimit(2)
-                                       .font(.system(size: 13))
-                                       .foregroundColor(Color.secondary)
-                                       .padding(.bottom, 24)
-
-                                    PaymentListView(vm: vm, showType: "plus")
-                                        .frame(minHeight: 128)
-                                }
-                                .padding()
-                                .background(
-                                    ZStack {
-                                        RoundedRectangle(cornerRadius: 10).fill(Color.cActivePlus)
-                                        RoundedRectangle(cornerRadius: 10).fill(Color.cSemiTransparent)
-                                    }
-                                )
-                            }.padding(.top, 16)
 
                             Spacer()
 
@@ -122,7 +82,7 @@ struct PaymentGatewayView: View {
                                     }
                                 }) {
                                     Text(L10n.paymentActionRestore)
-                                    .foregroundColor(Color.cActivePlus)
+                                    .foregroundColor(Color.cAccent)
                                     .multilineTextAlignment(.center)
                                 }
 
@@ -132,7 +92,7 @@ struct PaymentGatewayView: View {
                                     }
                                 }) {
                                     Text(L10n.paymentActionTermsAndPrivacy)
-                                    .foregroundColor(Color.cActivePlus)
+                                    .foregroundColor(Color.cAccent)
                                     .padding(.top, 8)
                                     .multilineTextAlignment(.center)
                                     .actionSheet(isPresented: self.$showPrivacySheet) {

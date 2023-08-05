@@ -16,6 +16,7 @@ import Factory
 
 class PacksViewModel: ObservableObject {
 
+    @Injected(\.flutter) private var flutter
     @Injected(\.deck) private var deck
     @Injected(\.stage) private var stage
 
@@ -46,6 +47,7 @@ class PacksViewModel: ObservableObject {
     private let log = BlockaLogger("Pack")
 
     init() {
+        filtering = self.flutter.isFlavorFamily ? 3 : 0
         deck.onDecks = { it in
             var packs = [Pack]()
             var tags = [Tag]()
@@ -86,10 +88,12 @@ class PacksViewModel: ObservableObject {
             self.packs = allPacks.filter { pack in
                 self.activeTags.intersection(pack.tags).isEmpty != true
             }
-        } else {
+        } else if filtering == 0 {
             self.packs = allPacks.filter { pack in
                 pack.tags.contains(Pack.recommended) /* && !pack.status.installed */
             }
+        } else {
+            self.packs = allPacks
         }
     }
 

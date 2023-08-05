@@ -32,7 +32,7 @@ struct AfterActivatedView: View {
                         Text((
                             self.homeVM.dnsPermsGranted &&
                             self.homeVM.notificationPermsGranted &&
-                            (self.homeVM.accountType == .Cloud || self.homeVM.vpnPermsGranted) ?
+                            ((self.homeVM.accountType == .Cloud || self.homeVM.accountType == .Family) || self.homeVM.vpnPermsGranted) ?
                                 L10n.activatedDescAllOk : L10n.activatedDesc
                         )
                         )

@@ -22,6 +22,9 @@ struct ContentView: View {
     @Injected(\.stats) private var stats
     
     var onboarding = AfterActivatedView()
+    var accountChange = AccountChangeView()
+    var accountLink = AccountLinkView()
+    var onboardingAccountDecided = OnboardingAccountDecidedView()
 
     var body: some View {
         // Set accent color on all switches
@@ -43,8 +46,14 @@ struct ContentView: View {
                         PaymentGatewayView()
                     case .plusLocationSelect:
                         LocationListView()
-                    case .onboarding:
+                    case .perms:
                         onboarding
+                    case .onboardingAccountDecided:
+                        onboardingAccountDecided
+                    case .accountChange:
+                        accountChange
+                    case .accountLink:
+                        accountLink
                     case .adsCounterShare:
                         ShareSheet(activityItems: [L10n.mainShareMessage(stats.blockedCounter.value)])
                     case .help:

@@ -64,7 +64,7 @@ class StageBinding: StageOps {
 
     func dismiss() -> AnyPublisher<Void, Error> {
         return Future<Void, Error> { promise in
-            self.commands.cmd.onCommand(command: "\(CommandName.modalDismiss)") {
+            self.commands.cmd.onCommand(command: "\(CommandName.modalDismiss)") { _ in
                 return promise(.success(()))
             }
         }
@@ -104,8 +104,9 @@ class StageBinding: StageOps {
     }
 
     var supportedSheets: [StageModal] = [
-        .custom, .help, .onboarding, .payment, .plusLocationSelect,
-        .adsCounterShare
+        .custom, .help, .perms, .payment, .plusLocationSelect,
+        .adsCounterShare, .accountChange, .accountLink,
+        .onboardingAccountDecided
     ]
 
     func doShowModal(modal: StageModal, completion: @escaping (Result<Void, Error>) -> Void) {

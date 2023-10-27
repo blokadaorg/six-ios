@@ -36,10 +36,6 @@ class EnvBinding: EnvOps {
     func getAppVersion() -> String {
         return appVersion
     }
-
-    func getDeviceName() -> String {
-        return deviceName
-    }
     
     func getAliasForLease() -> String {
         return aliasForLease

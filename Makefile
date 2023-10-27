@@ -21,6 +21,9 @@ clean:
 	@fastlane run clean_build_artifacts; \
 	cd six-common && flutter clean; \
 
+clean-sixcommon:
+	@cd six-common && flutter clean && cd ../ ; \
+
 devsc:
 	@echo "Fetch latest six-common"; \
 	cd six-common && git pull --rebase && cd ../ ; \

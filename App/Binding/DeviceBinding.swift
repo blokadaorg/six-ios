@@ -42,6 +42,8 @@ class DeviceBinding: DeviceOps {
         self.writePaused.compactMap { $0 }.removeDuplicates().eraseToAnyPublisher()
     }
 
+    var deviceAlias = ""
+
     @Injected(\.flutter) private var flutter
     @Injected(\.env) private var env
     @Injected(\.account) private var account
@@ -99,6 +101,11 @@ class DeviceBinding: DeviceOps {
 
     func doDeviceTagChanged(deviceTag: String, completion: @escaping (Result<Void, Error>) -> Void) {
         writeDeviceTag.send(deviceTag)
+        completion(.success(()))
+    }
+
+    func doDeviceAliasChanged(deviceAlias: String, completion: @escaping (Result<Void, Error>) -> Void) {
+        self.deviceAlias = deviceAlias
         completion(.success(()))
     }
 

@@ -104,7 +104,7 @@ struct AccountLinkView: View {
                         Text("Tap to show")
                         .padding()
                         .padding([.top, .bottom], 40)
-                        .foregroundColor(Color.cActivePlus)
+                        .foregroundColor(Color.cAccent)
                         .background(Color.cBackground)
                         .opacity(self.accountId == "" ? 1.0 : 0.0)
                         .onTapGesture {

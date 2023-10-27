@@ -80,6 +80,7 @@ struct PackDetailView: View {
                                 text: item.capitalized,
                                 image: Image.fPack,
                                 active: self.vm.pack.status.config.contains(tag),
+                                canSpin: true,
                                 action: {
                                     self.vm.changeConfig(config: item, fail: { error in
                                         self.packsVM.showError = true

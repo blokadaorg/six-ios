@@ -87,7 +87,7 @@ struct SupportView: View {
 
                     Button(action: {
                         self.contentVM.stage.dismiss()
-                        self.contentVM.stage.setRoute("home/rate")
+                        self.contentVM.stage.showModal(.rate)
                     }) {
                         ZStack {
                             ButtonView(enabled: .constant(true), plus: .constant(true))

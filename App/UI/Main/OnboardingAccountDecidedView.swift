@@ -66,7 +66,7 @@ struct OnboardingAccountDecidedView: View {
                     .padding()
                     
                     Button(action: {
-                        self.contentVM.stage.setRoute("home/lock")
+                        self.contentVM.stage.showModal(.lock)
                     }) {
                         HStack(spacing: 0) {
                             Image(systemName: "lock.iphone")
@@ -80,7 +80,7 @@ struct OnboardingAccountDecidedView: View {
                                 Text("Link this device")
                                     .fontWeight(.medium)
                                     .foregroundColor(.primary)
-                                
+
                                 Text("Alternatively, you may simply configure Blokada to work on this device, and set the pin to lock the app.")
                                     .foregroundColor(.secondary)
                                     .multilineTextAlignment(.leading)

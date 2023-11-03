@@ -156,6 +156,7 @@ class StageBinding: StageOps {
         } else {
             //showPauseMenu.send(false)
             completion(.success(()))
+            commands.execute(.modalDismissed)
         }
     }
 

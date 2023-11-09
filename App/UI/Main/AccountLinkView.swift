@@ -12,11 +12,16 @@
 
 import SwiftUI
 import CoreImage.CIFilterBuiltins
+import Factory
 
 struct AccountLinkView: View {
     @ObservedObject var vm = ViewModels.account
     @ObservedObject var contentVM = ViewModels.content
     @ObservedObject var homeVM = ViewModels.home
+
+    @Injected(\.family) private var family
+    @Injected(\.cloud) private var device
+    @Injected(\.commands) private var commands
 
     @Environment(\.colorScheme) var colorScheme
 
@@ -24,8 +29,7 @@ struct AccountLinkView: View {
     let filter = CIFilter.qrCodeGenerator()
 
     @State var appear = false
-    
-    @State private var accountId: String = ""
+    @State var deviceName = ""
 
     func generateQRCode(from string: String) -> UIImage {
         filter.message = Data(string.utf8)
@@ -43,12 +47,41 @@ struct AccountLinkView: View {
         NavigationView {
             ZStack {
                 VStack {
-                    Text("Link account")
+                    Text("Link device")
                         .font(.largeTitle)
                         .bold()
                         .padding()
                         .padding([.top, .bottom], 24)
     
+                    
+                    HStack(spacing: 0) {
+                        Image(systemName: "iphone")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 24, height: 24)
+                        .foregroundColor(Color.accentColor)
+                        .padding(.trailing)
+
+                        VStack(alignment: .leading) {
+                            Text("Set device name")
+                            .fontWeight(.medium)
+                            HStack {
+                                TextField(L10n.accountIdStatusUnchanged, text: $deviceName)
+                                    .autocapitalization(.none)
+                            }
+                            .padding(8)
+                            .background(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .stroke(lineWidth: 2)
+                                    .foregroundColor(Color.cSecondaryBackground)
+                            )
+                            
+                        }
+                        .font(.subheadline)
+                        Spacer()
+                    }
+                    .padding(.bottom, 30)
+
                     HStack(spacing: 0) {
                         Image(systemName: "qrcode.viewfinder")
                             .resizable()
@@ -60,7 +93,7 @@ struct AccountLinkView: View {
                         VStack(alignment: .leading) {
                             Text("Scan this QR code")
                             .fontWeight(.medium)
-                            Text("Link your account ID by scanning the QR code using your child's device.")
+                            Text("This screen will close automatically once the new device has been detected.")
                                 .foregroundColor(.secondary)
                         }
                         .font(.subheadline)
@@ -70,89 +103,62 @@ struct AccountLinkView: View {
 
                     ZStack {
                         VStack {
-                            Image(uiImage: generateQRCode(from: self.vm.id))
+                            Image(uiImage: generateQRCode(from: self.family.familyLinkTemplate.replacingOccurrences(of: "NAME", with: self.deviceName)))
                                 .interpolation(.none)
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 200, height: 200)
-    
-                            Text(self.accountId)
-                                .font(.subheadline)
-                                .foregroundColor(Color.secondary)
-                                .opacity(self.accountId == "" ? 0.0 : 1.0)
-                                .animation(.easeIn, value: self.accountId)
+                                .onChange(of: deviceName) { newValue in
+                                    self.commands.execute(.familyWaitForDeviceName, newValue)
+                                }
                         }
                         .padding()
-                        .opacity(self.accountId == "" ? 0.0 : 1.0)
-                        .animation(.easeIn, value: self.accountId)
+                        //.opacity(1.0)
+                        //.animation(.easeIn, value: self.accountId)
                         .onTapGesture {
-                            if self.accountId != "" {
-                                self.vm.copyAccountIdToClipboard()
-                            }
+//                            if self.accountId != "" {
+//                                self.vm.copyAccountIdToClipboard()
+//                            }
+
                         }
                         .contextMenu {
                             Button(action: {
-                                if self.accountId != "" {
-                                    self.vm.copyAccountIdToClipboard()
-                                }
+//                                if self.accountId != "" {
+//                                    self.vm.copyAccountIdToClipboard()
+//                                }
+                                UIPasteboard.general.string = self.family.familyLinkTemplate.replacingOccurrences(of: "NAME", with: self.deviceName)
                             }) {
                                 Text(L10n.universalActionCopy)
                                 Image(systemName: Image.fCopy)
                             }
                         }
-
-                        Text("Tap to show")
-                        .padding()
-                        .padding([.top, .bottom], 40)
-                        .foregroundColor(Color.cAccent)
-                        .background(Color.cBackground)
-                        .opacity(self.accountId == "" ? 1.0 : 0.0)
-                        .onTapGesture {
-                            self.vm.authenticate { id in
-                                self.accountId = id
-                            }
-                        }
                     }
-                    .background(
-                        RoundedRectangle(cornerRadius: 8)
-                            .stroke(lineWidth: 2)
-                            .foregroundColor(Color.cSecondaryBackground)
-                    )
     
                     Spacer()
 
-                    VStack {
-                        Button(action: {
-                            self.contentVM.stage.dismiss()
-                        }) {
-                            ZStack {
-                                ButtonView(enabled: .constant(true), plus: .constant(true))
-                                    .frame(height: 44)
-                                Text(L10n.universalActionClose)
-                                    .foregroundColor(.white)
-                                    .bold()
-                            }
-                        }
-                    }
-                    .padding(.bottom, 40)
+                    SpinnerView()
+                        .frame(width: 24, height: 24)
+                    .fixedSize()
+                        .padding(.bottom)
                 }
                 .frame(maxWidth: 500)
                 .navigationBarItems(trailing:
                     Button(action: {
                         self.contentVM.stage.dismiss()
                     }) {
-                        Text(L10n.universalActionDone)
+                        Text(L10n.universalActionCancel)
                     }
                     .contentShape(Rectangle())
                 )
             }
             .padding([.leading, .trailing], 40)
         }
-        .opacity(self.appear ? 1 : 0)
+        //.opacity(self.appear ? 1 : 0)
         .navigationViewStyle(StackNavigationViewStyle())
         .accentColor(Color.cAccent)
         .onAppear {
-            self.appear = true
+            self.deviceName = self.device.nameProposals.randomElement() ?? "Device"
+            self.commands.execute(.familyWaitForDeviceName, self.deviceName)
         }
     }
 }

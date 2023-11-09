@@ -51,7 +51,7 @@ extension SKProduct {
        let length = self.durationMonths
        if length == 1 {
            return "(\(L10n.paymentSubscriptionPerMonth(formatPrice(price: price))))"
-       } else if self.productIdentifier == "cloud_12month" || self.productIdentifier == "family_12month" {
+       } else if self.productIdentifier == "cloud_12month" || self.productIdentifier == "family_12months" {
            let price = self.price.dividing(by: NSDecimalNumber(decimal: (length as NSNumber).decimalValue))
            //return "then \(L10n.paymentSubscriptionPerMonth(formatPrice(price: price)))"
            return "(\(L10n.paymentSubscriptionPerMonth(formatPrice(price: price))))"

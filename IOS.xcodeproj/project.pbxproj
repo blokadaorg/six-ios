@@ -726,6 +726,18 @@
 		4E63194D244743C300191C16 /* LeaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E63194C244743C300191C16 /* LeaseView.swift */; };
 		4E652939248F760700EB871A /* Ui.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E65293C248F760700EB871A /* Ui.strings */; };
 		4E65293A248F760700EB871A /* Ui.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E65293C248F760700EB871A /* Ui.strings */; };
+		4E6582132AFA6879005AFEF0 /* Family.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6582122AFA6879005AFEF0 /* Family.swift */; };
+		4E6582142AFA6879005AFEF0 /* Family.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6582122AFA6879005AFEF0 /* Family.swift */; };
+		4E6582152AFA6879005AFEF0 /* Family.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6582122AFA6879005AFEF0 /* Family.swift */; };
+		4E6582162AFA6879005AFEF0 /* Family.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6582122AFA6879005AFEF0 /* Family.swift */; };
+		4E6582172AFA6879005AFEF0 /* Family.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6582122AFA6879005AFEF0 /* Family.swift */; };
+		4E6582182AFA6879005AFEF0 /* Family.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6582122AFA6879005AFEF0 /* Family.swift */; };
+		4E65821A2AFA6896005AFEF0 /* FamilyBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6582192AFA6896005AFEF0 /* FamilyBinding.swift */; };
+		4E65821B2AFA6896005AFEF0 /* FamilyBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6582192AFA6896005AFEF0 /* FamilyBinding.swift */; };
+		4E65821C2AFA6896005AFEF0 /* FamilyBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6582192AFA6896005AFEF0 /* FamilyBinding.swift */; };
+		4E65821D2AFA6896005AFEF0 /* FamilyBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6582192AFA6896005AFEF0 /* FamilyBinding.swift */; };
+		4E65821E2AFA6896005AFEF0 /* FamilyBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6582192AFA6896005AFEF0 /* FamilyBinding.swift */; };
+		4E65821F2AFA6896005AFEF0 /* FamilyBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6582192AFA6896005AFEF0 /* FamilyBinding.swift */; };
 		4E673D0629E6999D00A8A60D /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E673CFE29E6999D00A8A60D /* Stage.swift */; };
 		4E673D0729E6999D00A8A60D /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E673CFE29E6999D00A8A60D /* Stage.swift */; };
 		4E673D0A29E6999D00A8A60D /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E673D0029E6999D00A8A60D /* Env.swift */; };
@@ -1713,6 +1725,8 @@
 		4E63194A2447436C00191C16 /* LeaseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaseListView.swift; sourceTree = "<group>"; };
 		4E63194C244743C300191C16 /* LeaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaseView.swift; sourceTree = "<group>"; };
 		4E65293B248F760700EB871A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Ui.strings; sourceTree = "<group>"; };
+		4E6582122AFA6879005AFEF0 /* Family.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Family.swift; path = "six-common/libgen/ios/Family.swift"; sourceTree = SOURCE_ROOT; };
+		4E6582192AFA6896005AFEF0 /* FamilyBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyBinding.swift; sourceTree = "<group>"; };
 		4E673CFE29E6999D00A8A60D /* Stage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stage.swift; path = "six-common/libgen/ios/Stage.swift"; sourceTree = SOURCE_ROOT; };
 		4E673D0029E6999D00A8A60D /* Env.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Env.swift; path = "six-common/libgen/ios/Env.swift"; sourceTree = SOURCE_ROOT; };
 		4E673D0129E6999D00A8A60D /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Notification.swift; path = "six-common/libgen/ios/Notification.swift"; sourceTree = SOURCE_ROOT; };
@@ -2470,6 +2484,7 @@
 				4EEC49502A4D983D001EF934 /* TracerBinding.swift */,
 				4EEC49582A4E1435001EF934 /* StatsBinding.swift */,
 				4EEC49602A50205D001EF934 /* RateBinding.swift */,
+				4E6582192AFA6896005AFEF0 /* FamilyBinding.swift */,
 			);
 			path = Binding;
 			sourceTree = "<group>";
@@ -2553,6 +2568,7 @@
 		4EFFBCA429E6984500CEF37A /* Channel */ = {
 			isa = PBXGroup;
 			children = (
+				4E6582122AFA6879005AFEF0 /* Family.swift */,
 				4EEC49682A543AEE001EF934 /* Command.swift */,
 				4EEC49642A503657001EF934 /* Rate.swift */,
 				4EEC49542A4E1417001EF934 /* Stats.swift */,
@@ -3144,6 +3160,7 @@
 				4EF7EDF5240E9E95001FA02E /* Resources.swift in Sources */,
 				4E90BA3F27BC09260051FD0C /* QuickActionsService.swift in Sources */,
 				4E8AE1F9275918B400BD2E5B /* CombineUtil.swift in Sources */,
+				4E65821A2AFA6896005AFEF0 /* FamilyBinding.swift in Sources */,
 				4E02E30E2A56DA620014E884 /* NetworkCommand.swift in Sources */,
 				4E53CCC6244E34A9009B3CF0 /* PaymentGatewayViewModel.swift in Sources */,
 				4E2F2A092760A902005A59F5 /* DeviceBinding.swift in Sources */,
@@ -3174,6 +3191,7 @@
 				4E955DC82771DC12008DE06F /* ViewModels.swift in Sources */,
 				4E0B7E50278DB6DA0032259C /* LinkRepo.swift in Sources */,
 				4E11D2E627206D810042385B /* NoLogRetentionView.swift in Sources */,
+				4E6582132AFA6879005AFEF0 /* Family.swift in Sources */,
 				4E1C64E229E81F8B00ABB65B /* PersistenceBinding.swift in Sources */,
 				4E23D054293F3DD800613D0A /* x25519.c in Sources */,
 				4E58C13F2AC2BB41002CA1A3 /* AccountLinkView.swift in Sources */,
@@ -3269,6 +3287,7 @@
 				4E1275FF2AE7D0FC00A94994 /* SettingsFormNoNavView.swift in Sources */,
 				4E1276002AE7D0FC00A94994 /* Sequence+Extensions.swift in Sources */,
 				4E1276012AE7D0FC00A94994 /* TracerBinding.swift in Sources */,
+				4E65821F2AFA6896005AFEF0 /* FamilyBinding.swift in Sources */,
 				4E1276022AE7D0FC00A94994 /* Tracer.swift in Sources */,
 				4E1276032AE7D0FC00A94994 /* BlokadaView.swift in Sources */,
 				4E1276042AE7D0FC00A94994 /* LoggerSaverMock.swift in Sources */,
@@ -3374,6 +3393,7 @@
 				4E12766A2AE7D0FC00A94994 /* AccountLinkView.swift in Sources */,
 				4E12766B2AE7D0FC00A94994 /* PrivateDnsService.swift in Sources */,
 				4E12766C2AE7D0FC00A94994 /* JournalItemVM.swift in Sources */,
+				4E6582182AFA6879005AFEF0 /* Family.swift in Sources */,
 				4E12766D2AE7D0FC00A94994 /* ServicesForMocked.swift in Sources */,
 				4E12766E2AE7D0FC00A94994 /* AccountChangeView.swift in Sources */,
 				4E12766F2AE7D0FC00A94994 /* OnboardingAccountDecidedView.swift in Sources */,
@@ -3559,6 +3579,7 @@
 				4E270D252A80EB8300D3484B /* PlusVpn.swift in Sources */,
 				4E270D262A80EB8300D3484B /* OptionView.swift in Sources */,
 				4E270D272A80EB8300D3484B /* key.c in Sources */,
+				4E6582162AFA6879005AFEF0 /* Family.swift in Sources */,
 				4E270D282A80EB8300D3484B /* NotificationToken.swift in Sources */,
 				4E270D292A80EB8300D3484B /* SystemNavService.swift in Sources */,
 				4E270D2A2A80EB8300D3484B /* PlaceholderView.swift in Sources */,
@@ -3685,6 +3706,7 @@
 				4E58C14E2AC3025D002CA1A3 /* OnboardingAccountDecidedView.swift in Sources */,
 				4E270DA12A80EB8300D3484B /* LocationViewModel.swift in Sources */,
 				4E270DA22A80EB8300D3484B /* Journal.swift in Sources */,
+				4E65821D2AFA6896005AFEF0 /* FamilyBinding.swift in Sources */,
 				4E270DA32A80EB8300D3484B /* Perm.swift in Sources */,
 				4E270DA42A80EB8300D3484B /* PermBinding.swift in Sources */,
 				4E270DA52A80EB8300D3484B /* CustomV.swift in Sources */,
@@ -3758,6 +3780,7 @@
 				4EEC494F2A4D9822001EF934 /* Tracer.swift in Sources */,
 				4E36D5EE24589B2D00E339F2 /* BlokadaView.swift in Sources */,
 				4E42355D245195FA005A0779 /* LoggerSaverMock.swift in Sources */,
+				4E65821C2AFA6896005AFEF0 /* FamilyBinding.swift in Sources */,
 				4E11D2E727206D810042385B /* NoLogRetentionView.swift in Sources */,
 				4EBDD3632A0CDD190039C101 /* PermBinding.swift in Sources */,
 				4E946E602A29CDAC0053943D /* GatewayBinding.swift in Sources */,
@@ -3863,6 +3886,7 @@
 				4E2F2A102760AB9D005A59F5 /* PrivateDnsService.swift in Sources */,
 				4ECB8B5B2A0928D500048F6A /* JournalItemVM.swift in Sources */,
 				4EA9A2A32785B927009764F1 /* ServicesForMocked.swift in Sources */,
+				4E6582152AFA6879005AFEF0 /* Family.swift in Sources */,
 				4E58C1322AC1B196002CA1A3 /* AccountChangeView.swift in Sources */,
 				4E58C14D2AC3025D002CA1A3 /* OnboardingAccountDecidedView.swift in Sources */,
 				4E7FE9A8244DC28900851E9F /* StreamReader.swift in Sources */,
@@ -4043,6 +4067,7 @@
 				4E86517B2A3C968B0060AFB1 /* Resources.swift in Sources */,
 				4E86517C2A3C968B0060AFB1 /* QuickActionsService.swift in Sources */,
 				4E86517D2A3C968B0060AFB1 /* CombineUtil.swift in Sources */,
+				4E65821B2AFA6896005AFEF0 /* FamilyBinding.swift in Sources */,
 				4E02E30F2A56DA620014E884 /* NetworkCommand.swift in Sources */,
 				4E86517E2A3C968B0060AFB1 /* PaymentGatewayViewModel.swift in Sources */,
 				4E86517F2A3C968B0060AFB1 /* DeviceBinding.swift in Sources */,
@@ -4073,6 +4098,7 @@
 				4E86519E2A3C968B0060AFB1 /* ViewModels.swift in Sources */,
 				4E8651A02A3C968B0060AFB1 /* LinkRepo.swift in Sources */,
 				4E8651A12A3C968B0060AFB1 /* NoLogRetentionView.swift in Sources */,
+				4E6582142AFA6879005AFEF0 /* Family.swift in Sources */,
 				4E8651A22A3C968B0060AFB1 /* PersistenceBinding.swift in Sources */,
 				4E8651A32A3C968B0060AFB1 /* x25519.c in Sources */,
 				4E58C1402AC2BB41002CA1A3 /* AccountLinkView.swift in Sources */,
@@ -4192,6 +4218,7 @@
 				4EBF3B272A80E55900F637BB /* OptionView.swift in Sources */,
 				4EBF3B282A80E55900F637BB /* key.c in Sources */,
 				4EBF3B292A80E55900F637BB /* NotificationToken.swift in Sources */,
+				4E6582172AFA6879005AFEF0 /* Family.swift in Sources */,
 				4EBF3B2A2A80E55900F637BB /* SystemNavService.swift in Sources */,
 				4EBF3B2B2A80E55900F637BB /* PlaceholderView.swift in Sources */,
 				4EBF3B2C2A80E55900F637BB /* JournalWideVerticalV.swift in Sources */,
@@ -4318,6 +4345,7 @@
 				4E58C14F2AC3025D002CA1A3 /* OnboardingAccountDecidedView.swift in Sources */,
 				4EBF3BA32A80E55900F637BB /* LocationViewModel.swift in Sources */,
 				4EBF3BA42A80E55900F637BB /* Journal.swift in Sources */,
+				4E65821E2AFA6896005AFEF0 /* FamilyBinding.swift in Sources */,
 				4EBF3BA52A80E55900F637BB /* Perm.swift in Sources */,
 				4EBF3BA62A80E55900F637BB /* PermBinding.swift in Sources */,
 				4EBF3BA72A80E55900F637BB /* CustomV.swift in Sources */,

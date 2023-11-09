@@ -18,7 +18,7 @@ struct ShieldsView: View {
 
     var body: some View {
         List {
-            Text("Activate shields to block access to selected content on your child device.")
+            Text("Activate shields to block access to selected content on your supervised devices.")
             .font(.subheadline)
             .foregroundColor(.secondary)
             .listRowSeparator(.hidden)

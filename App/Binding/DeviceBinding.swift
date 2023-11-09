@@ -44,6 +44,8 @@ class DeviceBinding: DeviceOps {
 
     var deviceAlias = ""
 
+    @Published var nameProposals: Array<String> = []
+
     @Injected(\.flutter) private var flutter
     @Injected(\.env) private var env
     @Injected(\.account) private var account
@@ -106,6 +108,11 @@ class DeviceBinding: DeviceOps {
 
     func doDeviceAliasChanged(deviceAlias: String, completion: @escaping (Result<Void, Error>) -> Void) {
         self.deviceAlias = deviceAlias
+        completion(.success(()))
+    }
+
+    func doNameProposalsChanged(names: Array<String>, completion: @escaping (Result<Void, Error>) -> Void) {
+        self.nameProposals = names
         completion(.success(()))
     }
 

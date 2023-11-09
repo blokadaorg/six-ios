@@ -25,7 +25,7 @@ class StoreKitWrapper: NSObject, SKProductsRequestDelegate, SKRequestDelegate,
 
     private let productIdentifiersFamily = [
         "family_month",
-        "family_12month",
+        "family_12months",
     ]
 
     private let log = BlockaLogger("StoreKit")

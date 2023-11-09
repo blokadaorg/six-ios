@@ -12,6 +12,7 @@
 
 import SwiftUI
 import CodeScanner
+import Factory
 
 struct AccountChangeView: View {
     @ObservedObject var vm = ViewModels.account
@@ -19,10 +20,11 @@ struct AccountChangeView: View {
     @ObservedObject var homeVM = ViewModels.home
     
     @Environment(\.colorScheme) var colorScheme
+    @Injected(\.commands) var commands
     
     @State var appear = false
     
-    @State private var accountId: String = ""
+    @State private var token: String = ""
     @State private var isShowingScanner = false
 
     func handleScan(result: Result<ScanResult, ScanError>) {
@@ -30,7 +32,7 @@ struct AccountChangeView: View {
        
        switch result {
        case .success(let code):
-           self.accountId = code.string
+           self.token = code.string
        case .failure(let error):
            print("Scanning failed: \(error.localizedDescription)")
        }
@@ -40,29 +42,11 @@ struct AccountChangeView: View {
         NavigationView {
             ZStack {
                 VStack {
-                    Text("Restore account")
+                    Text("Attach device")
                         .font(.largeTitle)
                         .bold()
                         .padding()
                         .padding([.top, .bottom], 24)
-
-                    HStack(spacing: 0) {
-                        Image(systemName: Image.fAccount)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 24, height: 24)
-                        .foregroundColor(Color.accentColor)
-                        .padding(.trailing)
-
-                        VStack(alignment: .leading) {
-                            Text("Account ID")
-                            .fontWeight(.medium)
-                            Text("In Blokada, you simply use your account ID to log in and share your account with your kids.")
-                                .foregroundColor(.secondary)                            }
-                        .font(.subheadline)
-                        Spacer()
-                    }
-                    .padding(.bottom, 8)
     
                     HStack(spacing: 0) {
                         Image(systemName: "qrcode.viewfinder")
@@ -75,7 +59,7 @@ struct AccountChangeView: View {
                         VStack(alignment: .leading) {
                             Text("Scan QR code")
                             .fontWeight(.medium)
-                            Text("Enter your existing account ID below, or scan the QR code from the parent device, in order to restore your account.")
+                            Text("Scan the QR code from the parent device, in order to attach this device.")
                                 .foregroundColor(.secondary)
                         }
                         .font(.subheadline)
@@ -87,21 +71,22 @@ struct AccountChangeView: View {
                     .padding(.bottom, 40)
 
                     HStack {
-                        Text(L10n.accountLabelId)
-                            .font(.headline)
-                        Spacer()
-                    }
-
-                    HStack {
-                        TextField(L10n.accountIdStatusUnchanged, text: $accountId)
-                            .autocapitalization(.none)
-
                         Button(action: {
                             self.isShowingScanner = true
                         }) {
-                            Image(systemName: "qrcode.viewfinder")
-                                .resizable()
-                                .frame(width: 20, height: 20)
+                            ZStack {
+                                ButtonView(enabled: .constant(true), plus: .constant(true))
+                                    .frame(height: 44)
+                                HStack {
+                                    Image(systemName: "qrcode.viewfinder")
+                                        .resizable()
+                                        .frame(width: 20, height: 20)
+                                        .foregroundColor(.white)
+                                    Text("Scan")
+                                        .foregroundColor(.white)
+                                        .bold()
+                                }
+                            }
                         }
                         .sheet(isPresented: self.$isShowingScanner) {
                             AccountChangeScanView(isShowingScanner: self.$isShowingScanner, handleScan: self.handleScan)
@@ -113,19 +98,27 @@ struct AccountChangeView: View {
                             .stroke(lineWidth: 2)
                             .foregroundColor(Color.cSecondaryBackground)
                     )
+                    
+                    Spacer()
+                    
+                    Text(self.token)
+                        .foregroundColor(.secondary)
+                        .font(.subheadline)
+                        .multilineTextAlignment(.center)
+                        .padding([.leading, .trailing], 40)
+                        .opacity(self.token.isEmpty ? 0.0 : 1.0)
 
                     Spacer()
 
                     VStack {
                         Button(action: {
-                            if self.accountId.count == 12 {
+                            if !self.token.isEmpty {
                                 self.contentVM.stage.dismiss()
-                                self.vm.restoreAccount(self.accountId) {
-                                }
+                                self.commands.execute(CommandName.familyLink, self.token)
                             }
                         }) {
                             ZStack {
-                                ButtonView(enabled: .constant(self.accountId.count == 12), plus: .constant(true))
+                                ButtonView(enabled: .constant(!self.token.isEmpty), plus: .constant(true))
                                     .frame(height: 44)
                                 Text(L10n.universalActionContinue)
                                     .foregroundColor(.white)

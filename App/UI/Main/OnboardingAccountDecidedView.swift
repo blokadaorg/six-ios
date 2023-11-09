@@ -44,7 +44,7 @@ struct OnboardingAccountDecidedView: View {
                                 Text("Link a device")
                                     .fontWeight(.medium)
                                     .foregroundColor(.primary)
-                                Text("In Blokada, you simply use your account ID to log in and share your account with your kids.")
+                                Text("In Blokada, you simply scan a QR code to link and manage another device.")
                                     .foregroundColor(.secondary)
                                     .multilineTextAlignment(.leading)
                             }
@@ -77,7 +77,7 @@ struct OnboardingAccountDecidedView: View {
                                 .padding(.trailing)
                             
                             VStack(alignment: .leading) {
-                                Text("Link this device")
+                                Text("Use this device")
                                     .fontWeight(.medium)
                                     .foregroundColor(.primary)
 

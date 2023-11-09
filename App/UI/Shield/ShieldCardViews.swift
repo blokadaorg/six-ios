@@ -107,7 +107,10 @@ struct ShieldCardOneView: View {
                                    selected: self.selected,
                                    action: { self.action() }
                     )
-                        .padding()
+                    .onTapGesture {
+                        self.action()
+                    }
+                    .padding()
                 }
                 .background(.regularMaterial)
                 .cornerRadius(8, corners: [.bottomLeft, .bottomRight])
@@ -115,9 +118,6 @@ struct ShieldCardOneView: View {
         }
         .padding(.bottom, 8)
         .fixedSize(horizontal: false, vertical: true)
-        .onTapGesture {
-            self.action()
-        }
     }
 }
 
@@ -177,15 +177,15 @@ struct ShieldCardManyView: View {
                                    selected: self.selected.contains(tag),
                                    action: { self.action(item) }
                     )
+                    .onTapGesture {
+                        self.action(item)
+                    }
                 }
             }
             .padding()
         }
         .padding(.bottom, 8)
         .fixedSize(horizontal: false, vertical: true)
-        .onTapGesture {
-            self.action(items.first!)
-        }
     }
 }
 

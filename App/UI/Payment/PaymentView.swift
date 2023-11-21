@@ -24,27 +24,28 @@ struct PaymentView: View {
                 VStack {
                     if self.vm.product.trial {
                         Text(L10n.paymentPlanCtaTrial)
-                        .foregroundColor(Color.primary)
+                        .foregroundColor(getColor())
                         .font(.headline)
                         .padding(.bottom, 1)
 
                         Text(L10n.paymentSubscriptionPerYearThen(self.vm.price))
-                        .foregroundColor(Color.primary)
+                        .foregroundColor(getColor())
                     } else if self.vm.product.periodMonths == 12 {
                         Text(L10n.paymentPlanCtaAnnual)
-                        .foregroundColor(Color.primary)
+                        .foregroundColor(getColor())
                         .font(.headline)
                         .padding(.bottom, 1)
 
                         Text(L10n.paymentSubscriptionPerYear(self.vm.price))
-                        .foregroundColor(Color.primary)
+                        .foregroundColor(getColor())
                     } else {
-                    Text(L10n.paymentPlanCtaMonthly).foregroundColor(Color.primary)
+                    Text(L10n.paymentPlanCtaMonthly)
+                        .foregroundColor(getColor())
                         .font(.headline)
                         .padding(.bottom, 1)
 
                         Text(L10n.paymentSubscriptionPerMonth(self.vm.price))
-                        .foregroundColor(Color.primary)
+                        .foregroundColor(getColor())
                     }
                 }
             }
@@ -60,6 +61,10 @@ struct PaymentView: View {
         .padding(.bottom, 12)
         .padding(.leading, 8)
         .padding(.trailing, 8)
+    }
+    
+    func getColor() -> Color {
+        return self.vm.product.type == "family" ? Color.white : Color.primary
     }
 }
 

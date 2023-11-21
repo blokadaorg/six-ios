@@ -22,96 +22,85 @@ struct PaymentGatewayView: View {
 
     var body: some View {
         return ZStack(alignment: .topTrailing) {
-            ScrollView {
                 ZStack {
                     // Main part - payment options and all
                     HStack {
                         Spacer()
                         VStack {
-                            Button(action: {
-                                withAnimation {
-                                    self.showPlusFeaturesSheet = true
-                                }
-                            }) {
-                                Text(L10n.paymentActionCompare)
-                                .foregroundColor(Color.cAccent)
-                                .sheet(isPresented: self.$showPlusFeaturesSheet) {
-                                    PaymentFeaturesView(showSheet: self.$showPlusFeaturesSheet)
-
-                                }
-                                .padding(.top, 12)
-                                .padding(.bottom, 14)
-                            }
-
                             VStack {
                                 HStack {
                                     Spacer()
                                     Text("BLOKADA")
-                                        .fontWeight(.heavy).kerning(2).font(.system(size: 15))
+                                        .fontWeight(.heavy).kerning(2).font(.system(size: 24))
+                                        .foregroundColor(Color.white)
 
                                     Text("FAMILY")
-                                        .fontWeight(.heavy).kerning(2).font(.system(size: 15))
-                                        .foregroundColor(Color.cAccent)
+                                        .fontWeight(.heavy).kerning(2).font(.system(size: 24))
+                                        .foregroundColor(Color.white)
                                     Spacer()
                                 }
                                 .padding(.bottom, 2)
 
-                                Text("Protect your entire family")
-                                   .multilineTextAlignment(.center)
-                                   .lineLimit(2)
-                                   .font(.system(size: 13))
-                                   .foregroundColor(Color.secondary)
-                                   .padding(.bottom, 24)
-
-                                PaymentListView(vm: vm, showType: "family")
+                                
                             }
+                            .padding(.top, 50)
                             .padding()
-                            .background(
-                                ZStack {
-                                    RoundedRectangle(cornerRadius: 10).fill(Color.cAccent)
-                                    RoundedRectangle(cornerRadius: 10).fill(Color.cSemiTransparent)
-                                }
-                            )
-
+                            
+                            Spacer()
+                            
+                            Text("Protect your entire family with one subscription. Manage content your kids can access and monitor their activity.")
+                               .multilineTextAlignment(.center)
+                               .lineLimit(6)
+                               .font(.system(size: 18))
+                               .foregroundColor(Color.secondary)
+                               .padding(.top, 60)
+                               .padding([.leading, .trailing], 24)
+                            
                             Spacer()
 
                             VStack {
-                                Button(action: {
-                                    withAnimation {
-                                        self.vm.restoreTransactions()
-                                    }
-                                }) {
-                                    Text(L10n.paymentActionRestore)
-                                    .foregroundColor(Color.cAccent)
-                                    .multilineTextAlignment(.center)
-                                }
+                                PaymentListView(vm: vm, showType: "family")
+                            }
+                            .padding()
+                            
+                            Spacer()
 
-                                Button(action: {
-                                    withAnimation {
-                                        self.showPrivacySheet = true
-                                    }
-                                }) {
-                                    Text(L10n.paymentActionTermsAndPrivacy)
-                                    .foregroundColor(Color.cAccent)
-                                    .padding(.top, 8)
-                                    .multilineTextAlignment(.center)
-                                    .actionSheet(isPresented: self.$showPrivacySheet) {
-                                        ActionSheet(title: Text(L10n.paymentActionTermsAndPrivacy), buttons: [
-                                            .default(Text(L10n.paymentActionTerms)) {
-                                                self.contentVM.openLink(Link.Tos)
-                                            },
-                                            .default(Text(L10n.paymentActionPolicy)) {
-                                                self.contentVM.openLink(Link.Privacy)
-                                            },
-                                            .default(Text(L10n.universalActionSupport)) {
-                                                self.contentVM.openLink(Link.Support)
-                                            },
-                                            .cancel()
-                                        ])
-                                    }
+                            Button(action: {
+                                withAnimation {
+                                    self.vm.restoreTransactions()
+                                }
+                            }) {
+                                Text(L10n.paymentActionRestore)
+                                .foregroundColor(Color.cAccent)
+                                .multilineTextAlignment(.center)
+                            }
+
+                            Button(action: {
+                                withAnimation {
+                                    self.showPrivacySheet = true
+                                }
+                            }) {
+                                Text(L10n.paymentActionTermsAndPrivacy)
+                                .foregroundColor(Color.cAccent)
+                                .padding(.top, 8)
+                                .multilineTextAlignment(.center)
+                                .actionSheet(isPresented: self.$showPrivacySheet) {
+                                    ActionSheet(title: Text(L10n.paymentActionTermsAndPrivacy), buttons: [
+                                        .default(Text(L10n.paymentActionTerms)) {
+                                            self.contentVM.openLink(Link.Tos)
+                                        },
+                                        .default(Text(L10n.paymentActionPolicy)) {
+                                            self.contentVM.openLink(Link.Privacy)
+                                        },
+                                        .default(Text(L10n.universalActionSupport)) {
+                                            self.contentVM.openLink(Link.Support)
+                                        },
+                                        .cancel()
+                                    ])
                                 }
                             }
-                            .padding(.top, 16)
+                            .padding(.bottom)
+
                         }
                         .frame(maxWidth: 500)
                         .padding()
@@ -127,6 +116,14 @@ struct PaymentGatewayView: View {
                         }
                         Spacer()
                     }
+                    .background(
+                        CurvedShape()
+                            .fill(
+                                LinearGradient(gradient: Gradient(colors: [Color.cAccent, Color.cPrimaryBackground]),
+                                               startPoint: .top,
+                                               endPoint: .bottom)
+                            )
+                    )
 
                     // Overlay when loading or error
                     HStack {
@@ -150,6 +147,8 @@ struct PaymentGatewayView: View {
                             }
                             Spacer()
                         }
+                        .padding()
+                        .frame(maxWidth: 500)
                         Spacer()
                     }
                     .background(Color.cPrimaryBackground)
@@ -158,14 +157,38 @@ struct PaymentGatewayView: View {
                     .animation(
                         Animation.easeIn(duration: 0.3).repeatCount(1)
                     )
-                    .frame(maxWidth: 500)
-                    .padding()
                     .accessibilityHidden(true)
                 }
-            }
+            
         }
     }
 }
+
+struct CurvedShape: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+
+        // Start at the top left
+        path.move(to: CGPoint(x: 0, y: 0))
+
+        // Draw line to the top right
+        path.addLine(to: CGPoint(x: rect.width, y: 0))
+
+        // Draw line to the top right at 30% height
+        path.addLine(to: CGPoint(x: rect.width, y: rect.height * 0.3))
+
+        // Draw a curve to the top left at 30% height
+        path.addCurve(to: CGPoint(x: 0, y: rect.height * 0.2),
+                      control1: CGPoint(x: rect.width * 0.75, y: rect.height * 0.25),
+                      control2: CGPoint(x: rect.width * 0.25, y: rect.height * 0.35))
+
+        // Close the path (draw line to the start)
+        path.closeSubpath()
+
+        return path
+    }
+}
+
 
 struct PaymentGatewayView_Previews: PreviewProvider {
     static var previews: some View {

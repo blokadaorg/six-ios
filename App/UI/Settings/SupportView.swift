@@ -74,7 +74,7 @@ struct SupportView: View {
 //                        self.tabVM.setActiveTab(Tab.Home)
 //                        self.contentVM.stage.showModal(.debug)
                         self.contentVM.stage.dismiss()
-                        self.commands.execute(.shareLog)
+                        self.commands.execute(.log)
                     }) {
                         ZStack {
                             ButtonView(enabled: .constant(true), plus: .constant(true))

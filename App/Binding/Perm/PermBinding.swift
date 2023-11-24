@@ -66,7 +66,15 @@ class PermBinding: PermOps {
         .store(in: &cancellables)
     }
     
-    
+    func doSetSetPrivateDnsForward(completion: @escaping (Result<Void, Error>) -> Void) {
+        privateDns.savePrivateDnsProfile(tag: nil, name: nil)
+        .sink(
+            onFailure: { err in completion(Result.failure(err))},
+            onSuccess: { completion(Result.success(())) }
+        )
+        .store(in: &cancellables)
+    }
+
     //    func doIsEnabledForTag(tag: String) throws -> Bool {
     //        return NEDNSSettingsManager.shared().isEnabled
     //    }

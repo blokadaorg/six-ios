@@ -45,120 +45,122 @@ struct AccountLinkView: View {
 
     var body: some View {
         NavigationView {
-            ZStack {
-                VStack {
-                    Text("Link device")
-                        .font(.largeTitle)
-                        .bold()
-                        .padding()
-                        .padding([.top, .bottom], 24)
-    
-                    
-                    HStack(spacing: 0) {
-                        Image(systemName: "iphone")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 24, height: 24)
-                        .foregroundColor(Color.accentColor)
-                        .padding(.trailing)
-
-                        VStack(alignment: .leading) {
-                            Text("Set device name")
-                            .fontWeight(.medium)
-                            HStack {
-                                TextField(L10n.accountIdStatusUnchanged, text: $deviceName)
-                                    .autocapitalization(.none)
-                            }
-                            .padding(8)
-                            .background(
-                                RoundedRectangle(cornerRadius: 8)
-                                    .stroke(lineWidth: 2)
-                                    .foregroundColor(Color.cSecondaryBackground)
-                            )
-                            
-                        }
-                        .font(.subheadline)
-                        Spacer()
-                    }
-                    .padding(.bottom, 30)
-
-                    HStack(spacing: 0) {
-                        Image(systemName: "qrcode.viewfinder")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 24, height: 24)
-                        .foregroundColor(Color.accentColor)
-                        .padding(.trailing)
-
-                        VStack(alignment: .leading) {
-                            Text("Scan this QR code")
-                            .fontWeight(.medium)
-                            Text("This screen will close automatically once the new device has been detected.")
-                                .foregroundColor(.secondary)
-                        }
-                        .font(.subheadline)
-                        Spacer()
-                    }
-                    .padding(.bottom, 40)
-
-                    ZStack {
-                        VStack {
-                            Image(uiImage: generateQRCode(from: self.family.familyLinkTemplate.replacingOccurrences(of: "NAME", with: self.deviceName)))
-                                .interpolation(.none)
+            ScrollView {
+                ZStack {
+                    VStack {
+                        Text("Link device")
+                            .font(.largeTitle)
+                            .bold()
+                            .padding()
+                            .padding([.top, .bottom], 24)
+                        
+                        
+                        HStack(spacing: 0) {
+                            Image(systemName: "iphone")
                                 .resizable()
-                                .scaledToFit()
-                                .frame(width: 200, height: 200)
-                                .onChange(of: deviceName) { newValue in
-                                    self.commands.execute(.familyWaitForDeviceName, newValue)
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 24, height: 24)
+                                .foregroundColor(Color.accentColor)
+                                .padding(.trailing)
+                            
+                            VStack(alignment: .leading) {
+                                Text("Set device name")
+                                    .fontWeight(.medium)
+                                HStack {
+                                    TextField(L10n.accountIdStatusUnchanged, text: $deviceName)
+                                        .autocapitalization(.none)
                                 }
+                                .padding(8)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .stroke(lineWidth: 2)
+                                        .foregroundColor(Color.cSecondaryBackground)
+                                )
+                                
+                            }
+                            .font(.subheadline)
+                            Spacer()
                         }
-                        .padding()
-                        //.opacity(1.0)
-                        //.animation(.easeIn, value: self.accountId)
-                        .onTapGesture {
-//                            if self.accountId != "" {
-//                                self.vm.copyAccountIdToClipboard()
-//                            }
-
+                        .padding(.bottom, 30)
+                        
+                        HStack(spacing: 0) {
+                            Image(systemName: "qrcode.viewfinder")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 24, height: 24)
+                                .foregroundColor(Color.accentColor)
+                                .padding(.trailing)
+                            
+                            VStack(alignment: .leading) {
+                                Text("Scan this QR code")
+                                    .fontWeight(.medium)
+                                Text("This screen will close automatically once the new device has been detected.")
+                                    .foregroundColor(.secondary)
+                            }
+                            .font(.subheadline)
+                            Spacer()
                         }
-                        .contextMenu {
-                            Button(action: {
-//                                if self.accountId != "" {
-//                                    self.vm.copyAccountIdToClipboard()
-//                                }
-                                UIPasteboard.general.string = self.family.familyLinkTemplate.replacingOccurrences(of: "NAME", with: self.deviceName)
-                            }) {
-                                Text(L10n.universalActionCopy)
-                                Image(systemName: Image.fCopy)
+                        .padding(.bottom, 40)
+                        
+                        ZStack {
+                            VStack {
+                                Image(uiImage: generateQRCode(from: self.family.familyLinkTemplate.replacingOccurrences(of: "NAME", with: self.deviceName)))
+                                    .interpolation(.none)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 200, height: 200)
+                                    .onChange(of: deviceName) { newValue in
+                                        self.commands.execute(.familyWaitForDeviceName, newValue)
+                                    }
+                            }
+                            .padding()
+                            //.opacity(1.0)
+                            //.animation(.easeIn, value: self.accountId)
+                            .onTapGesture {
+                                //                            if self.accountId != "" {
+                                //                                self.vm.copyAccountIdToClipboard()
+                                //                            }
+                                
+                            }
+                            .contextMenu {
+                                Button(action: {
+                                    //                                if self.accountId != "" {
+                                    //                                    self.vm.copyAccountIdToClipboard()
+                                    //                                }
+                                    UIPasteboard.general.string = self.family.familyLinkTemplate.replacingOccurrences(of: "NAME", with: self.deviceName)
+                                }) {
+                                    Text(L10n.universalActionCopy)
+                                    Image(systemName: Image.fCopy)
+                                }
                             }
                         }
+                        
+                        Spacer()
+                        
+                        SpinnerView()
+                            .frame(width: 24, height: 24)
+                            .fixedSize()
+                            .padding(.bottom)
                     }
-    
-                    Spacer()
-
-                    SpinnerView()
-                        .frame(width: 24, height: 24)
-                    .fixedSize()
-                        .padding(.bottom)
-                }
-                .frame(maxWidth: 500)
-                .navigationBarItems(trailing:
-                    Button(action: {
+                    .frame(maxWidth: 500)
+                    .navigationBarItems(trailing:
+                                            Button(action: {
                         self.contentVM.stage.dismiss()
                     }) {
                         Text(L10n.universalActionCancel)
                     }
-                    .contentShape(Rectangle())
-                )
+                        .contentShape(Rectangle())
+                    )
+                }
+                .padding([.leading, .trailing], 40)
             }
-            .padding([.leading, .trailing], 40)
-        }
-        //.opacity(self.appear ? 1 : 0)
-        .navigationViewStyle(StackNavigationViewStyle())
-        .accentColor(Color.cAccent)
-        .onAppear {
-            self.deviceName = self.device.nameProposals.randomElement() ?? "Device"
-            self.commands.execute(.familyWaitForDeviceName, self.deviceName)
+            //.opacity(self.appear ? 1 : 0)
+            .navigationViewStyle(StackNavigationViewStyle())
+            .accentColor(Color.cAccent)
+            .onAppear {
+                self.deviceName = self.device.nameProposals.randomElement() ?? "Device"
+                self.commands.execute(.familyWaitForDeviceName, self.deviceName)
+            }
         }
     }
 }

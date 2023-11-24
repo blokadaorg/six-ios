@@ -26,6 +26,7 @@ class PermsRepo: Startable {
         writeNotificationPerms.compactMap { $0 }.removeDuplicates().eraseToAnyPublisher()
     }
     
+    @Injected(\.flutter) private var flutter
     @Injected(\.stage) private var stage
     @Injected(\.account) private var account
     @Injected(\.cloud) private var cloud
@@ -151,7 +152,8 @@ class PermsRepo: Startable {
             header: L10n.dnsprofileHeader,
             okText: L10n.dnsprofileActionOpenSettings,
             okAction: {
-                self.notification.scheduleNotification(id: NOTIF_ONBOARDING, when: Date().addingTimeInterval(3))
+                let id = self.flutter.isFlavorFamily ? NOTIF_ONBOARDING_FAMILY : NOTIF_ONBOARDING
+                self.notification.scheduleNotification(id: id, when: Date().addingTimeInterval(3))
                 self.systemNav.openSystemSettings()
             }
         )

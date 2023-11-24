@@ -20,11 +20,14 @@ struct ContentView: View {
 
     @Injected(\.tracer) private var tracer
     @Injected(\.stats) private var stats
+    @Injected(\.commands) private var commands
     
     var onboarding = AfterActivatedView()
     var accountChange = AccountChangeView()
     var accountLink = AccountLinkView()
     var onboardingAccountDecided = OnboardingAccountDecidedView()
+
+    @State private var userInput = ""
 
     var body: some View {
         // Set accent color on all switches
@@ -95,6 +98,11 @@ struct ContentView: View {
                     .transition(.opacity)
                     .animation(.easeInOut(duration: 0.5))
             }
+            .alert("Rename device", isPresented: self.$homeVM.showInput) {
+                TextField("", text: $userInput)
+                Button("Cancel", action: { self.vm.stage.onDismissed() })
+                Button("Save", action: submit)
+            }
             // TODO: remove his global alert thing
             .alert(isPresented: self.$homeVM.showError) {
                 Alert(title: Text(self.homeVM.errorHeader ?? L10n.alertErrorHeader), message: Text(self.homeVM.showErrorMessage()),
@@ -111,6 +119,11 @@ struct ContentView: View {
         // Draw under status bar and bottom bar (we manage it ourselves)
         .edgesIgnoringSafeArea([.top, .bottom])
         .background(Color.cBackground.edgesIgnoringSafeArea(.all))
+    }
+    
+    func submit() {
+        self.commands.execute(.deviceAlias, self.userInput)
+        self.vm.stage.onDismissed()
     }
 }
 

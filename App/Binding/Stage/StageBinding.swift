@@ -13,6 +13,7 @@
 import Foundation
 import Factory
 import Combine
+import UIKit
 
 extension StageModal: Identifiable {
     var id: Int {
@@ -28,8 +29,9 @@ class StageBinding: StageOps {
 
     let activeTab = CurrentValueSubject<Tab, Never>(Tab.Home)
     let tabPayload = CurrentValueSubject<String?, Never>(nil)
-    
+
     let showNavbar = CurrentValueSubject<Bool, Never>(true)
+    let showInput = CurrentValueSubject<Bool, Never>(false)
     
     let netx = Services.netx
 
@@ -136,6 +138,8 @@ class StageBinding: StageOps {
             error.send(L10n.errorPaymentFailedAlternative)
         } else if (modal == .accountInvalid) {
             error.send(L10n.errorAccountInvalid)
+        } else if (modal == .deviceAlias) {
+            showInput.send(true)
         } else {
             currentModal.send(nil)
         }
@@ -153,6 +157,10 @@ class StageBinding: StageOps {
             error.send(nil)
             completion(.success(()))
             commands.execute(.modalDismissed)
+        } else if showInput.value {
+            showInput.send(false)
+            completion(.success(()))
+            commands.execute(.modalDismissed)
         } else {
             //showPauseMenu.send(false)
             completion(.success(()))
@@ -162,6 +170,13 @@ class StageBinding: StageOps {
 
     func doShowNavbar(show: Bool, completion: @escaping (Result<Void, Error>) -> Void) {
         showNavbar.send(show)
+        completion(.success(()))
+    }
+
+    func doOpenLink(url: String, completion: @escaping (Result<Void, Error>) -> Void) {
+        if let link = URL(string: url) {
+          UIApplication.shared.open(link)
+        }
         completion(.success(()))
     }
 }

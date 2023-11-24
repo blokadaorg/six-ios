@@ -26,14 +26,34 @@ struct JournalFilterBarView: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Image(systemName: "list.dash.header.rectangle")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 24, height: 24)
-                    .foregroundColor(.primary)
-                    .onTapGesture {
-                        self.vm.stage.showModal(.custom)
+                ZStack {
+                    if self.journal.device == "" {
+                        Image(systemName: Image.fDevices)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .foregroundColor(.primary)
+                    } else if self.journal.device == "." {
+                        Image(systemName: "iphone.circle")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .foregroundColor(Color.cAccent)
+                    } else {
+                        Text(self.journal.device.prefix(2).uppercased())
+                            .foregroundStyle(Color.cAccent)
                     }
+                }
+                .frame(width: 24, height: 24)
+                .onTapGesture {
+                    self.showDevices = true
+                }
+                .actionSheet(isPresented: self.$showDevices) {
+                    ActionSheet(
+                        title: Text(getDevicesText(self.journal.device)),
+                        buttons: getDeviceButtons(devices: self.journal.devices, onDevice: {
+                            self.journal.device = $0
+                        })
+                    )
+                }
 
                 SearchBar(text: self.$journal.search, isFocused: $isFocused)
 
@@ -61,22 +81,14 @@ struct JournalFilterBarView: View {
                                 .cancel()
                             ])
                         }
-                    
-                    Image(systemName: Image.fDevices)
+
+                    Image(systemName: "list.dash.header.rectangle")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 24, height: 24)
-                        .foregroundColor(self.journal.device == "" ? .primary : Color.cAccent)
+                        .foregroundColor(.primary)
                         .onTapGesture {
-                            self.showDevices = true
-                        }
-                        .actionSheet(isPresented: self.$showDevices) {
-                            ActionSheet(
-                                title: Text(getDevicesText(self.journal.device)),
-                                buttons: getDeviceButtons(devices: self.journal.devices, onDevice: {
-                                    self.journal.device = $0
-                                })
-                            )
+                            self.vm.stage.showModal(.custom)
                         }
                 }
             }

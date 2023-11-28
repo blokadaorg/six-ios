@@ -73,7 +73,7 @@ class AccountPaymentBinding: AccountPaymentOps {
                     pricePerMonth: "", // TODO use this?
                     periodMonths: Int64(it.durationMonths),
                     type: String(it.productIdentifier.split(separator: "_")[0]),
-                    trial: it.isTrial,
+                    trial: it.getTrialLength.map { Int64($0) },
                     owned: false
                 ) }
                 completion(.success(products))

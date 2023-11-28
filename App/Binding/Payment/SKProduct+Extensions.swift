@@ -61,8 +61,18 @@ extension SKProduct {
        }
    }
 
-    var isTrial: Bool {
-        return self.introductoryPrice?.paymentMode == SKProductDiscount.PaymentMode.freeTrial
+    var getTrialLength: Int? {
+        if let introPrice = self.introductoryPrice, introPrice.paymentMode == SKProductDiscount.PaymentMode.freeTrial {
+            let period = introPrice.subscriptionPeriod
+            switch (period.unit) {
+                case .day:
+                    return period.numberOfUnits;
+                default:
+                    return 7 // TODO: just a fallback
+            }
+        }
+
+        return nil
     }
 
     private var localInfo: String {

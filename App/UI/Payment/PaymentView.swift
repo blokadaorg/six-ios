@@ -22,8 +22,8 @@ struct PaymentView: View {
                 ButtonView(enabled: .constant(true), plus: .constant(self.vm.product.type == "plus" || self.vm.product.type == "family"))
 
                 VStack {
-                    if self.vm.product.trial {
-                        Text(L10n.paymentPlanCtaTrial)
+                    if let trial = self.vm.product.trial {
+                        Text(L10n.paymentPlanCtaTrialLength(trial))
                         .foregroundColor(getColor())
                         .font(.headline)
                         .padding(.bottom, 1)

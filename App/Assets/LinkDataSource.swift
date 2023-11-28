@@ -25,7 +25,9 @@ class LinkDataSource {
         Link.KnowledgeBase: "https://go.blokada.org/kb_ios",
         Link.Privacy: "https://go.blokada.org/privacy",
         Link.CloudPrivacy: "https://go.blokada.org/privacy_cloud",
+        Link.FamilyPrivacy: "https://go.blokada.org/privacy_family",
         Link.Tos: "https://go.blokada.org/terms",
+        Link.FamilyTos: "https://go.blokada.org/terms_family",
         Link.Credits: "https://blokada.org/"
     ]
 

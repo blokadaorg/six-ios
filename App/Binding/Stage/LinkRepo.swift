@@ -25,6 +25,8 @@ enum Link {
     case KnowledgeBase
     case Privacy
     case CloudPrivacy
+    case FamilyPrivacy
+    case FamilyTos
     case Tos
     case Credits
 }

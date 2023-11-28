@@ -182,6 +182,8 @@
 "pack category active" = "Активно";
 "pack category all" = "Всичкo";
 
+"shields section header" = "Щитове";
+
 "location choice header" = "Избор на местоположение";
 
 "activity section header" = "Активност";
@@ -396,6 +398,9 @@
 "payment plan cta monthly" = "Месечен абонамент";
 "payment plan cta annual" = "Годишен абонамент";
 "payment plan current" = "(текущ план)";
+
+"payment cancel footer" = "The subscription is auto-renewed before the current billing period ends. You can cancel anytime in Settings.";
+"payment cancel footer trial short" = "Cancel during the next %@ days, and you won’t be charged.";
 
 "location region worldwide" = "Навсякъде";
 "location region america" = "Америка";

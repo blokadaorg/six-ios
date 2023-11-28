@@ -182,6 +182,8 @@
 "pack category active" = "Aktiva";
 "pack category all" = "Alla";
 
+"shields section header" = "Sköldar";
+
 "location choice header" = "Välj en plats";
 
 "activity section header" = "Aktivitet";
@@ -396,6 +398,9 @@
 "payment plan cta monthly" = "Månadsvis prenumeration";
 "payment plan cta annual" = "Årlig prenumereration";
 "payment plan current" = "(nuvarande plan)";
+
+"payment cancel footer" = "Prenumerationen förnyas automatiskt innan den aktuella faktureringsperioden tar slut. Du kan avbryta när som helst i Inställningar.";
+"payment cancel footer trial short" = "Avbryt under de närmaste %@ dagarna, och du kommer inte att debiteras.";
 
 "location region worldwide" = "Överallt";
 "location region america" = "Amerika";

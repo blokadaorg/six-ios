@@ -182,6 +182,8 @@
 "pack category active" = "Actif";
 "pack category all" = "Tous";
 
+"shields section header" = "Boucliers";
+
 "location choice header" = "Choisissez une localisation";
 
 "activity section header" = "Activité";
@@ -396,6 +398,9 @@
 "payment plan cta monthly" = "S'abonner au mois";
 "payment plan cta annual" = "S'abonner à l'année";
 "payment plan current" = "(offre actuelle)";
+
+"payment cancel footer" = "L'abonnement est automatiquement renouvelé avant la fin de la période de facturation en cours. Vous pouvez annuler à tout moment dans les paramètres.";
+"payment cancel footer trial short" = "Annulez dans les %@ prochains jours, et vous ne serez pas facturé.";
 
 "location region worldwide" = "Partout";
 "location region america" = "Amérique";

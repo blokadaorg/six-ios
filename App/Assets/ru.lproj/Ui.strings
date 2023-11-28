@@ -182,6 +182,8 @@
 "pack category active" = "Активно";
 "pack category all" = "Все";
 
+"shields section header" = "Защиты";
+
 "location choice header" = "Выберите местоположение";
 
 "activity section header" = "Активность";
@@ -396,6 +398,9 @@
 "payment plan cta monthly" = "Подписка на месяц";
 "payment plan cta annual" = "Подписка на год";
 "payment plan current" = "(текущий тариф)";
+
+"payment cancel footer" = "Подписка автоматически продлевается до окончания текущего расчетного периода. Отменить подписку можно в любое время в Настройках.";
+"payment cancel footer trial short" = "Отмена бронирования в течение следующих %@ дней без оплаты.";
 
 "location region worldwide" = "Везде";
 "location region america" = "Америка";

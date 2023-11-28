@@ -182,6 +182,8 @@
 "pack category active" = "啟用";
 "pack category all" = "全部";
 
+"shields section header" = "Shields";
+
 "location choice header" = "選擇位置";
 
 "activity section header" = "活動";
@@ -396,6 +398,9 @@
 "payment plan cta monthly" = "訂閱月付方案";
 "payment plan cta annual" = "訂閱年付方案";
 "payment plan current" = "（目前方案）";
+
+"payment cancel footer" = "The subscription is auto-renewed before the current billing period ends. You can cancel anytime in Settings.";
+"payment cancel footer trial short" = "Cancel during the next %@ days, and you won’t be charged.";
 
 "location region worldwide" = "到處";
 "location region america" = "美洲";

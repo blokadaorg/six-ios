@@ -182,6 +182,8 @@
 "pack category active" = "सक्रिय";
 "pack category all" = "सभी";
 
+"shields section header" = "Shields";
+
 "location choice header" = "स्थान चुनें";
 
 "activity section header" = "गतिविधि";
@@ -397,6 +399,9 @@
 "payment plan cta annual" = "Subscribe Annually";
 "payment plan current" = "(current plan)";
 
+"payment cancel footer" = "The subscription is auto-renewed before the current billing period ends. You can cancel anytime in Settings.";
+"payment cancel footer trial short" = "Cancel during the next %@ days, and you won’t be charged.";
+
 "location region worldwide" = "Everywhere";
 "location region america" = "America";
 "location region europe" = "Europe";
@@ -444,7 +449,7 @@
 // A short one-word label for the counter of allowed requests.
 "stats label allowed" = "Allowed";
 // A short one-word label for the counter of blocked requests.
-"stats label blocked" = "Blocked";
+"stats label blocked" = "अवरुद्ध";
 // A short one-word label for the counter of total requests.
 "stats label total" = "Total";
 // A short header for the stats section of last 24h.
@@ -477,7 +482,7 @@
 
 "homepage vpn credit" = "'WireGuard' and the 'WireGuard' logo are registered trademarks of Jason A. Donenfeld.";
 "advanced section header packs" = "Blocklists";
-"app settings section header" = "This device";
+"app settings section header" = "यह डिवाइस";
 
 "lock status locked" = "Blokada is locked. Enter the pin code to unlock";
 "lock status unlocked has pin" = "Enter the pin code to change it";

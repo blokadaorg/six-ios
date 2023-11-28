@@ -182,6 +182,8 @@
 "pack category active" = "Aktywne";
 "pack category all" = "Wszystkie";
 
+"shields section header" = "Tarcze";
+
 "location choice header" = "Wybierz lokalizację";
 
 "activity section header" = "Aktywność";
@@ -396,6 +398,9 @@
 "payment plan cta monthly" = "Subskrybuj miesięcznie";
 "payment plan cta annual" = "Subskrybuj rocznie";
 "payment plan current" = "(obecny plan)";
+
+"payment cancel footer" = "Subskrypcja jest automatycznie odnawiana przed zakończeniem bieżącego okresu rozliczeniowego. Możesz anulować w dowolnym momencie w Ustawieniach.";
+"payment cancel footer trial short" = "Anuluj subskrypcję w ciągu następnych %@ dni, aby nie zostać obciążonym.";
 
 "location region worldwide" = "Wszędzie";
 "location region america" = "Ameryka";

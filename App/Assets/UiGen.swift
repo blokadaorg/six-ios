@@ -506,6 +506,12 @@ internal enum L10n {
   internal static let paymentActivatedDescription = L10n.tr("Ui", "payment activated description")
   /// A message from App Store
   internal static let paymentAlertErrorHeader = L10n.tr("Ui", "payment alert error header")
+  /// The subscription is auto-renewed before the current billing period ends. You can cancel anytime in Settings.
+  internal static let paymentCancelFooter = L10n.tr("Ui", "payment cancel footer")
+  /// Cancel during the next %@ days, and you won’t be charged.
+  internal static func paymentCancelFooterTrialShort(_ p1: Any) -> String {
+    return L10n.tr("Ui", "payment cancel footer trial short", String(describing: p1))
+  }
   /// Change
   internal static let paymentChangeMethod = L10n.tr("Ui", "payment change method")
   /// We accept Euro, and the displayed prices are an estimate. A refund is available if your bank charges too much.
@@ -602,6 +608,10 @@ internal enum L10n {
   internal static let paymentPlanCtaMonthly = L10n.tr("Ui", "payment plan cta monthly")
   /// Start 7-Day Free Trial
   internal static let paymentPlanCtaTrial = L10n.tr("Ui", "payment plan cta trial")
+  /// Start %@-Day Free Trial
+  internal static func paymentPlanCtaTrialLength(_ p1: Any) -> String {
+    return L10n.tr("Ui", "payment plan cta trial length", String(describing: p1))
+  }
   /// (current plan)
   internal static let paymentPlanCurrent = L10n.tr("Ui", "payment plan current")
   /// Blocks ads and trackers
@@ -686,6 +696,8 @@ internal enum L10n {
   internal static let setupStepInstallWireguard = L10n.tr("Ui", "setup step install wireguard")
   /// Name your device (optional)
   internal static let setupStepName = L10n.tr("Ui", "setup step name")
+  /// Shields
+  internal static let shieldsSectionHeader = L10n.tr("Ui", "shields section header")
   /// Stats
   internal static let statsHeader = L10n.tr("Ui", "stats header")
   /// All time

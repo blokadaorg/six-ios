@@ -182,6 +182,8 @@
 "pack category active" = "Active";
 "pack category all" = "All";
 
+"shields section header" = "Shields";
+
 "location choice header" = "Choose a Location";
 
 "activity section header" = "Activity";
@@ -393,9 +395,13 @@
 "payment plan slugline cloud detail" = "(includes Blokada Cloud)";
 "payment plan slugline plus" = "Additional protection with VPN";
 "payment plan cta trial" = "Start 7-Day Free Trial";
+"payment plan cta trial length" = "Start %@-Day Free Trial";
 "payment plan cta monthly" = "Subscribe Monthly";
 "payment plan cta annual" = "Subscribe Annually";
 "payment plan current" = "(current plan)";
+
+"payment cancel footer" = "The subscription is auto-renewed before the current billing period ends. You can cancel anytime in Settings.";
+"payment cancel footer trial short" = "Cancel during the next %@ days, and you won’t be charged.";
 
 "location region worldwide" = "Everywhere";
 "location region america" = "America";

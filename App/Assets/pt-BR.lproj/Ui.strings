@@ -158,7 +158,7 @@
 "home status detail paused" = "Pausado até o temporizador terminar";
 "home status detail active" = "Bloqueando *anúncios* e *rastreadores*";
 "home status detail active with counter" = "Bloqueou *%@* anúncios e rastreadores";
-"home status detail active day" = "Ads and trackers blocked last 24h";
+"home status detail active day" = "Anúncios e rastreadores bloqueados nas últimas 24 horas";
 "home status detail active slim" = "O Blokada *Slim* está ativo";
 "home status detail plus" = "*+* protegendo sua *privacidade*";
 "home status detail progress" = "Por favor, aguarde...";
@@ -181,6 +181,8 @@
 "pack category highlights" = "Destaques";
 "pack category active" = "Ativo";
 "pack category all" = "Todas";
+
+"shields section header" = "Escudos";
 
 "location choice header" = "Escolha uma Localização";
 
@@ -226,11 +228,11 @@
 "activity filter showing for" = "Mostrando para: %@";
 "activity empty text" = "Tente usar o seu dispositivo e volte aqui mais tarde, para ver onde o seu dispositivo se conecta.";
 "activity device filter show all" = "Todos os dispositivos";
-"activity retention header" = "Should we store your activity?";
+"activity retention header" = "Devemos armazenar sua atividade?";
 "activity retention option none" = "Não armazenar minha atividade";
-"activity retention option 24h" = "Yes, store my activity";
-"activity retention policy" = "By enabling activity logging you accept the privacy policy.";
-"activity retention desc" = "Blokada Cloud is not logging anything by default. If you wish to see the aggregated stats and activity from all of your devices, enable activity logging below.";
+"activity retention option 24h" = "Sim, armazenar minha atividade";
+"activity retention policy" = "Ao ativar o registro de atividades, você aceita a política de privacidade.";
+"activity retention desc" = "O Blokada Cloud não está registrando nada por padrão. Se você deseja ver as estatísticas agregadas e atividades de todos os seus dispositivos, habilite o registro de atividades abaixo.";
 
 // Header for the Exceptions screen (where all user defined custom rules are)
 "userdenied section header" = "Exceções";
@@ -244,7 +246,7 @@
 // A short one word action to block a hostname.
 "userdenied action block" = "Bloquear";
 // Opens the Exceptions screen (where all user defined custom rules are)
-"userdefined action open" = "Open Exceptions";
+"userdefined action open" = "Exceções em aberto";
 
 "account section header settings" = "Configurações";
 "account status text" = "Sua conta BLOKADA %@ está ativa até %@.";
@@ -397,6 +399,9 @@
 "payment plan cta annual" = "Assinar Anualmente";
 "payment plan current" = "(plano atual)";
 
+"payment cancel footer" = "A assinatura é renovada automaticamente antes do término do período de faturamento atual. Você pode cancelar a qualquer momento nas Configurações.";
+"payment cancel footer trial short" = "Cancele durante os próximos %@ dias, e você não será cobrado.";
+
 "location region worldwide" = "Todos os lugares";
 "location region america" = "América";
 "location region europe" = "Europa";
@@ -442,24 +447,24 @@
 "stats top allowed header" = "Principais solicitações permitidas";
 "stats top blocked header" = "Principais solicitações bloqueadas";
 // A short one-word label for the counter of allowed requests.
-"stats label allowed" = "Allowed";
+"stats label allowed" = "Permitido";
 // A short one-word label for the counter of blocked requests.
-"stats label blocked" = "Blocked";
+"stats label blocked" = "Bloqueado";
 // A short one-word label for the counter of total requests.
-"stats label total" = "Total";
+"stats label total" = "Total:";
 // A short header for the stats section of last 24h.
-"stats header day" = "Last 24h";
+"stats header day" = "Últimas 24h";
 // A short header for the stats section of the all time stats.
-"stats header all time" = "All time";
+"stats header all time" = "Desde o início";
 
 "dnsprofile header" = "Ative o Blokada nas Configurações";
 "dnsprofile desc" = "Em Configurações, navegue até Geral → VPN, DNS e Gerenciamento de Dispositivos → DNS e selecione o Blokada.";
 "dnsprofile action open settings" = "Abrir Configurações";
-"dnsprofile desc android" = "In the Settings app, find the Private DNS section, and then paste your hostname (long tap).";
-"dnsprofile desc android copy" = "Copy your Blokada Cloud hostname to paste it in Settings.";
-"dnsprofile notification subtitle" = "In the Settings app, navigate to:";
+"dnsprofile desc android" = "No aplicativo de configurações, encontre a seção de DNS privado e cole o seu nome de host (toque longo).";
+"dnsprofile desc android copy" = "Copie seu nome de host do Blokada Cloud para colá-lo nas Configurações.";
+"dnsprofile notification subtitle" = "No aplicativo Configurações, navegue para:";
 // A helpful message during onboarding to help user find the right settings to change
-"dnsprofile notification body" = "General → VPN, DNS & Device Management → DNS and select Blokada.";
+"dnsprofile notification body" = "Geral → VPN, DNS & Gerenciamento de dispositivo → DNS e selecione Blokada.";
 
 // A short header text displayed to user when permissions still have to be granted. Keep it very short.
 "activated header" = "Quase lá!";
@@ -479,6 +484,6 @@
 "advanced section header packs" = "Listas de bloqueio";
 "app settings section header" = "Este dispositivo";
 
-"lock status locked" = "Blokada is locked. Enter the pin code to unlock";
-"lock status unlocked has pin" = "Enter the pin code to change it";
-"lock status unlocked" = "Set your pin code to lock Blokada";
+"lock status locked" = "Blokada está bloqueado. Insira o código PIN para desbloquear";
+"lock status unlocked has pin" = "Digite o código PIN para alterá-lo";
+"lock status unlocked" = "Defina o seu código PIN para bloquear Blokada";

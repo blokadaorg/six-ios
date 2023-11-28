@@ -182,6 +182,8 @@
 "pack category active" = "有効";
 "pack category all" = "すべて";
 
+"shields section header" = "シールド";
+
 "location choice header" = "接続先を選択";
 
 "activity section header" = "アクティビティ";
@@ -397,6 +399,9 @@
 "payment plan cta monthly" = "月額プラン";
 "payment plan cta annual" = "年額プラン";
 "payment plan current" = "（現在のプラン）";
+
+"payment cancel footer" = "サブスクリプションは支払い済みの期間が終了する前に自動更新されます。いつでも設定からキャンセルできます。";
+"payment cancel footer trial short" = "次の %@ 日間はキャンセルします。課金されません。";
 
 "location region worldwide" = "ワールドワイド";
 "location region america" = "アメリカ";

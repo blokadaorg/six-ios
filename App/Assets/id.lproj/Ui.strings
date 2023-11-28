@@ -182,6 +182,8 @@
 "pack category active" = "Aktif";
 "pack category all" = "Semua";
 
+"shields section header" = "Shields";
+
 "location choice header" = "Pilih lokasi";
 
 "activity section header" = "Aktifitas";
@@ -396,6 +398,9 @@
 "payment plan cta monthly" = "Langganan Bulanan";
 "payment plan cta annual" = "Langganan Tahunan";
 "payment plan current" = "(paket saat ini)";
+
+"payment cancel footer" = "The subscription is auto-renewed before the current billing period ends. You can cancel anytime in Settings.";
+"payment cancel footer trial short" = "Cancel during the next %@ days, and you won’t be charged.";
 
 "location region worldwide" = "Di mana saja";
 "location region america" = "Amerika";

@@ -182,6 +182,8 @@
 "pack category active" = "Aktivní";
 "pack category all" = "Vše";
 
+"shields section header" = "Štíty";
+
 "location choice header" = "Zvolte umístění";
 
 "activity section header" = "Aktivita";
@@ -396,6 +398,9 @@
 "payment plan cta monthly" = "Měsíční předplatné";
 "payment plan cta annual" = "Roční předplatné";
 "payment plan current" = "(aktuální plán)";
+
+"payment cancel footer" = "Předplatné je automaticky obnoveno před ukončením aktuálního fakturačního období. Kdykoli můžete zrušit v Nastavení.";
+"payment cancel footer trial short" = "Zrušit během následujících %@ dní a nebude ti nic účtováno.";
 
 "location region worldwide" = "Všude";
 "location region america" = "Amerika";

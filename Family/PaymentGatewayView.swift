@@ -131,14 +131,8 @@ struct PaymentGatewayView: View {
                         VStack {
                             Spacer()
                             if self.vm.working {
-                                if #available(iOS 14.0, *) {
-                                    ProgressView()
+                                ProgressView()
                                         .padding(.bottom)
-                                } else {
-                                    SpinnerView()
-                                        .frame(width: 24, height: 24)
-                                        .padding(.bottom)
-                                }
                                 Text(L10n.universalStatusProcessing)
                                     .multilineTextAlignment(.center)
                             } else if self.vm.error != nil {
@@ -148,15 +142,16 @@ struct PaymentGatewayView: View {
                             Spacer()
                         }
                         .padding()
-                        .frame(maxWidth: 500)
                         Spacer()
                     }
-                    .background(Color.cPrimaryBackground)
+                    .background(
+                        RoundedRectangle(cornerRadius: 8)
+                        .foregroundColor(Color.cPrimaryBackground)
+                        .opacity(0.90)
+                    )
                     .opacity(self.vm.working || self.vm.error != nil || self.vm.options.isEmpty ? 1.0 : 0.0)
                     .transition(.opacity)
-                    .animation(
-                        Animation.easeIn(duration: 0.3).repeatCount(1)
-                    )
+                    .padding()
                     .accessibilityHidden(true)
                 }
             

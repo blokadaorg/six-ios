@@ -114,7 +114,7 @@ struct AccountChangeView: View {
                         Button(action: {
                             if !self.token.isEmpty {
                                 self.contentVM.stage.dismiss()
-                                self.commands.execute(CommandName.familyLink, self.token)
+                                self.commands.execute(CommandName.url, self.token)
                             }
                         }) {
                             ZStack {

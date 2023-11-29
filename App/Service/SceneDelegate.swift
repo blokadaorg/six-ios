@@ -22,6 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private let tabVM = ViewModels.tab
 
     @Injected(\.stage) private var foreground
+    @Injected(\.commands) private var commands
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -58,30 +59,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         
         // Handle universal links
-        
-        // Get URL components from the incoming user activity.
+        // Currently only the link_device url is supported
         guard let userActivity = connectionOptions.userActivities.first,
             userActivity.activityType == NSUserActivityTypeBrowsingWeb,
-            let incomingURL = userActivity.webpageURL,
-            let components = NSURLComponents(url: incomingURL, resolvingAgainstBaseURL: true) else {
+            let incomingURL = userActivity.webpageURL else {
             return
         }
-        
-        // Check for specific URL components that you need.
-        guard let path = components.path,
-        let params = components.queryItems else {
-            return
-        }
-        print("scene path = \(path)")
 
-        if let tag = params.first(where: { $0.name == "tag" } )?.value,
-            let name = params.first(where: { $0.name == "name" })?.value {
-
-            print("tag = \(tag)")
-            print("name = \(name)")
-        } else {
-            print("Either tag or name missing")
-        }
+        commands.execute(.url, incomingURL.absoluteString)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -108,6 +108,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         BlockaLogger.v("Main", "Application will terminate")
         payment.stopObservingPayments()
     }
+
+    // Handle universal links
+    func application(_ application: UIApplication,
+                     continue userActivity: NSUserActivity,
+                     restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool
+    {
+        // Get URL components from the incoming user activity.
+        guard userActivity.activityType == NSUserActivityTypeBrowsingWeb,
+            let incomingURL = userActivity.webpageURL,
+            let components = NSURLComponents(url: incomingURL, resolvingAgainstBaseURL: true) else {
+            return false
+        }
+
+        // Check for specific URL components that you need.
+        guard let path = components.path,
+        let params = components.queryItems else {
+            return false
+        }
+        print("path = \(path)")
+
+
+        if let tag = params.first(where: { $0.name == "tag" } )?.value,
+            let name = params.first(where: { $0.name == "name" })?.value {
+
+
+            print("tag = \(tag)")
+            print("name = \(name)")
+            return true
+
+
+        } else {
+            print("Either tag or name missing")
+            return false
+        }
+    }
+
 }
 
 // Copied from WG - not sure if important

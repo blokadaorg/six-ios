@@ -55,6 +55,33 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.homeVM.showSplash = false
         }
+        
+        
+        // Handle universal links
+        
+        // Get URL components from the incoming user activity.
+        guard let userActivity = connectionOptions.userActivities.first,
+            userActivity.activityType == NSUserActivityTypeBrowsingWeb,
+            let incomingURL = userActivity.webpageURL,
+            let components = NSURLComponents(url: incomingURL, resolvingAgainstBaseURL: true) else {
+            return
+        }
+        
+        // Check for specific URL components that you need.
+        guard let path = components.path,
+        let params = components.queryItems else {
+            return
+        }
+        print("scene path = \(path)")
+
+        if let tag = params.first(where: { $0.name == "tag" } )?.value,
+            let name = params.first(where: { $0.name == "name" })?.value {
+
+            print("tag = \(tag)")
+            print("name = \(name)")
+        } else {
+            print("Either tag or name missing")
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -92,5 +119,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     ) {
         Services.quickActions.onQuickAction(shortcutItem.type)
     }
-
 }

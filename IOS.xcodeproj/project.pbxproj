@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 53;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -1697,6 +1697,7 @@
 		4E4562B7240E5E150022CBF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4E45F4EC248E87FF002D4DD6 /* AfterActivatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterActivatedView.swift; sourceTree = "<group>"; };
 		4E45F4F2248EA5F3002D4DD6 /* LevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
+		4E4F320F2B1736900087ECA1 /* FamilyProdRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FamilyProdRelease.entitlements; sourceTree = "<group>"; };
 		4E53CCB6244DFE21009B3CF0 /* PaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
 		4E53CCB8244DFEB1009B3CF0 /* PaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentModel.swift; sourceTree = "<group>"; };
 		4E53CCBA244DFF99009B3CF0 /* SKProduct+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKProduct+Extensions.swift"; sourceTree = "<group>"; };
@@ -1971,6 +1972,7 @@
 		47729DF922F447C800B9B36B = {
 			isa = PBXGroup;
 			children = (
+				4E4F320F2B1736900087ECA1 /* FamilyProdRelease.entitlements */,
 				4E270D002A80EAF100D3484B /* NotFamily */,
 				4E270CFF2A80EAEA00D3484B /* Family */,
 				47729E0422F447C800B9B36B /* App */,
@@ -5041,6 +5043,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = App/Assets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Blokada Family";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5077,7 +5080,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = App/Assets/IOS.entitlements;
+				CODE_SIGN_ENTITLEMENTS = FamilyProdRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 230424;
@@ -5088,6 +5091,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = App/Assets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Blokada Family";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

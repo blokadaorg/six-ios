@@ -135,7 +135,6 @@
 		4E1276552AE7D0FC00A94994 /* LeaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E63194C244743C300191C16 /* LeaseView.swift */; };
 		4E1276562AE7D0FC00A94994 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2F2A00275F7AB3005A59F5 /* Mocks.swift */; };
 		4E1276572AE7D0FC00A94994 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F6FEF243D1048002E1DF6 /* PaymentView.swift */; };
-		4E1276582AE7D0FC00A94994 /* JournalFilterBarV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E90BA3827BBB5B40051FD0C /* JournalFilterBarV.swift */; };
 		4E1276592AE7D0FC00A94994 /* PlaceholderPaneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA189B827B4495B00E57470 /* PlaceholderPaneView.swift */; };
 		4E12765A2AE7D0FC00A94994 /* JournalItemV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1681A8247860490040334B /* JournalItemV.swift */; };
 		4E12765B2AE7D0FC00A94994 /* TabFamilyHorizontalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECD10245CBDB3009040F1 /* TabFamilyHorizontalView.swift */; };
@@ -449,7 +448,6 @@
 		4E270D762A80EB8300D3484B /* TabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E72D6742461407F00FE7737 /* TabViewModel.swift */; };
 		4E270D772A80EB8300D3484B /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E267F57243C8C5200D3160F /* ButtonView.swift */; };
 		4E270D782A80EB8300D3484B /* CustomVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBDD3522A0B7F290039C101 /* CustomVM.swift */; };
-		4E270D792A80EB8300D3484B /* JournalFilterBarV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E90BA3827BBB5B40051FD0C /* JournalFilterBarV.swift */; };
 		4E270D7A2A80EB8300D3484B /* PlaceholderPaneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA189B827B4495B00E57470 /* PlaceholderPaneView.swift */; };
 		4E270D7B2A80EB8300D3484B /* AccountBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5F0B8F29E801A5005F5C9A /* AccountBinding.swift */; };
 		4E270D7C2A80EB8300D3484B /* BenefitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E267F5B243CB79C00D3160F /* BenefitView.swift */; };
@@ -1009,6 +1007,9 @@
 		4E8AE1F9275918B400BD2E5B /* CombineUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8AE1F8275918B400BD2E5B /* CombineUtil.swift */; };
 		4E8AE1FA275918B400BD2E5B /* CombineUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8AE1F8275918B400BD2E5B /* CombineUtil.swift */; };
 		4E8AE1FC27591F8E00BD2E5B /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8AE1FB27591F8E00BD2E5B /* Services.swift */; };
+		4E8B179E2B177EFE00D1D854 /* JournalFilterBarV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8B179D2B177EFE00D1D854 /* JournalFilterBarV.swift */; };
+		4E8B179F2B177EFE00D1D854 /* JournalFilterBarV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8B179D2B177EFE00D1D854 /* JournalFilterBarV.swift */; };
+		4E8B17A02B177EFE00D1D854 /* JournalFilterBarV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8B179D2B177EFE00D1D854 /* JournalFilterBarV.swift */; };
 		4E90BA3627BBB5860051FD0C /* JournalNoBarV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E90BA3527BBB5860051FD0C /* JournalNoBarV.swift */; };
 		4E90BA3727BBB5860051FD0C /* JournalNoBarV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E90BA3527BBB5860051FD0C /* JournalNoBarV.swift */; };
 		4E90BA3927BBB5B40051FD0C /* JournalFilterBarV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E90BA3827BBB5B40051FD0C /* JournalFilterBarV.swift */; };
@@ -1212,7 +1213,6 @@
 		4EBF3B782A80E55900F637BB /* TabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E72D6742461407F00FE7737 /* TabViewModel.swift */; };
 		4EBF3B792A80E55900F637BB /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E267F57243C8C5200D3160F /* ButtonView.swift */; };
 		4EBF3B7A2A80E55900F637BB /* CustomVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBDD3522A0B7F290039C101 /* CustomVM.swift */; };
-		4EBF3B7B2A80E55900F637BB /* JournalFilterBarV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E90BA3827BBB5B40051FD0C /* JournalFilterBarV.swift */; };
 		4EBF3B7C2A80E55900F637BB /* PlaceholderPaneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA189B827B4495B00E57470 /* PlaceholderPaneView.swift */; };
 		4EBF3B7D2A80E55900F637BB /* AccountBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5F0B8F29E801A5005F5C9A /* AccountBinding.swift */; };
 		4EBF3B7E2A80E55900F637BB /* BenefitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E267F5B243CB79C00D3160F /* BenefitView.swift */; };
@@ -1754,6 +1754,7 @@
 		4E8AE1E92758D93800BD2E5B /* Repos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repos.swift; sourceTree = "<group>"; };
 		4E8AE1F8275918B400BD2E5B /* CombineUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineUtil.swift; sourceTree = "<group>"; };
 		4E8AE1FB27591F8E00BD2E5B /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		4E8B179D2B177EFE00D1D854 /* JournalFilterBarV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalFilterBarV.swift; sourceTree = "<group>"; };
 		4E90BA3527BBB5860051FD0C /* JournalNoBarV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalNoBarV.swift; sourceTree = "<group>"; };
 		4E90BA3827BBB5B40051FD0C /* JournalFilterBarV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalFilterBarV.swift; sourceTree = "<group>"; };
 		4E90BA3B27BBB6810051FD0C /* JournalListV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalListV.swift; sourceTree = "<group>"; };
@@ -1972,7 +1973,6 @@
 		47729DF922F447C800B9B36B = {
 			isa = PBXGroup;
 			children = (
-				4E4F320F2B1736900087ECA1 /* FamilyProdRelease.entitlements */,
 				4E270D002A80EAF100D3484B /* NotFamily */,
 				4E270CFF2A80EAEA00D3484B /* Family */,
 				47729E0422F447C800B9B36B /* App */,
@@ -1991,6 +1991,7 @@
 				47729E0322F447C800B9B36B /* Products */,
 				4E270CFA2A80E85E00D3484B /* WGNetx copy-Info.plist */,
 				4E1276C62AE7D0FC00A94994 /* Mocked copy-Info.plist */,
+				4E4F320F2B1736900087ECA1 /* FamilyProdRelease.entitlements */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2316,6 +2317,7 @@
 				4E1275E72AE7CEA800A94994 /* FlavorResources.swift */,
 				4E1275F12AE7D08400A94994 /* PaymentGatewayView.swift */,
 				4E1275F42AE7D0A100A94994 /* PaymentFeaturesView.swift */,
+				4E8B179D2B177EFE00D1D854 /* JournalFilterBarV.swift */,
 			);
 			path = Family;
 			sourceTree = "<group>";
@@ -2328,6 +2330,7 @@
 				4E1275ED2AE7CF0D00A94994 /* FlavorResources.swift */,
 				4E94C2FE2420D3B00008E318 /* PaymentGatewayView.swift */,
 				4E971F7E246BCEA300809EA6 /* PaymentFeaturesView.swift */,
+				4E90BA3827BBB5B40051FD0C /* JournalFilterBarV.swift */,
 			);
 			path = NotFamily;
 			sourceTree = "<group>";
@@ -2549,7 +2552,6 @@
 				4E61D8FE27B4316C00C98D36 /* JournalWideVerticalV.swift */,
 				4E61D90127B4360B00C98D36 /* JournalWideHorizontalV.swift */,
 				4E90BA3527BBB5860051FD0C /* JournalNoBarV.swift */,
-				4E90BA3827BBB5B40051FD0C /* JournalFilterBarV.swift */,
 				4E90BA3B27BBB6810051FD0C /* JournalListV.swift */,
 				4E08B9D8247FF4BE00AED8F0 /* JournalDetailV.swift */,
 				4E1681A8247860490040334B /* JournalItemV.swift */,
@@ -3335,6 +3337,7 @@
 				4E12762C2AE7D0FC00A94994 /* SettingsHeaderView.swift in Sources */,
 				4E12762D2AE7D0FC00A94994 /* Stats.swift in Sources */,
 				4E12762E2AE7D0FC00A94994 /* NetworkCommand.swift in Sources */,
+				4E8B17A02B177EFE00D1D854 /* JournalFilterBarV.swift in Sources */,
 				4E12762F2AE7D0FC00A94994 /* BadgeView.swift in Sources */,
 				4E1276302AE7D0FC00A94994 /* AccountPayment.swift in Sources */,
 				4E1276312AE7D0FC00A94994 /* Error.swift in Sources */,
@@ -3375,7 +3378,6 @@
 				4E1276552AE7D0FC00A94994 /* LeaseView.swift in Sources */,
 				4E1276562AE7D0FC00A94994 /* Mocks.swift in Sources */,
 				4E1276572AE7D0FC00A94994 /* PaymentView.swift in Sources */,
-				4E1276582AE7D0FC00A94994 /* JournalFilterBarV.swift in Sources */,
 				4E1276592AE7D0FC00A94994 /* PlaceholderPaneView.swift in Sources */,
 				4E12765A2AE7D0FC00A94994 /* JournalItemV.swift in Sources */,
 				4E12765B2AE7D0FC00A94994 /* TabFamilyHorizontalView.swift in Sources */,
@@ -3664,7 +3666,6 @@
 				4E270D762A80EB8300D3484B /* TabViewModel.swift in Sources */,
 				4E270D772A80EB8300D3484B /* ButtonView.swift in Sources */,
 				4E270D782A80EB8300D3484B /* CustomVM.swift in Sources */,
-				4E270D792A80EB8300D3484B /* JournalFilterBarV.swift in Sources */,
 				4E270D7A2A80EB8300D3484B /* PlaceholderPaneView.swift in Sources */,
 				4E270D7B2A80EB8300D3484B /* AccountBinding.swift in Sources */,
 				4E270D7C2A80EB8300D3484B /* BenefitView.swift in Sources */,
@@ -3676,6 +3677,7 @@
 				4E270D822A80EB8300D3484B /* StageBinding.swift in Sources */,
 				4E270D832A80EB8300D3484B /* SettingsItemView.swift in Sources */,
 				4E270D842A80EB8300D3484B /* TabFamilyVerticalView.swift in Sources */,
+				4E8B179E2B177EFE00D1D854 /* JournalFilterBarV.swift in Sources */,
 				4E270D852A80EB8300D3484B /* SplashView.swift in Sources */,
 				4E270D862A80EB8300D3484B /* PlusGateway.swift in Sources */,
 				4E270D872A80EB8300D3484B /* Flutter.swift in Sources */,
@@ -4303,7 +4305,6 @@
 				4EBF3B782A80E55900F637BB /* TabViewModel.swift in Sources */,
 				4EBF3B792A80E55900F637BB /* ButtonView.swift in Sources */,
 				4EBF3B7A2A80E55900F637BB /* CustomVM.swift in Sources */,
-				4EBF3B7B2A80E55900F637BB /* JournalFilterBarV.swift in Sources */,
 				4EBF3B7C2A80E55900F637BB /* PlaceholderPaneView.swift in Sources */,
 				4EBF3B7D2A80E55900F637BB /* AccountBinding.swift in Sources */,
 				4EBF3B7E2A80E55900F637BB /* BenefitView.swift in Sources */,
@@ -4315,6 +4316,7 @@
 				4EBF3B842A80E55900F637BB /* StageBinding.swift in Sources */,
 				4EBF3B852A80E55900F637BB /* SettingsItemView.swift in Sources */,
 				4EBF3B862A80E55900F637BB /* TabFamilyVerticalView.swift in Sources */,
+				4E8B179F2B177EFE00D1D854 /* JournalFilterBarV.swift in Sources */,
 				4EBF3B872A80E55900F637BB /* SplashView.swift in Sources */,
 				4EBF3B882A80E55900F637BB /* PlusGateway.swift in Sources */,
 				4EBF3B892A80E55900F637BB /* Flutter.swift in Sources */,

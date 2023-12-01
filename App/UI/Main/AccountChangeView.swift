@@ -33,6 +33,7 @@ struct AccountChangeView: View {
        switch result {
        case .success(let code):
            self.token = code.string
+           self.commands.execute(CommandName.url, self.token)
        case .failure(let error):
            print("Scanning failed: \(error.localizedDescription)")
        }
@@ -46,20 +47,26 @@ struct AccountChangeView: View {
                         .font(.largeTitle)
                         .bold()
                         .padding()
-                        .padding([.top, .bottom], 24)
-    
+                        .padding([.top], 24)
+
+                    Text("To link this device to the parent device, complete the setup process. Once linked, this device will be locked, allowing you to configure and monitor it from the parent device.")
+                    .foregroundColor(.secondary)
+                    .font(.subheadline)
+                    .padding(.top, 24)
+                    .padding(.bottom, 56)
+
                     HStack(spacing: 0) {
                         Image(systemName: "qrcode.viewfinder")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 24, height: 24)
                         .foregroundColor(Color.accentColor)
-                        .padding(.trailing)
+                        .padding(.trailing) 
 
                         VStack(alignment: .leading) {
                             Text("Scan QR code")
                             .fontWeight(.medium)
-                            Text("Scan the QR code from the parent device, in order to attach this device.")
+                            Text("Scan the QR code from the parent device, in order to initiate the linking process.")
                                 .foregroundColor(.secondary)
                         }
                         .font(.subheadline)
@@ -70,7 +77,9 @@ struct AccountChangeView: View {
                     }
                     .padding(.bottom, 40)
 
-                    HStack {
+                    Spacer()
+
+                    VStack {
                         Button(action: {
                             self.isShowingScanner = true
                         }) {
@@ -90,40 +99,6 @@ struct AccountChangeView: View {
                         }
                         .sheet(isPresented: self.$isShowingScanner) {
                             AccountChangeScanView(isShowingScanner: self.$isShowingScanner, handleScan: self.handleScan)
-                        }
-                    }
-                    .padding()
-                    .background(
-                        RoundedRectangle(cornerRadius: 8)
-                            .stroke(lineWidth: 2)
-                            .foregroundColor(Color.cSecondaryBackground)
-                    )
-                    
-                    Spacer()
-                    
-                    Text(self.token)
-                        .foregroundColor(.secondary)
-                        .font(.subheadline)
-                        .multilineTextAlignment(.center)
-                        .padding([.leading, .trailing], 40)
-                        .opacity(self.token.isEmpty ? 0.0 : 1.0)
-
-                    Spacer()
-
-                    VStack {
-                        Button(action: {
-                            if !self.token.isEmpty {
-                                self.contentVM.stage.dismiss()
-                                self.commands.execute(CommandName.url, self.token)
-                            }
-                        }) {
-                            ZStack {
-                                ButtonView(enabled: .constant(!self.token.isEmpty), plus: .constant(true))
-                                    .frame(height: 44)
-                                Text(L10n.universalActionContinue)
-                                    .foregroundColor(.white)
-                                    .bold()
-                            }
                         }
                     }
                     .padding(.bottom, 40)

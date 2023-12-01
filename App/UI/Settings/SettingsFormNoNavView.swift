@@ -46,14 +46,16 @@ struct SettingsFormNoNavView: View {
                     }
                 }
 
-                Button(action: {
-                    self.tabVM.setSection("logRetention")
-                }) {
-                    SettingsItemView(
-                        title: L10n.activitySectionHeader,
-                        image: Image.fChart,
-                        selected: self.tabVM.isSection("logRetention")
-                    )
+                if (self.vm.type != .Family) {
+                    Button(action: {
+                        self.tabVM.setSection("logRetention")
+                    }) {
+                        SettingsItemView(
+                            title: L10n.activitySectionHeader,
+                            image: Image.fChart,
+                            selected: self.tabVM.isSection("logRetention")
+                        )
+                    }
                 }
             }
 

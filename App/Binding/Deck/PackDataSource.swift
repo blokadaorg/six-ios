@@ -239,16 +239,7 @@ class PackDataSource {
                     description: "Limits access to various social media platforms. Ideal for enhancing work focus and moderating children's usage.",
                     creditName: "Various authors",
                     creditUrl: "https://blokada.org",
-                    configs: ["social networks", "facebook"]
-                ),
-
-        Pack.mocked(id: "meta_apps_social", tags: ["apps", "social"],
-                    title: "Social apps",
-                    slugline: "Blocks popular social media applications",
-                    description: "This shield specifically targets popular social media apps. It's tailored for users seeking a focused digital environment.",
-                    creditName: "Various authors",
-                    creditUrl: "https://blokada.org",
-                    configs: ["facebook", "instagram", "snapchat", "tiktok", "twitter"]
+                    configs: ["social networks", "facebook", "instagram", "reddit", "snapchat", "tiktok", "twitter"]
                 ),
 
         Pack.mocked(id: "meta_apps_chat", tags: ["apps", "chat"],
@@ -293,7 +284,7 @@ class PackDataSource {
                     description: "This shield provides a list of popular apps of various type. It's created for users aiming for a more comprehensive app control.",
                     creditName: "Various authors",
                     creditUrl: "https://blokada.org",
-                    configs: ["9gag", "chat gpt", "imgur", "pinterest", "reddit", "tinder"]
+                    configs: ["9gag", "chat gpt", "imgur", "pinterest", "tinder"]
                 ),
     ]
 

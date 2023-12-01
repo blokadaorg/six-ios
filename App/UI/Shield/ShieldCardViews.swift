@@ -229,8 +229,9 @@ struct ShieldItemView: View {
 
 struct ShieldIconView: View {
 
-    @State var id: String = ""
+    var id: String = ""
     var title: String = ""
+    var small: Bool = false
 
     var body: some View {
         ZStack {
@@ -242,22 +243,11 @@ struct ShieldIconView: View {
                 .overlay(Color(generateColor(from: id)).blendMode(.color))
 
             Text(title.prefix(2).uppercased())
-                .font(.title2)
+                .font(small ? .headline : .title2)
                 //.foregroundColor(Color(generateColor(from: id)))
             .foregroundColor(.white)
                 .fontWeight(.bold)
         }
-    }
-
-    func generateColor(from string: String) -> UIColor {
-        let hash = SHA256.hash(data: Data(string.utf8))
-        let bytes = Array(hash)
-        
-        let red = CGFloat(bytes[0]) / 255.0
-        let green = CGFloat(bytes[1]) / 255.0
-        let blue = CGFloat(bytes[2]) / 255.0
-        
-        return UIColor(red: red, green: green, blue: blue, alpha: 1)
     }
 }
 

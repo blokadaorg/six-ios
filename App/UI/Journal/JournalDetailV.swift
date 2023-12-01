@@ -107,18 +107,6 @@ struct JournalDetailView: View {
                             }
                         )
                     }
-
-                    Divider().padding([.top, .bottom], 8)
-
-                    OptionView(
-                        text: L10n.userdefinedActionOpen,
-                        image: "list.dash.header.rectangle",
-                        active: false,
-                        canSpin: false,
-                        action: {
-                            self.contentVM.stage.showModal(.custom)
-                        }
-                    )
                 }
                 .padding(8)
                 .background(

@@ -40,13 +40,26 @@ struct PaymentGatewayView: View {
                                     Spacer()
                                 }
                                 .padding(.bottom, 2)
-
-                                
                             }
                             .padding(.top, 50)
                             .padding()
                             
                             Spacer()
+                            
+                            Button(action: {
+                                withAnimation {
+                                    self.showPlusFeaturesSheet = true
+                                }
+                            }) {
+                                Text(L10n.paymentActionSeeAllFeatures)
+                                .foregroundColor(Color.cAccent)
+                                .sheet(isPresented: self.$showPlusFeaturesSheet) {
+                                    PaymentFeaturesView(showSheet: self.$showPlusFeaturesSheet)
+
+                                }
+                                .padding(.top, 40)
+                                .padding(.bottom, 14)
+                            }
                             
                             Text("Protect your entire family with one subscription. Manage content your kids can access and monitor their activity.")
                                .multilineTextAlignment(.center)
@@ -149,7 +162,7 @@ struct PaymentGatewayView: View {
                         .foregroundColor(Color.cPrimaryBackground)
                         .opacity(0.90)
                     )
-                    .opacity(self.vm.working || self.vm.error != nil || self.vm.options.isEmpty ? 1.0 : 0.0)
+                    .opacity(self.vm.working || self.vm.error != nil || self.vm.options.isEmpty ? 0.0 : 0.0)
                     .transition(.opacity)
                     .padding()
                     .accessibilityHidden(true)

@@ -40,12 +40,14 @@ struct SettingsFormNavView: View {
                     .background(NavigationLink("", value: "leases").opacity(0))
                 }
 
-                SettingsItemView(
-                    title: L10n.activitySectionHeader,
-                    image: Image.fChart,
-                    selected: false
-                )
-                .background(NavigationLink("", value: "logRetention").opacity(0))
+                if (self.vm.type != .Family) {
+                    SettingsItemView(
+                        title: L10n.activitySectionHeader,
+                        image: Image.fChart,
+                        selected: false
+                    )
+                    .background(NavigationLink("", value: "logRetention").opacity(0))
+                }
             }
             
             Section(header: Text(L10n.accountSectionHeaderOther)) {

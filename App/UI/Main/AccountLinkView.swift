@@ -140,7 +140,7 @@ struct AccountLinkView: View {
                         SpinnerView()
                             .frame(width: 24, height: 24)
                             .fixedSize()
-                            .padding(.bottom)
+                            .padding([.top, .bottom])
                     }
                     .frame(maxWidth: 500)
                     .navigationBarItems(trailing:

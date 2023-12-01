@@ -36,11 +36,11 @@ struct TabFamilyVerticalView: View {
                     onTap: { self.onTap($0) }
                 )
                 TabItemView(
-                    id: .Advanced, icon: "blokada", text: "Shields", badge: nil,
+                    id: .Activity, icon: "chart.bar", text: L10n.mainTabActivity, badge: nil,
                     onTap: { self.onTap($0) }
                 )
                 TabItemView(
-                    id: .Activity, icon: "chart.bar", text: L10n.mainTabActivity, badge: nil,
+                    id: .Advanced, icon: "blokada", text: "Shields", badge: nil,
                     onTap: { self.onTap($0) }
                 )
                 Spacer()

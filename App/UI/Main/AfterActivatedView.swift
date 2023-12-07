@@ -44,22 +44,45 @@ struct AfterActivatedView: View {
                             .padding([.top, .bottom])
                         
                         VStack(spacing: 0) {
-                            Button(action: {
-                            }) {
-                                HStack {
-                                    Image(systemName: Image.fCheckmark)
-                                        .imageScale(.large)
-                                        .foregroundColor(Color.cOk)
-                                        .frame(width: 32, height: 32)
-                                    
-                                    Text(L10n.activatedLabelAccount(self.homeVM.accountType))
-                                        .fontWeight(.bold)
-                                        .foregroundColor(.primary)
-                                    
-                                    Spacer()
+                            if self.homeVM.accountType == .Family {
+                                Button(action: {
+                                }) {
+                                    HStack {
+                                        Image(systemName: Image.fCheckmark)
+                                            .imageScale(.large)
+                                            .foregroundColor(Color.cOk)
+                                            .frame(width: 32, height: 32)
+                                        
+                                        Text(L10n.activatedLabelAccount(self.homeVM.accountType))
+                                            .fontWeight(.bold)
+                                            .foregroundColor(.primary)
+                                            .multilineTextAlignment(.leading)
+                                        
+                                        Spacer()
+                                    }
+                                    .padding([.leading, .trailing], 18)
+                                    .padding([.top, .bottom], 4)
                                 }
-                                .padding([.leading, .trailing], 18)
-                                .padding([.top, .bottom], 4)
+                            } else {
+                                Button(action: {
+                                    self.homeVM.finishSetup()
+                                }) {
+                                    HStack {
+                                        Image(systemName: Image.fXmark)
+                                            .imageScale(.large)
+                                            .foregroundColor(Color.cError)
+                                            .frame(width: 32, height: 32)
+                                        
+                                        Text(L10n.accountStatusTextInactive)
+                                            .fontWeight(.bold)
+                                            .foregroundColor(.primary)
+                                            .multilineTextAlignment(.leading)
+                                        
+                                        Spacer()
+                                    }
+                                    .padding([.leading, .trailing], 18)
+                                    .padding([.top, .bottom], 4)
+                                }
                             }
                             
                             if self.homeVM.notificationPermsGranted {
@@ -74,6 +97,7 @@ struct AfterActivatedView: View {
                                         Text(L10n.activatedLabelNotifYes)
                                             .fontWeight(.bold)
                                             .foregroundColor(.primary)
+                                            .multilineTextAlignment(.leading)
                                         
                                         Spacer()
                                     }
@@ -92,6 +116,7 @@ struct AfterActivatedView: View {
                                         
                                         Text(L10n.activatedLabelNotifNo)
                                             .foregroundColor(.primary)
+                                            .multilineTextAlignment(.leading)
                                         
                                         Spacer()
                                     }
@@ -112,6 +137,7 @@ struct AfterActivatedView: View {
                                         Text(L10n.activatedLabelDnsYes)
                                             .fontWeight(.bold)
                                             .foregroundColor(.primary)
+                                            .multilineTextAlignment(.leading)
                                         
                                         Spacer()
                                     }
@@ -130,6 +156,7 @@ struct AfterActivatedView: View {
                                         
                                         Text(L10n.activatedLabelDnsNo)
                                             .foregroundColor(.primary)
+                                            .multilineTextAlignment(.leading)
                                         
                                         Spacer()
                                     }
@@ -169,6 +196,7 @@ struct AfterActivatedView: View {
                                             
                                             Text(L10n.activatedLabelVpnNo)
                                                 .foregroundColor(.primary)
+                                                .multilineTextAlignment(.leading)
                                             
                                             Spacer()
                                         }

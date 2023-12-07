@@ -27,6 +27,17 @@ struct ShieldsView: View {
             .listRowSeparator(.hidden)
             .padding([.leading, .trailing, .bottom])
 
+            // List of shields
+            ForEach(self.vm.packs, id: \.self) { pack in
+                ZStack {
+                    ShieldCardView(packsVM: self.vm, vm: PackDetailViewModel(packId: pack.id))
+                }
+                .listRowSeparator(.hidden)
+//                .background(
+//                    NavigationLink("", value: pack.id).opacity(0)
+//                )
+            }
+            
             // My shield (custom exceptions)
             ZStack(alignment: .topLeading) {
                 // Background
@@ -44,6 +55,18 @@ struct ShieldsView: View {
 
                 VStack(alignment: .leading) {
                     VStack(alignment: .leading, spacing: 8) {
+                        HStack {
+                            Text("CUSTOM")
+                                .font(.subheadline)
+                                .fontWeight(.medium)
+                                .foregroundColor(Color.secondary)
+                        }
+                        .padding(.top, 8)
+                        
+                        Text("Exceptions")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .foregroundColor(.primary)
 
                         Text("Manage your own custom entries to block or allow.")
                             .font(.body)
@@ -70,19 +93,9 @@ struct ShieldsView: View {
                     .cornerRadius(8, corners: [.bottomLeft, .bottomRight])
                 }
             }
+            .listRowSeparator(.hidden)
             .padding(.bottom, 8)
             .fixedSize(horizontal: false, vertical: true)
-
-            // List of shields
-            ForEach(self.vm.packs, id: \.self) { pack in
-                ZStack {
-                    ShieldCardView(packsVM: self.vm, vm: PackDetailViewModel(packId: pack.id))
-                }
-                .listRowSeparator(.hidden)
-//                .background(
-//                    NavigationLink("", value: pack.id).opacity(0)
-//                )
-            }
         }
         .listStyle(PlainListStyle())
         .alert(isPresented: self.$vm.showError) {

@@ -18,6 +18,7 @@ struct SupportView: View {
     @ObservedObject var tabVM = ViewModels.tab
 
     @Injected(\.commands) private var commands
+    @Injected(\.flutter) private var flutter
 
     var body: some View {
         NavigationView {
@@ -33,7 +34,7 @@ struct SupportView: View {
                 VStack {
                     Button(action: {
                         self.contentVM.stage.dismiss()
-                        self.contentVM.openLink(Link.KnowledgeBase)
+                        self.contentVM.openLink(self.flutter.isFlavorFamily ? Link.FamilyKnowledgeBase : Link.KnowledgeBase)
                     }) {
                         ZStack {
                             ButtonView(enabled: .constant(true), plus: .constant(true))

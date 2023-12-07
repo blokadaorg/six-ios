@@ -61,7 +61,7 @@ struct PaymentGatewayView: View {
                                 .padding(.bottom, 14)
                             }
                             
-                            Text("Protect your entire family with one subscription. Manage content your kids can access and monitor their activity.")
+                            Text("Protect your entire family with one subscription. Monitor and protect all family devices from unwanted content.")
                                .multilineTextAlignment(.center)
                                .lineLimit(6)
                                .font(.system(size: 18))
@@ -162,7 +162,7 @@ struct PaymentGatewayView: View {
                         .foregroundColor(Color.cPrimaryBackground)
                         .opacity(0.90)
                     )
-                    .opacity(self.vm.working || self.vm.error != nil || self.vm.options.isEmpty ? 0.0 : 0.0)
+                    .opacity(self.vm.working || self.vm.error != nil || self.vm.options.isEmpty ? 1.0 : 0.0)
                     .transition(.opacity)
                     .padding()
                     .accessibilityHidden(true)

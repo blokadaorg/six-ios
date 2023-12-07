@@ -125,10 +125,23 @@ class PacksViewModel: ObservableObject {
     }
 
     func getListName(_ listId: String) -> String {
-        if let packId = deck.getDeckIdForList(listId) {
-            return packs.first { it in
-                it.id == packId
-            }?.meta.title ?? listId
+        if let tag = deck.getTagForListId(listId) {
+            let components = tag.split(separator: "/").map(String.init)
+            if components.count == 2 {
+                let id = components[0]
+                let config = components[1]
+                let title = dataSource.packs.first { it in
+                    it.id == id
+                }?.meta.title
+
+                guard let title = title else {
+                    return tag
+                }
+
+                return "\(title) (\(config.capitalizingFirstLetter()))"
+            } else {
+                return tag
+            }
         } else {
             return listId
         }

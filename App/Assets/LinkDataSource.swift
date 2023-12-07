@@ -23,6 +23,7 @@ class LinkDataSource {
         Link.HowToRestore: "https://go.blokada.org/vpnrestore",
         Link.Support: "https://app.blokada.org/support?account-id=$ACCOUNTID&user-agent=$USERAGENT",
         Link.KnowledgeBase: "https://go.blokada.org/kb_ios",
+        Link.FamilyKnowledgeBase: "https://go.blokada.org/kb_ios_family",
         Link.Privacy: "https://go.blokada.org/privacy",
         Link.CloudPrivacy: "https://go.blokada.org/privacy_cloud",
         Link.FamilyPrivacy: "https://go.blokada.org/privacy_family",

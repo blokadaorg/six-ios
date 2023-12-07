@@ -23,6 +23,7 @@ enum Link {
     case HowToRestore
     case Support
     case KnowledgeBase
+    case FamilyKnowledgeBase
     case Privacy
     case CloudPrivacy
     case FamilyPrivacy

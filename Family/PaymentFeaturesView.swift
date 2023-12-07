@@ -37,7 +37,7 @@ struct PaymentFeaturesView: View {
                             
                             VStack(alignment: .leading) {
                                 HStack(alignment: .top) {
-                                    Image(systemName: Image.fHide)
+                                    Image(systemName: "ipad.and.iphone")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
                                         .frame(width: 48, height: 48)
@@ -45,34 +45,12 @@ struct PaymentFeaturesView: View {
                                         .foregroundColor(Color.cAccent)
 
                                     VStack(alignment: .leading) {
-                                        Text(L10n.paymentFeatureTitleNoAds)
+                                        Text("Family Device Monitoring")
                                             .font(.system(size: 20))
                                             .bold()
                                             .padding(.bottom)
 
-                                        Text(L10n.paymentFeatureDescNoAds)
-                                            .lineLimit(5)
-                                            .fixedSize(horizontal: false, vertical: true)
-                                    }
-                                    Spacer()
-                                }
-                                .padding(.bottom, 32)
-
-                                HStack(alignment: .top) {
-                                    Image(systemName: Image.fShield)
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width: 48, height: 48)
-                                        .padding([.leading, .trailing], 8)
-                                        .foregroundColor(Color.cAccent)
-
-                                    VStack(alignment: .leading) {
-                                        Text(L10n.paymentFeatureTitleEncryptDns)
-                                            .font(.system(size: 20))
-                                            .bold()
-                                            .padding(.bottom)
-
-                                        Text(L10n.paymentFeatureDescEncryptDns)
+                                        Text("Manage and monitor all your devices through a single app. Control access and content filtering directly from your device.")
                                             .lineLimit(5)
                                             .fixedSize(horizontal: false, vertical: true)
                                     }
@@ -94,7 +72,30 @@ struct PaymentFeaturesView: View {
                                             .bold()
                                             .padding(.bottom)
 
-                                        Text(L10n.paymentFeatureDescPerformance)
+                                        Text("Maintain a swift and responsive device while ensuring your internet connection remains at peak speeds, all thanks to our proven technology.")
+                                            .lineLimit(5)
+                                            .fixedSize(horizontal: false, vertical: true)
+                                    }
+                                    Spacer()
+                                }
+                                .padding(.bottom, 32)
+                                
+                                
+                                HStack(alignment: .top) {
+                                    Image(systemName: Image.fShield)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 48, height: 48)
+                                        .padding([.leading, .trailing], 8)
+                                        .foregroundColor(Color.cAccent)
+
+                                    VStack(alignment: .leading) {
+                                        Text(L10n.paymentFeatureTitleEncryptDns)
+                                            .font(.system(size: 20))
+                                            .bold()
+                                            .padding(.bottom)
+
+                                        Text("Enhance privacy across all your devices with DNS encryption. Blokada utilizes cutting-edge protocols to ensure your internet traffic remains confidential.")
                                             .lineLimit(5)
                                             .fixedSize(horizontal: false, vertical: true)
                                     }
@@ -116,7 +117,7 @@ struct PaymentFeaturesView: View {
                                             .bold()
                                             .padding(.bottom)
 
-                                        Text(L10n.paymentFeatureDescBattery)
+                                        Text("Activating Blokada won't drain your battery. It might actually help it last longer by blocking unnecessary background activities.")
                                             .lineLimit(5)
                                             .fixedSize(horizontal: false, vertical: true)
                                     }
@@ -124,8 +125,10 @@ struct PaymentFeaturesView: View {
                                 }
                                 .padding(.bottom, 32)
 
+                               
+
                                 HStack(alignment: .top) {
-                                    Image(systemName: Image.fComputer)
+                                    Image(systemName: Image.fHide)
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
                                         .frame(width: 48, height: 48)
@@ -133,19 +136,19 @@ struct PaymentFeaturesView: View {
                                         .foregroundColor(Color.cAccent)
 
                                     VStack(alignment: .leading) {
-                                        Text(L10n.paymentFeatureTitleDevicesCloud)
+                                        Text(L10n.paymentFeatureTitleNoAds)
                                             .font(.system(size: 20))
                                             .bold()
                                             .padding(.bottom)
 
-                                        Text(L10n.paymentFeatureDescDevicesCloud)
+                                        Text(L10n.paymentFeatureDescNoAds)
                                             .lineLimit(5)
                                             .fixedSize(horizontal: false, vertical: true)
                                     }
                                     Spacer()
                                 }
                                 .padding(.bottom, 32)
-
+                                
                                 HStack(alignment: .top) {
                                     Image(systemName: Image.fMessage)
                                         .resizable()

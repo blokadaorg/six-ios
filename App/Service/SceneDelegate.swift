@@ -79,21 +79,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidBecomeActive(_ scene: UIScene) {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
-        BlockaLogger.v("Main", "Scene did become active")
+        foreground.onForeground(true)
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
         // Called when the scene will move from an active state to an inactive state.
         // This may occur due to temporary interruptions (ex. an incoming phone call).
+        
+        // Close the kb when leaving to bg
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+
+        foreground.onForeground(false)
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {
-        foreground.onForeground(true)
         UIApplication.shared.applicationIconBadgeNumber = 0
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
-        foreground.onForeground(false)
     }
 
     // Quick action selected by user

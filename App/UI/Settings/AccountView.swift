@@ -24,33 +24,36 @@ struct AccountView: View {
 
     var body: some View {
         Form {
-            Section(header: Text(L10n.accountSectionHeaderGeneral)) {
-                Button(action: {
-                    if self.id == "••••••" {
-                        self.vm.authenticate { id in
-                            self.id = id
-                        }
-                    }
-                }) {
-                    HStack {
-                        Text(L10n.accountLabelId)
-                        .foregroundColor(Color.cPrimary)
-                        Spacer()
-                        Text(self.id)
-                            .foregroundColor(Color.secondary)
-                    }
-                }
-                .contextMenu {
+            if (self.vm.type != .Family) {
+                Section(header: Text(L10n.accountSectionHeaderGeneral)) {
                     Button(action: {
-                        self.vm.authenticate { id in
-                            self.vm.copyAccountIdToClipboard()
+                        if self.id == "••••••" {
+                            self.vm.authenticate { id in
+                                self.id = id
+                            }
                         }
                     }) {
-                        Text(L10n.universalActionCopy)
-                        Image(systemName: Image.fCopy)
+                        HStack {
+                            Text(L10n.accountLabelId)
+                                .foregroundColor(Color.cPrimary)
+                            Spacer()
+                            Text(self.id)
+                                .foregroundColor(Color.secondary)
+                        }
+                    }
+                    .contextMenu {
+                        Button(action: {
+                            self.vm.authenticate { id in
+                                self.vm.copyAccountIdToClipboard()
+                            }
+                        }) {
+                            Text(L10n.universalActionCopy)
+                            Image(systemName: Image.fCopy)
+                        }
                     }
                 }
             }
+
             if self.vm.active {
                 Section(header: Text(L10n.accountSectionHeaderSubscription)) {
                     HStack {

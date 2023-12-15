@@ -32,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     @Injected(\.plusKeypair) private var plusKeypair
     @Injected(\.stats) private var stats
     @Injected(\.rate) private var rate
+    @Injected(\.link) private var link
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)

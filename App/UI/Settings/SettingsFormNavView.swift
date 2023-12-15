@@ -11,6 +11,7 @@
 //
 
 import SwiftUI
+import Factory
 
 // Used in iPhone mode, where we utilize the built in navigation.
 struct SettingsFormNavView: View {
@@ -18,6 +19,10 @@ struct SettingsFormNavView: View {
     @ObservedObject var vm = ViewModels.account
     @ObservedObject var tabVM = ViewModels.tab
     @ObservedObject var contentVM = ViewModels.content
+
+    @Injected(\.commands) private var commands
+    @State private var showNewPin = false
+    @State private var newPin = ""
 
     var body: some View {
         Form {
@@ -48,6 +53,25 @@ struct SettingsFormNavView: View {
                     )
                     .background(NavigationLink("", value: "logRetention").opacity(0))
                 }
+                
+                if (self.vm.type == .Family) {
+                    Button(action: {
+                        self.showNewPin = true
+                        self.newPin = ""
+                    }) {
+                        SettingsItemView(
+                            title: "Change pin",
+                            image: "lock.fill",
+                            selected: false
+                        )
+                    }
+                    .alert("Change pin", isPresented: self.$showNewPin) {
+                        TextField("", text: $newPin)
+                            .keyboardType(.decimalPad)
+                        Button("Cancel", action: { self.showNewPin = false })
+                        Button("Save", action: submit)
+                    }
+                }
             }
             
             Section(header: Text(L10n.accountSectionHeaderOther)) {
@@ -62,7 +86,7 @@ struct SettingsFormNavView: View {
                 }
 
                 Button(action: {
-                    self.contentVM.openLink(Link.Credits)
+                    self.contentVM.openLink(LinkId.credits)
                 }) {
                     SettingsItemView(
                         title: L10n.accountActionAbout,
@@ -74,6 +98,17 @@ struct SettingsFormNavView: View {
         }
         .navigationBarTitle(L10n.mainTabSettings)
         .accentColor(Color.cAccent)
+    }
+
+    let formatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .ordinal
+        return formatter
+    }()
+
+    func submit() {
+        self.showNewPin = false
+        self.commands.execute(.setPin, self.newPin)
     }
 }
 

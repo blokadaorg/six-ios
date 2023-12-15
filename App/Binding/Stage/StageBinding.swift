@@ -120,6 +120,8 @@ class StageBinding: StageOps {
             currentModal.send(modal)
         } else if (modal == .fault) {
             error.send(L10n.errorUnknown)
+        } else if (modal == .faultLocked) {
+            error.send(L10n.errorLocked)
         } else if (modal == .accountInitFailed) {
             error.send(L10n.errorUnknown)
         } else if (modal == .accountRestoreFailed) {

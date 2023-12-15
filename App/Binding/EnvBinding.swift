@@ -15,6 +15,7 @@ import Factory
 import UIKit
 
 class EnvBinding: EnvOps {
+    
     @Injected(\.flutter) private var flutter
 
     init() {
@@ -61,9 +62,10 @@ class EnvBinding: EnvOps {
             deviceName: deviceName
         )))
     }
-
-    func doGetUserAgent(completion: @escaping (Result<String, Error>) -> Void) {
-        completion(Result.success(getUserAgent()))
+    
+    func doUserAgentChanged(userAgent: String, completion: @escaping (Result<Void, Error>) -> Void) {
+        // TODO: thos is ignored for now
+        completion(.success(()))
     }
 
     fileprivate var cpu: String {

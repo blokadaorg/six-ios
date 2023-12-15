@@ -71,7 +71,7 @@ struct SettingsFormNoNavView: View {
                 }
 
                 Button(action: {
-                    self.contentVM.openLink(Link.Credits)
+                    self.contentVM.openLink(LinkId.credits)
                 }) {
                     SettingsItemView(
                         title: L10n.accountActionAbout,

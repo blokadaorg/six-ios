@@ -98,10 +98,10 @@ struct ContentView: View {
                     .transition(.opacity)
                     .animation(.easeInOut(duration: 0.5))
             }
-            .alert("Rename device", isPresented: self.$homeVM.showInput) {
+            .alert(L10n.familyRenameDevice, isPresented: self.$homeVM.showInput) {
                 TextField("", text: $userInput)
-                Button("Cancel", action: { self.vm.stage.onDismissed() })
-                Button("Save", action: submit)
+                Button(L10n.universalActionCancel, action: { self.vm.stage.onDismissed() })
+                Button(L10n.universalActionSave, action: submit)
             }
             // TODO: remove his global alert thing
             .alert(isPresented: self.$homeVM.showError) {

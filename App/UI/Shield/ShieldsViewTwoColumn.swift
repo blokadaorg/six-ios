@@ -36,7 +36,7 @@ struct ShieldsViewTwoColumn: View {
         
         // Use LazyVGrid to create the two-column layout
         ScrollView {
-            Text("Activate shields to block access to selected content on your supervised devices.")
+            Text(L10n.familyShieldsHeader)
             .font(.subheadline)
             .foregroundColor(.secondary)
             .listRowSeparator(.hidden)
@@ -76,12 +76,12 @@ struct ShieldsViewTwoColumn: View {
                                 }
                                 .padding(.top, 8)
                                 
-                                Text("Exceptions")
+                                Text(L10n.userdeniedSectionHeader)
                                     .font(.largeTitle)
                                     .fontWeight(.bold)
                                     .foregroundColor(.primary)
 
-                                Text("Manage your own custom entries to block or allow.")
+                                Text(L10n.familyShieldsCustomSlug)
                                     .font(.body)
                                     .padding(.bottom, 16)
                                     .foregroundColor(.primary)
@@ -95,7 +95,7 @@ struct ShieldsViewTwoColumn: View {
                                     ZStack {
                                         ButtonView(enabled: .constant(true), plus: .constant(true))
                                             .frame(height: 44)
-                                        Text("Open exceptions")
+                                        Text(L10n.userdefinedActionOpen)
                                             .foregroundColor(.white)
                                             .bold()
                                     }

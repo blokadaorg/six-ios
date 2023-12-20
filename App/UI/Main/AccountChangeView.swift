@@ -43,13 +43,13 @@ struct AccountChangeView: View {
         NavigationView {
             ZStack {
                 VStack {
-                    Text("Attach device")
+                    Text(L10n.familyAccountAttachHeader)
                         .font(.largeTitle)
                         .bold()
                         .padding()
                         .padding([.top], 24)
 
-                    Text("To link this device to the parent device, complete the setup process. Once linked, this device will be locked, allowing you to configure and monitor it from the parent device.")
+                    Text(L10n.familyAccountAttachBody)
                     .foregroundColor(.secondary)
                     .font(.subheadline)
                     .padding(.top, 24)
@@ -64,9 +64,9 @@ struct AccountChangeView: View {
                         .padding(.trailing) 
 
                         VStack(alignment: .leading) {
-                            Text("Scan QR code")
+                            Text(L10n.familyAccountQrHeader)
                             .fontWeight(.medium)
-                            Text("Scan the QR code from the parent device, in order to initiate the linking process.")
+                            Text(L10n.familyAccountQrBody)
                                 .foregroundColor(.secondary)
                         }
                         .font(.subheadline)
@@ -91,7 +91,7 @@ struct AccountChangeView: View {
                                         .resizable()
                                         .frame(width: 20, height: 20)
                                         .foregroundColor(.white)
-                                    Text("Scan")
+                                    Text(L10n.familyAccountQrActionButton)
                                         .foregroundColor(.white)
                                         .bold()
                                 }

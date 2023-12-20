@@ -57,11 +57,11 @@ struct PaymentGatewayView: View {
                                     PaymentFeaturesView(showSheet: self.$showPlusFeaturesSheet)
 
                                 }
-                                .padding(.top, 40)
+                                .padding(.top, 56)
                                 .padding(.bottom, 14)
                             }
                             
-                            Text("Protect your entire family with one subscription. Monitor and protect all family devices from unwanted content.")
+                            Text(L10n.familyPaymentSlug)
                                .multilineTextAlignment(.center)
                                .lineLimit(6)
                                .font(.system(size: 18))

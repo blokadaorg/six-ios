@@ -60,16 +60,16 @@ struct SettingsFormNavView: View {
                         self.newPin = ""
                     }) {
                         SettingsItemView(
-                            title: "Change pin",
+                            title: L10n.lockChangePin,
                             image: "lock.fill",
                             selected: false
                         )
                     }
-                    .alert("Change pin", isPresented: self.$showNewPin) {
+                    .alert(L10n.lockChangePin, isPresented: self.$showNewPin) {
                         TextField("", text: $newPin)
                             .keyboardType(.decimalPad)
-                        Button("Cancel", action: { self.showNewPin = false })
-                        Button("Save", action: submit)
+                        Button(L10n.universalActionCancel, action: { self.showNewPin = false })
+                        Button(L10n.universalActionSave, action: submit)
                     }
                 }
             }

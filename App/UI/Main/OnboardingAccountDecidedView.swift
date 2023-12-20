@@ -23,7 +23,7 @@ struct OnboardingAccountDecidedView: View {
         NavigationView {
             ZStack {
                 VStack {
-                    Text("Add device")
+                    Text(L10n.familyAccountDecideHeader)
                         .font(.largeTitle)
                         .bold()
                         .padding()
@@ -41,10 +41,10 @@ struct OnboardingAccountDecidedView: View {
                                 .padding(.trailing)
                             
                             VStack(alignment: .leading) {
-                                Text("Link a device")
+                                Text(L10n.familyAccountDecideLinkHeader)
                                     .fontWeight(.medium)
                                     .foregroundColor(.primary)
-                                Text("In Blokada, you simply scan a QR code to link and manage another device.")
+                                Text(L10n.familyAccountDecideLinkBody)
                                     .foregroundColor(.secondary)
                                     .multilineTextAlignment(.leading)
                             }
@@ -60,7 +60,7 @@ struct OnboardingAccountDecidedView: View {
                     }
                     .padding(.bottom, 8)
                     
-                    Text("- or -")
+                    Text(L10n.familyAccountDecideSeparator)
                     .foregroundColor(.secondary)
                     .font(.subheadline)
                     .padding()
@@ -77,11 +77,11 @@ struct OnboardingAccountDecidedView: View {
                                 .padding(.trailing)
                             
                             VStack(alignment: .leading) {
-                                Text("Use this device")
+                                Text(L10n.familyAccountDecideThisHeader)
                                     .fontWeight(.medium)
                                     .foregroundColor(.primary)
 
-                                Text("Alternatively, you may simply configure Blokada to work on this device, and set the pin to lock the app.")
+                                Text(L10n.familyAccountDecideThisBody)
                                     .foregroundColor(.secondary)
                                     .multilineTextAlignment(.leading)
                             }

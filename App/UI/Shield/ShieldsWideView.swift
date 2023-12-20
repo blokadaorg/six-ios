@@ -18,7 +18,7 @@ struct ShieldsWideView: View {
     var body: some View {
         NavigationStack(path: self.$vm.sectionStack) {
             ShieldsViewTwoColumn()
-            .navigationTitle("Shields")
+            .navigationTitle(L10n.shieldsSectionHeader)
 //            .navigationDestination(for: String.self) { packId in
 //                PackDetailView(vm: PackDetailViewModel(packId: packId))
 //            }

@@ -41,7 +41,7 @@ struct TabFamilyHorizontalView: View {
                     onTap: { self.onTap($0) }
                 )
                 TabItemView(
-                    id: .Advanced, icon: "blokada", text: "Shields", badge: nil,
+                    id: .Advanced, icon: "blokada", text: L10n.shieldsSectionHeader, badge: nil,
                     onTap: { self.onTap($0) }
                 )
                 TabItemView(

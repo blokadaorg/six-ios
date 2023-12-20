@@ -48,7 +48,7 @@ struct AccountLinkView: View {
             ScrollView {
                 ZStack {
                     VStack {
-                        Text("Link device")
+                        Text(L10n.familyAccountLinkHeader)
                             .font(.largeTitle)
                             .bold()
                             .padding()
@@ -64,7 +64,7 @@ struct AccountLinkView: View {
                                 .padding(.trailing)
                             
                             VStack(alignment: .leading) {
-                                Text("Set device name")
+                                Text(L10n.familyAccountLinkName)
                                     .fontWeight(.medium)
                                 HStack {
                                     TextField(L10n.accountIdStatusUnchanged, text: $deviceName)
@@ -92,9 +92,9 @@ struct AccountLinkView: View {
                                 .padding(.trailing)
                             
                             VStack(alignment: .leading) {
-                                Text("Scan this QR code")
+                                Text(L10n.familyAccountLinkQrHeader)
                                     .fontWeight(.medium)
-                                Text("This screen will close automatically once the new device has been detected.")
+                                Text(L10n.familyAccountQrBody)
                                     .foregroundColor(.secondary)
                             }
                             .font(.subheadline)

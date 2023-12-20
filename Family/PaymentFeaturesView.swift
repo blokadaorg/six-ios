@@ -45,12 +45,12 @@ struct PaymentFeaturesView: View {
                                         .foregroundColor(Color.cAccent)
 
                                     VStack(alignment: .leading) {
-                                        Text("Family Device Monitoring")
+                                        Text(L10n.familyPaymentFeaturesDevicesHeader)
                                             .font(.system(size: 20))
                                             .bold()
                                             .padding(.bottom)
 
-                                        Text("Manage and monitor all your devices through a single app. Control access and content filtering directly from your device.")
+                                        Text(L10n.familyPaymentFeaturesDevicesBody)
                                             .lineLimit(5)
                                             .fixedSize(horizontal: false, vertical: true)
                                     }
@@ -72,7 +72,7 @@ struct PaymentFeaturesView: View {
                                             .bold()
                                             .padding(.bottom)
 
-                                        Text("Maintain a swift and responsive device while ensuring your internet connection remains at peak speeds, all thanks to our proven technology.")
+                                        Text(L10n.familyPaymentFeaturesPerformanceBody)
                                             .lineLimit(5)
                                             .fixedSize(horizontal: false, vertical: true)
                                     }
@@ -95,7 +95,7 @@ struct PaymentFeaturesView: View {
                                             .bold()
                                             .padding(.bottom)
 
-                                        Text("Enhance privacy across all your devices with DNS encryption. Blokada utilizes cutting-edge protocols to ensure your internet traffic remains confidential.")
+                                        Text(L10n.familyPaymentFeaturesDnsBody)
                                             .lineLimit(5)
                                             .fixedSize(horizontal: false, vertical: true)
                                     }
@@ -117,7 +117,7 @@ struct PaymentFeaturesView: View {
                                             .bold()
                                             .padding(.bottom)
 
-                                        Text("Activating Blokada won't drain your battery. It might actually help it last longer by blocking unnecessary background activities.")
+                                        Text(L10n.familyPaymentFeaturesBatteryBody)
                                             .lineLimit(5)
                                             .fixedSize(horizontal: false, vertical: true)
                                     }

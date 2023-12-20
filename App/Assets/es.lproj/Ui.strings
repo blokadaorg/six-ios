@@ -495,11 +495,16 @@
 "universal status waiting for data" = "Esperando datos";
 "universal action disable" = "Desactivar";
 
+// Make it as short as possible
 "lock action slide unlock" = "Deslizar para desbloquear";
+// The app will use this version if the Slide to unlock is too long
+"lock action slide unlock short" = "Deslizar";
 "lock status too many attempts" = "Demasiados intentos erróneos. Inténtalo más tarde";
 "lock status enter to confirm" = "Introduzca de nuevo el código pin para confirmar";
 "lock status enter or wait" = "Introduce un nuevo código pin o espera para bloquear...";
+"lock change pin" = "Cambiar pin";
 
+"family rename device" = "Cambiar el nombre del dispositivo";
 "family label this device" = "Este dispositivo (%@)";
 "family onboard header" = "¡Bienvenido a Blokada Familia!";
 "family onboard body" = "Siga las instrucciones en pantalla para configurar su primer dispositivo.";
@@ -542,8 +547,14 @@
 "family account decide header" = "Añadir dispositivo";
 "family account decide link header" = "Vincular un dispositivo";
 "family account decide link body" = "En Blokada, simplemente escanea un código QR para enlazar y administrar otro dispositivo.";
+"family account decide separator" = "- o -";
 "family account decide this header" = "Usar este dispositivo";
 "family account decide this body" = "Alternativamente, puede configurar Blokada para que funcione en este dispositivo y configurar el pin para que bloquee la aplicación.";
 
 "family shields header" = "Activa escudos para bloquear el acceso al contenido seleccionado en tus dispositivos supervisados.";
 "family shields custom slug" = "Gestiona tus propias entradas personalizadas para bloquear o permitir.";
+
+// When a company name is other than the big ones
+"toplist company other" = "Otro";
+// When a domain is unknown
+"toplist tld unknown" = "desconocido";

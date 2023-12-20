@@ -46,3 +46,60 @@
 "A blocklist of malicious websites that are being used for malware distribution, based on urlhaus.abuse.ch." = "urlhaus.abuse.ch に基づいて、マルウェア配布に使用されている悪意のあるウェブサイトをブロックします。";
 "A blocklist from the maker of the adblocker test" = "広告ブロッカーテストサイト製作者のブロックリスト";
 "This is the official blocklist from d3ward, the maker of the popular adblocker testing website. It is meant to achieve 100% score in the test. Keep in mind, this is a minimum list. You may want to use it together with another blocklist activated. If you wish to perform the test, just visit go.blokada.org/test" = "これは、人気の広告ブロッカーテストサイトの製作者である d3ward の公式ブロックリストです。テストで 100% のスコアを達成するために必要な最低限の内容が含まれており、他のブロックリストと一緒に使用することができます。go.blokada.org/test からテストを実行できます。";
+// Family packs (shields) below
+// Name of the Ads shield
+"Ads" = "広告";
+"Blocks advertisements and tracking" = "広告とトラッキングをブロック";
+"Eliminates intrusive advertisements and web tracking. Enhances browsing speed and safeguards user privacy." = "侵入型広告やWebトラッキングを排除します。ブラウジング速度を向上させ、ユーザーのプライバシーを保護します。";
+// Name of the Malware shield
+"Malware" = "Malware";
+"Protects against malicious software" = "悪意のあるソフトウェアから保護";
+"Defends against malicious software and harmful websites. Provides a secure shield against a spectrum of cyber threats." = "悪意のあるソフトウェアや有害なウェブサイトから守ります。サイバー脅威のスペクトルに対する安全なシールドを提供します。";
+// Name of the Porn shield
+"Porn" = "Porn";
+"Blocks adult and pornographic content" = "大人とポルノコンテンツをブロック";
+"This filter targets adult content for a safer online experience. It shields users from explicit materials and potential risks." = "このフィルターは、より安全なオンライン体験のためにアダルトコンテンツをターゲットにしています。明示的な素材と潜在的なリスクからユーザーを保護します。";
+// Name of the Dating shield
+"Dating" = "デート";
+"Blocks dating and relationship-seeking websites" = "デートとリレーションシップシークのウェブサイトをブロック";
+"Designed to restrict online dating platforms. It offers protection against potential distractions and unwanted interactions." = "オンラインを制限するように設計 日付 プラットフォーム. これは、潜在的な気晴らしや不要な相互作用に対する保護を提供しています.";
+// Name of the Gambling shield
+"Gambling" = "Gambling";
+"Blocks gambling-related content and websites" = "ギャンブル関連のコンテンツとウェブサイトをブロック";
+"Denies access to gambling platforms and content. Helps in preventing addiction and ensuring financial safety." = "ギャンブルプラットフォームやコンテンツへのアクセスを拒否します。中毒を防ぎ、財務上の安全を確保するのに役立ちます。";
+// Name of the Piracy shield
+"Piracy" = "<unk>";
+"Blocks piracy websites and related content" = "著作権侵害のウェブサイトと関連するコンテンツをブロックします";
+"Blocks unauthorized piracy sites and related platforms. Safeguards intellectual property and reduces harmful download risks." = "不正な著作権侵害サイトや関連プラットフォームをブロックします。知的財産を保護し、有害なダウンロードリスクを軽減します。";
+// Name of the Video streaming shield
+"Video streaming" = "ビデオストリーミング";
+"Blocks popular video streaming platforms" = "人気のビデオストリーミングプラットフォームをブロック";
+"Curbs access to top video streaming services. Crafted for users wanting to manage viewing habits and save bandwidth." = "トップビデオストリーミングサービスへのアクセスを制限します。閲覧習慣を管理し、帯域幅を節約したいユーザー向けに作成されます。";
+// Name of the Streaming apps shield
+"Streaming apps" = "ストリーミングアプリ";
+"Blocks streaming apps and related content" = "ストリーミングアプリと関連コンテンツをブロック";
+"Features a curated selection of popular streaming apps. Allows granular control over media consumption." = "人気のストリーミングアプリを厳選しています。メディア消費を細かく制御できます。";
+// Name of the Social media shield
+"Social media" = "SNS";
+"Restricts access to social networking platforms" = "ソーシャルネットワーキングプラットフォームへのアクセスを制限する";
+"Limits access to various social media platforms. Ideal for enhancing work focus and moderating children's usage." = "さまざまなソーシャルメディアプラットフォームへのアクセスを制限します。";
+// Name of the Chat apps shield
+"Chat apps" = "チャットアプリ";
+"Restricts popular messaging and chat applications" = "一般的なメッセージングやチャットアプリケーションを制限します";
+"This shield is designed to block widely-used messaging and chat apps. Perfect for those wanting to control their communication channels." = "このシールドは、広く使われているメッセージングやチャットアプリをブロックするように設計されています。通信チャネルを制御したい人に最適です。";
+// Name of the Gaming shield
+"Gaming" = "ゲーム";
+"Blocks gaming platforms and related content" = "ゲームプラットフォームと関連するコンテンツをブロックします";
+"Restricts online gaming sites and related distractions. Designed for users wanting a balanced digital lifestyle." = "オンラインゲームサイトと関連する気晴らしを制限します。バランスの取れたデジタルライフスタイルを望むユーザー向けに設計されています。";
+// Name of the Games shield
+"Games" = "ゲーム";
+"Restricts access to popular games" = "人気のゲームへのアクセスを制限します";
+"Showcases top gaming applications. Ideal for users desiring precise game access control." = "最高のゲームアプリケーションを紹介します。正確なゲームアクセス制御を望むユーザーに最適です。";
+// Name of the Online shopping apps shield
+"Online shopping apps" = "オンラインショッピングアプリ";
+"Blocks leading e-commerce and shopping applications" = "主要な電子商取引およびショッピングアプリケーションをブロック";
+"This shield prevents access to the common shopping apps. It aids users in curbing impulse purchases or distractions." = "このシールドは、一般的なショッピングアプリへのアクセスを防ぎます。インパルス購入や気晴らしの抑制に役立ちます。";
+// Name of the Miscellaneous apps shield
+"Miscellaneous apps" = "その他のアプリ";
+"A selection of various popular applications" = "様々な人気のあるアプリケーションの選択";
+"This shield provides a list of popular apps of various type. It's created for users aiming for a more comprehensive app control." = "このシールドは、さまざまな種類の人気のアプリのリストを提供します。より包括的なアプリコントロールを目指してユーザーのために作成されました。";

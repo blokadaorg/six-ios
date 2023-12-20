@@ -495,11 +495,16 @@
 "universal status waiting for data" = "Čekání na data";
 "universal action disable" = "Zakázat";
 
+// Make it as short as possible
 "lock action slide unlock" = "Přejetím odemknete";
+// The app will use this version if the Slide to unlock is too long
+"lock action slide unlock short" = "Posunutí";
 "lock status too many attempts" = "Příliš mnoho chybných pokusů. Zkuste to později";
 "lock status enter to confirm" = "Pro potvrzení zadejte PIN kód znovu";
 "lock status enter or wait" = "Zadejte nový pin kód, nebo počkejte na zamknutí...";
+"lock change pin" = "Změnit pin";
 
+"family rename device" = "Přejmenovat zařízení";
 "family label this device" = "Toto zařízení (%@)";
 "family onboard header" = "Vítejte v rodině Blokady!";
 "family onboard body" = "Postupujte podle pokynů na obrazovce a nastavte své první zařízení.";
@@ -542,8 +547,14 @@
 "family account decide header" = "Přidat zařízení";
 "family account decide link header" = "Propojit zařízení";
 "family account decide link body" = "V Blokadě jednoduše naskenujete QR kód pro propojení a správu jiného zařízení.";
+"family account decide separator" = "- nebo -";
 "family account decide this header" = "Použít toto zařízení";
 "family account decide this body" = "Alternativně můžete jednoduše nakonfigurovat Blokadu, aby fungovala na tomto zařízení, a nastavit pin pro zamknutí aplikace.";
 
 "family shields header" = "Aktivujte štíty pro blokování přístupu k vybranému obsahu ve vašich dohlížených zařízeních.";
 "family shields custom slug" = "Spravujte své vlastní položky pro blokování nebo povolení.";
+
+// When a company name is other than the big ones
+"toplist company other" = "Ostatní";
+// When a domain is unknown
+"toplist tld unknown" = "neznámé";

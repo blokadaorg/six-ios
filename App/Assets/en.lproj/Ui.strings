@@ -495,11 +495,16 @@
 "universal status waiting for data" = "Waiting for data";
 "universal action disable" = "Disable";
 
+// Make it as short as possible
 "lock action slide unlock" = "Slide to unlock";
+// The app will use this version if the Slide to unlock is too long
+"lock action slide unlock short" = "Slide";
 "lock status too many attempts" = "Too many wrong attempts. Try again later";
 "lock status enter to confirm" = "Enter the pin code again to confirm";
 "lock status enter or wait" = "Enter new pin code, or wait to lock...";
+"lock change pin" = "Change pin";
 
+"family rename device" = "Rename device";
 "family label this device" = "This device (%@)";
 "family onboard header" = "Welcome to Blokada Family!";
 "family onboard body" = "Follow the instructions on screen to set up your first device.";
@@ -542,8 +547,14 @@
 "family account decide header" = "Add device";
 "family account decide link header" = "Link a device";
 "family account decide link body" = "In Blokada, you simply scan a QR code to link and manage another device.";
+"family account decide separator" = "- or -";
 "family account decide this header" = "Use this device";
 "family account decide this body" = "Alternatively, you may simply configure Blokada to work on this device, and set the pin to lock the app.";
 
 "family shields header" = "Activate shields to block access to selected content on your supervised devices.";
 "family shields custom slug" = "Manage your own custom entries to block or allow.";
+
+// When a company name is other than the big ones
+"toplist company other" = "Other";
+// When a domain is unknown
+"toplist tld unknown" = "unknown";

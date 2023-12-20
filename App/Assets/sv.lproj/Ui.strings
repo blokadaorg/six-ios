@@ -495,11 +495,16 @@
 "universal status waiting for data" = "Väntar på data";
 "universal action disable" = "Inaktivera";
 
+// Make it as short as possible
 "lock action slide unlock" = "Dra för att låsa upp";
+// The app will use this version if the Slide to unlock is too long
+"lock action slide unlock short" = "Glid";
 "lock status too many attempts" = "För många felaktiga försök. Försök igen senare";
 "lock status enter to confirm" = "Ange pinkoden igen för att bekräfta";
 "lock status enter or wait" = "Ange ny PIN-kod eller vänta med att låsa...";
+"lock change pin" = "Ändra pin";
 
+"family rename device" = "Byt namn på enhet";
 "family label this device" = "Den här enheten (%@)";
 "family onboard header" = "Välkommen till Blokada Familj!";
 "family onboard body" = "Följ instruktionerna på skärmen för att ställa in din första enhet.";
@@ -542,8 +547,14 @@
 "family account decide header" = "Lägg till enhet";
 "family account decide link header" = "Länka en enhet";
 "family account decide link body" = "I Blokada skannar du helt enkelt en QR-kod för att länka och hantera en annan enhet.";
+"family account decide separator" = "- eller -";
 "family account decide this header" = "Använd denna enhet";
 "family account decide this body" = "Alternativt kan du helt enkelt konfigurera Blokada att arbeta på denna enhet, och ställa in stiftet för att låsa appen.";
 
 "family shields header" = "Aktivera sköldar för att blockera åtkomst till valt innehåll på dina övervakade enheter.";
 "family shields custom slug" = "Hantera dina egna anpassade poster att blockera eller tillåta.";
+
+// When a company name is other than the big ones
+"toplist company other" = "Annat";
+// When a domain is unknown
+"toplist tld unknown" = "okänd";

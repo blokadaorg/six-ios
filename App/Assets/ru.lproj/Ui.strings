@@ -495,11 +495,16 @@
 "universal status waiting for data" = "Ожидание данных";
 "universal action disable" = "Отключено";
 
+// Make it as short as possible
 "lock action slide unlock" = "Проведите для разблокировки";
+// The app will use this version if the Slide to unlock is too long
+"lock action slide unlock short" = "Слайд";
 "lock status too many attempts" = "Слишком много неправильных попыток. Повторите позже";
 "lock status enter to confirm" = "Для подтверждения введите пин-код еще раз";
 "lock status enter or wait" = "Введите новый пин-код или дождитесь блокировки...";
+"lock change pin" = "Изменить пин-код";
 
+"family rename device" = "Переименовать устройство";
 "family label this device" = "Это устройство (%@)";
 "family onboard header" = "Добро пожаловать в Blokada Family!";
 "family onboard body" = "Следуйте инструкциям на экране, чтобы настроить ваше первое устройство.";
@@ -542,8 +547,14 @@
 "family account decide header" = "Добавить устройство";
 "family account decide link header" = "Привязать устройство";
 "family account decide link body" = "В Blokada вы просто сканируете QR-код, чтобы связать и управлять другим устройством.";
+"family account decide separator" = "- или -";
 "family account decide this header" = "Использовать это устройство";
 "family account decide this body" = "Кроме того, вы можете просто настроить Blokada для работы на этом устройстве и установить пин-код для блокировки приложения.";
 
 "family shields header" = "Активируйте защиту, чтобы заблокировать доступ к выбранному контенту на контролируемых устройствах.";
 "family shields custom slug" = "Управляйте собственными пользовательскими записями, чтобы блокировать или разрешать их.";
+
+// When a company name is other than the big ones
+"toplist company other" = "Прочее";
+// When a domain is unknown
+"toplist tld unknown" = "неизвестно";

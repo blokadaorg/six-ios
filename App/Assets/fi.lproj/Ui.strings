@@ -495,11 +495,16 @@
 "universal status waiting for data" = "Odotetaan tietoja";
 "universal action disable" = "Poista Käytöstä";
 
+// Make it as short as possible
 "lock action slide unlock" = "Poista lukitus liu'uttamalla";
+// The app will use this version if the Slide to unlock is too long
+"lock action slide unlock short" = "Liu'uta";
 "lock status too many attempts" = "Liian monta väärää yritystä. Yritä myöhemmin uudelleen";
 "lock status enter to confirm" = "Syötä pin koodi uudelleen vahvistaaksesi";
 "lock status enter or wait" = "Syötä uusi pin koodi tai odota lukkoa...";
+"lock change pin" = "Vaihda pinni";
 
+"family rename device" = "Nimeä laite uudelleen";
 "family label this device" = "Tämä laite (%@)";
 "family onboard header" = "Tervetuloa Blokada-perheeseen!";
 "family onboard body" = "Noudata näytöllä olevia ohjeita määrittääksesi ensimmäisen laitteen.";
@@ -542,8 +547,14 @@
 "family account decide header" = "Lisää laite";
 "family account decide link header" = "Linkitä laite";
 "family account decide link body" = "Blokadassa voit yksinkertaisesti skannata QR-koodin linkittääksesi ja hallitaksesi toista laitetta.";
+"family account decide separator" = "- tai -";
 "family account decide this header" = "Käytä tätä laitetta";
 "family account decide this body" = "Vaihtoehtoisesti voit yksinkertaisesti määrittää Blokada-konfiguroida toimimaan tällä laitteella ja asettaa tapin lukitsemaan sovelluksen.";
 
 "family shields header" = "Aktivoi kilvet estääksesi pääsyn valittuun sisältöön valvotuissa laitteissa.";
 "family shields custom slug" = "Hallitse omia omia merkintöjäsi estääksesi tai sallitaksesi.";
+
+// When a company name is other than the big ones
+"toplist company other" = "Muu";
+// When a domain is unknown
+"toplist tld unknown" = "tuntematon";

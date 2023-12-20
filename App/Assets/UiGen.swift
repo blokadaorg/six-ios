@@ -346,6 +346,8 @@ internal enum L10n {
   internal static let familyAccountDecideLinkBody = L10n.tr("Ui", "family account decide link body")
   /// Link a device
   internal static let familyAccountDecideLinkHeader = L10n.tr("Ui", "family account decide link header")
+  /// - or -
+  internal static let familyAccountDecideSeparator = L10n.tr("Ui", "family account decide separator")
   /// Alternatively, you may simply configure Blokada to work on this device, and set the pin to lock the app.
   internal static let familyAccountDecideThisBody = L10n.tr("Ui", "family account decide this body")
   /// Use this device
@@ -390,6 +392,8 @@ internal enum L10n {
   internal static let familyPaymentFeaturesPerformanceBody = L10n.tr("Ui", "family payment features performance body")
   /// Protect your entire family with one subscription. Monitor and protect all family devices from unwanted content.
   internal static let familyPaymentSlug = L10n.tr("Ui", "family payment slug")
+  /// Rename device
+  internal static let familyRenameDevice = L10n.tr("Ui", "family rename device")
   /// Manage your own custom entries to block or allow.
   internal static let familyShieldsCustomSlug = L10n.tr("Ui", "family shields custom slug")
   /// Activate shields to block access to selected content on your supervised devices.
@@ -474,6 +478,10 @@ internal enum L10n {
   internal static let locationRegionWorldwide = L10n.tr("Ui", "location region worldwide")
   /// Slide to unlock
   internal static let lockActionSlideUnlock = L10n.tr("Ui", "lock action slide unlock")
+  /// Slide
+  internal static let lockActionSlideUnlockShort = L10n.tr("Ui", "lock action slide unlock short")
+  /// Change pin
+  internal static let lockChangePin = L10n.tr("Ui", "lock change pin")
   /// Enter new pin code, or wait to lock...
   internal static let lockStatusEnterOrWait = L10n.tr("Ui", "lock status enter or wait")
   /// Enter the pin code again to confirm
@@ -810,6 +818,10 @@ internal enum L10n {
   internal static let statsTopAllowedHeader = L10n.tr("Ui", "stats top allowed header")
   /// Top blocked requests
   internal static let statsTopBlockedHeader = L10n.tr("Ui", "stats top blocked header")
+  /// Other
+  internal static let toplistCompanyOther = L10n.tr("Ui", "toplist company other")
+  /// unknown
+  internal static let toplistTldUnknown = L10n.tr("Ui", "toplist tld unknown")
   /// Cancel
   internal static let universalActionCancel = L10n.tr("Ui", "universal action cancel")
   /// Clear

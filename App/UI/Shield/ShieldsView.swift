@@ -94,7 +94,7 @@ struct ShieldsView: View {
                 }
             }
             .listRowSeparator(.hidden)
-            .padding(.bottom, 8)
+            .padding(.bottom, 64)
             .fixedSize(horizontal: false, vertical: true)
         }
         .listStyle(PlainListStyle())

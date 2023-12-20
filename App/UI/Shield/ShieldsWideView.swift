@@ -22,7 +22,6 @@ struct ShieldsWideView: View {
 //            .navigationDestination(for: String.self) { packId in
 //                PackDetailView(vm: PackDetailViewModel(packId: packId))
 //            }
-            .padding(.bottom, 64)
         }
         .accentColor(Color.cAccent)
         .navigationViewStyle(StackNavigationViewStyle())

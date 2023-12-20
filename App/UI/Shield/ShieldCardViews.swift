@@ -27,8 +27,8 @@ struct ShieldCardView: View {
                 ShieldCardOneView(
                     id: vm.pack.id,
                     headerText: vm.pack.tags.joined(separator: ", "),
-                    mainTitle: vm.pack.meta.title,
-                    descriptionText: vm.pack.meta.description,
+                    mainTitle: vm.pack.meta.title.tr(),
+                    descriptionText: vm.pack.meta.description.tr(),
                     selected: self.vm.pack.status.config.contains(tag),
                     action: {
                         self.vm.changeConfig(config: vm.pack.configs.first!, fail: { error in
@@ -40,8 +40,8 @@ struct ShieldCardView: View {
                 ShieldCardManyView(
                     id: vm.pack.id,
                     headerText: vm.pack.tags.joined(separator: ", "),
-                    mainTitle: vm.pack.meta.title,
-                    descriptionText: vm.pack.meta.description,
+                    mainTitle: vm.pack.meta.title.tr(),
+                    descriptionText: vm.pack.meta.description.tr(),
                     items: vm.pack.configs,
                     selected: self.vm.pack.status.config,
                     action: { item in

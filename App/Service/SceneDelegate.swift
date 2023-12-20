@@ -89,7 +89,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Close the kb when leaving to bg
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
 
-        foreground.onForeground(false)
+        // foreground.onForeground(false)
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {
@@ -97,6 +97,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
+        self.foreground.onForeground(false)
     }
 
     // Quick action selected by user

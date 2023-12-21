@@ -34,6 +34,7 @@ class HomeViewModel: ObservableObject {
     private lazy var selectedLeaseHot = plusLease.currentLease
 
     @Published var showSplash = true
+    @Published var hideContent = false
 
     @Published var appState: AppState = .Deactivated
     @Published var vpnEnabled: Bool = false

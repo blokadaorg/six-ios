@@ -94,7 +94,7 @@ struct ContentView: View {
                     .opacity(self.homeVM.showSplash ? 1 : 0)
                 SplashView()
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-                    .opacity(self.homeVM.showSplash ? 1 : 0)
+                    .opacity(self.homeVM.showSplash || self.homeVM.hideContent ? 1 : 0)
                     .transition(.opacity)
                     .animation(.easeInOut(duration: 0.5))
             }

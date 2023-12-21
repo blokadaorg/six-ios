@@ -1055,6 +1055,9 @@
 		4EA0292F2B34591D00B689B4 /* SettingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA0292E2B34591D00B689B4 /* SettingsHeaderView.swift */; };
 		4EA029302B34591D00B689B4 /* SettingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA0292E2B34591D00B689B4 /* SettingsHeaderView.swift */; };
 		4EA029312B34591D00B689B4 /* SettingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA0292E2B34591D00B689B4 /* SettingsHeaderView.swift */; };
+		4EA029332B346FA400B689B4 /* Flavor.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4EA029322B346FA400B689B4 /* Flavor.xcconfig */; };
+		4EA029342B346FA400B689B4 /* Flavor.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4EA029322B346FA400B689B4 /* Flavor.xcconfig */; };
+		4EA029352B346FA400B689B4 /* Flavor.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4EA029322B346FA400B689B4 /* Flavor.xcconfig */; };
 		4EA105C2242B8A7900559CBB /* Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA105C1242B8A7900559CBB /* Transitions.swift */; };
 		4EA105C4242BABC200559CBB /* SupportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA105C3242BABC200559CBB /* SupportView.swift */; };
 		4EA189B927B4495B00E57470 /* PlaceholderPaneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA189B827B4495B00E57470 /* PlaceholderPaneView.swift */; };
@@ -1833,6 +1836,7 @@
 		4E99A3BC2514986C0054BF69 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Ui.strings; sourceTree = "<group>"; };
 		4E9EB98F27B548420040F375 /* SettingsWideVerticalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsWideVerticalView.swift; sourceTree = "<group>"; };
 		4EA0292E2B34591D00B689B4 /* SettingsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeaderView.swift; sourceTree = "<group>"; };
+		4EA029322B346FA400B689B4 /* Flavor.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Flavor.xcconfig; sourceTree = "<group>"; };
 		4EA105C1242B8A7900559CBB /* Transitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transitions.swift; sourceTree = "<group>"; };
 		4EA105C3242BABC200559CBB /* SupportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportView.swift; sourceTree = "<group>"; };
 		4EA189B827B4495B00E57470 /* PlaceholderPaneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderPaneView.swift; sourceTree = "<group>"; };
@@ -2334,6 +2338,7 @@
 		4E270CFF2A80EAEA00D3484B /* Family */ = {
 			isa = PBXGroup;
 			children = (
+				4EA029322B346FA400B689B4 /* Flavor.xcconfig */,
 				4E356A8724376B3A0094EE27 /* SplashView.swift */,
 				4E88AA152B2B1B28006B16E7 /* BlokadaView.swift */,
 				4E61D8E627B2DA7F00C98D36 /* MainView.swift */,
@@ -2939,6 +2944,7 @@
 				4E1276BB2AE7D0FC00A94994 /* PackTags.strings in Resources */,
 				4E1276BC2AE7D0FC00A94994 /* Ui.strings in Resources */,
 				4E1276BD2AE7D0FC00A94994 /* LaunchScreen.storyboard in Resources */,
+				4EA029352B346FA400B689B4 /* Flavor.xcconfig in Resources */,
 				4E1276BE2AE7D0FC00A94994 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2972,6 +2978,7 @@
 				4E270DE22A80EB8300D3484B /* PackTags.strings in Resources */,
 				4E270DE32A80EB8300D3484B /* Ui.strings in Resources */,
 				4E270DE42A80EB8300D3484B /* LaunchScreen.storyboard in Resources */,
+				4EA029332B346FA400B689B4 /* Flavor.xcconfig in Resources */,
 				4E270DE52A80EB8300D3484B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3008,6 +3015,7 @@
 				4EBF3BE42A80E55900F637BB /* PackTags.strings in Resources */,
 				4EBF3BE52A80E55900F637BB /* Ui.strings in Resources */,
 				4EBF3BE62A80E55900F637BB /* LaunchScreen.storyboard in Resources */,
+				4EA029342B346FA400B689B4 /* Flavor.xcconfig in Resources */,
 				4EBF3BE72A80E55900F637BB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4789,6 +4797,7 @@
 		};
 		4E1276C32AE7D0FC00A94994 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EA029322B346FA400B689B4 /* Flavor.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = FamilyAppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -4813,7 +4822,7 @@
 					"$(PROJECT_DIR)",
 				);
 				MARKETING_VERSION = 6;
-				OTHER_SWIFT_FLAGS = "$(inherited) -D DEBUG";
+				OTHER_SWIFT_FLAGS = "$(inherited) -D DEBUG -D FAMILY";
 				"OTHER_SWIFT_FLAGS[sdk=iphonesimulator*]" = "$(inherited) -D PREVIEW";
 				PRODUCT_BUNDLE_IDENTIFIER = net.blocka.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -4827,6 +4836,7 @@
 		};
 		4E1276C42AE7D0FC00A94994 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EA029322B346FA400B689B4 /* Flavor.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = FamilyAppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -4851,6 +4861,7 @@
 					"$(PROJECT_DIR)",
 				);
 				MARKETING_VERSION = 6;
+				"OTHER_SWIFT_FLAGS[arch=*]" = "-D FAMILY";
 				PRODUCT_BUNDLE_IDENTIFIER = net.blocka.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5078,6 +5089,7 @@
 		};
 		4E270DEC2A80EB8300D3484B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EA029322B346FA400B689B4 /* Flavor.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = FamilyAppIcon;
@@ -5105,7 +5117,7 @@
 					"$(PROJECT_DIR)/BlockaEngine",
 				);
 				MARKETING_VERSION = 23.4.37;
-				OTHER_SWIFT_FLAGS = "$(inherited) -D DEBUG";
+				OTHER_SWIFT_FLAGS = "$(inherited) -D DEBUG -D FAMILY";
 				"OTHER_SWIFT_FLAGS[sdk=iphonesimulator*]" = "$(inherited) -D PREVIEW";
 				PRODUCT_BUNDLE_IDENTIFIER = net.blocka.app.family;
 				PRODUCT_NAME = "Blokada Family";
@@ -5126,6 +5138,7 @@
 		};
 		4E270DED2A80EB8300D3484B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EA029322B346FA400B689B4 /* Flavor.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = FamilyAppIcon;
@@ -5153,6 +5166,7 @@
 					"$(PROJECT_DIR)/BlockaEngine",
 				);
 				MARKETING_VERSION = 23.4.37;
+				"OTHER_SWIFT_FLAGS[arch=*]" = "-D FAMILY";
 				PRODUCT_BUNDLE_IDENTIFIER = net.blocka.app.family;
 				PRODUCT_NAME = "Blokada Family";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5335,6 +5349,7 @@
 		};
 		4EBF3BEE2A80E55900F637BB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EA029322B346FA400B689B4 /* Flavor.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = FamilyAppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -5360,7 +5375,7 @@
 					"$(PROJECT_DIR)/BlockaEngine",
 				);
 				MARKETING_VERSION = "6-dev";
-				OTHER_SWIFT_FLAGS = "$(inherited) -D DEBUG";
+				OTHER_SWIFT_FLAGS = "$(inherited) -D DEBUG -D FAMILY";
 				"OTHER_SWIFT_FLAGS[sdk=iphonesimulator*]" = "$(inherited) -D PREVIEW";
 				PRODUCT_BUNDLE_IDENTIFIER = net.blocka.app.family;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -5381,6 +5396,7 @@
 		};
 		4EBF3BEF2A80E55900F637BB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EA029322B346FA400B689B4 /* Flavor.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = FamilyAppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -5406,6 +5422,7 @@
 					"$(PROJECT_DIR)/BlockaEngine",
 				);
 				MARKETING_VERSION = "6-dev";
+				"OTHER_SWIFT_FLAGS[arch=*]" = "-D FAMILY";
 				PRODUCT_BUNDLE_IDENTIFIER = net.blocka.app.family;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

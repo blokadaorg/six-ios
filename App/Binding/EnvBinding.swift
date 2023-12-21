@@ -31,7 +31,7 @@ class EnvBinding: EnvOps {
     }
     
     func getUserAgent() -> String {
-        return "blokada/\(appVersion) (ios-\(osVersion) six \(buildType) \(cpu) apple \(deviceModel) touch api compatible)"
+        return "blokada/\(appVersion) (ios-\(osVersion) \(getBuildFlavor()) \(buildType) \(cpu) apple \(deviceModel) touch api compatible)"
     }
 
     func getAppVersion() -> String {
@@ -49,12 +49,16 @@ class EnvBinding: EnvOps {
     func setDeviceTag(tag: String) {
         deviceTag = tag
     }
+    
+    func getBuildFlavor() -> String {
+        return flutter.isFlavorFamily ? "family" : "six"
+    }
 
     func doGetEnvPayload(completion: @escaping (Result<EnvPayload, Error>) -> Void) {
         completion(Result.success(EnvPayload(
             appVersion: appVersion,
             osVersion: osVersion,
-            buildFlavor: "six",
+            buildFlavor: getBuildFlavor(),
             buildType: buildType,
             cpu: cpu,
             deviceBrand: "apple",

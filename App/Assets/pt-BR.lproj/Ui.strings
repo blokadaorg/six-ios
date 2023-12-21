@@ -12,6 +12,7 @@
 
 "error device offline" = "O seu dispositivo está offline";
 "error account inactive" = "Sua conta está inativa. Por favor, ative sua conta para continuar a usar o BLOKADA+.";
+"error account inactive generic" = "Sua conta está inativa. Por favor, ative sua conta para continuar usando o Blokada.";
 "error account inactive after restore" = "Esta não parece ser uma conta ativa válida. Se você acredita que isso é um erro, entre em contato conosco tocando no ícone de ajuda na parte superior.";
 "error account invalid" = "O ID dessa conta parece inválido.";
 "error creating account" = "Não foi possível criar uma conta nova. Por favor, tente novamente mais tarde.";
@@ -33,6 +34,7 @@
 "error unknown" = "Ocorreu um problema. Verifique se você está online e tente novamente mais tarde. Se o problema persistir, entre em contato conosco tocando no ícone de ajuda na parte superior.";
 "error multiple apps" = "Há mais de um aplicativo do Blokada no seu dispositivo. Isso pode causar problemas de conectividade. Você deseja corrigir isso agora?";
 "error locked" = "Esta ação não está disponível quando o aplicativo está em um estado bloqueado. Por favor, desbloqueie o aplicativo para prosseguir.";
+"error lock invalid" = "Um PIN válido deve ter exatamente 4 dígitos. Por favor, tente novamente.";
 
 "conn isssues header" = "Problemas de conexão";
 "conn isssues slug" = "Problemas de conexão. Verifique sua configuração. Toque para mais detalhes.";
@@ -495,7 +497,7 @@
 "universal status waiting for data" = "Aguardando dados";
 "universal action disable" = "Desligado";
 
-// Make it as short as possible
+// Translate just Unlock if the original is longer than 16 characters
 "lock action slide unlock" = "Deslize para desbloquear";
 // The app will use this version if the Slide to unlock is too long
 "lock action slide unlock short" = "Deslizar";
@@ -543,6 +545,9 @@
 "family account link name" = "Definir nome do dispositivo";
 "family account link qr header" = "Escanear este código QR";
 "family account link qr body" = "Esta tela será fechada automaticamente quando o novo dispositivo for detectado.";
+
+// A button to unlink linked device
+"family account cta unlink" = "Desvincular";
 
 "family account decide header" = "Adicionar dispositivo";
 "family account decide link header" = "Vincular um dispositivo";

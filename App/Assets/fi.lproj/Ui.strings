@@ -12,6 +12,7 @@
 
 "error device offline" = "Laitteesi on offline-tilassa";
 "error account inactive" = "Tilisi on toimeton. Aktivoi tilisi jatkaaksesi BLOKADA+:n käyttöä.";
+"error account inactive generic" = "Tilisi ei ole aktiivinen. Ole hyvä ja aktivoi tilisi jatkaaksesi Blokadan käyttöä.";
 "error account inactive after restore" = "Tämä ei vaikuta olevan kelvollinen aktiivinen tili. Jos uskot, että tämä on virhe, ota yhteyttä meihin napauttamalla yläosassa olevaa ohjekuvaketta.";
 "error account invalid" = "Tämä tilitunnus näyttää olevan virheellinen.";
 "error creating account" = "Uutta tiliä ei voitu luoda. Yritä uudelleen myöhemmin.";
@@ -33,6 +34,7 @@
 "error unknown" = "Tapahtui ongelma. Varmista, että olet verkossa, ja yritä myöhemmin uudelleen. Jos ongelma jatkuu, ota meihin yhteyttä napauttamalla yläreunassa olevaa ohjetta.";
 "error multiple apps" = "Laitteessasi on useampi kuin yksi Blokada-sovellus. Tämä saattaa aiheuttaa yhteysongelmia. Haluatko korjata sen nyt?";
 "error locked" = "Tämä toiminto ei ole käytettävissä, kun sovellus on lukitussa tilassa. Ole hyvä ja avaa sovellus jatkaaksesi.";
+"error lock invalid" = "Kelvollisen PIN-koodin on oltava tasan 4 numeroa. Yritä uudelleen.";
 
 "conn isssues header" = "Yhteyteen liittyvät kysymykset";
 "conn isssues slug" = "Yhteyteen liittyvät ongelmat. Tarkista asetukset. Paina saadaksesi lisätietoja.";
@@ -495,7 +497,7 @@
 "universal status waiting for data" = "Odotetaan tietoja";
 "universal action disable" = "Poista Käytöstä";
 
-// Make it as short as possible
+// Translate just Unlock if the original is longer than 16 characters
 "lock action slide unlock" = "Poista lukitus liu'uttamalla";
 // The app will use this version if the Slide to unlock is too long
 "lock action slide unlock short" = "Liu'uta";
@@ -543,6 +545,9 @@
 "family account link name" = "Aseta laitteen nimi";
 "family account link qr header" = "Skannaa tämä QR-koodi";
 "family account link qr body" = "Tämä näyttö sulkeutuu automaattisesti, kun uusi laite on havaittu.";
+
+// A button to unlink linked device
+"family account cta unlink" = "Irrota";
 
 "family account decide header" = "Lisää laite";
 "family account decide link header" = "Linkitä laite";

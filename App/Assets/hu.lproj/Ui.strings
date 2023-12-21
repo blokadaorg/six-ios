@@ -12,6 +12,7 @@
 
 "error device offline" = "A készüléked offline állapotban van";
 "error account inactive" = "Fiókod inaktív. Kérjük, aktiváld fiókodat a BLOKADA+ használatának folytatása érdekében.";
+"error account inactive generic" = "Your account is inactive. Please activate your account in order to continue using Blokada.";
 "error account inactive after restore" = "Nem tűnik érvényes aktív fióknak. Ha úgy gondolod, hogy a hiba nálunk van, kérjük, vedd fel velünk a kapcsolatot a súgó ikon megérintésével.";
 "error account invalid" = "Ez az ID helytelennek tűnik.";
 "error creating account" = "Nem sikerült új fiókot létrehozni. Kérjük, próbáld újra később.";
@@ -33,6 +34,7 @@
 "error unknown" = "Egy hiba lépett fel. Bizonyosodjon meg arról, hogy online, és próbálkozzon újra. Ha a hiba továbbra is fennáll, nyomjon rá a segítség ikonra felül.";
 "error multiple apps" = "Egynél több Blokada alkalmazás van a készülékeden. Ez kapcsolódási problémákat okozhat. Szeretnéd ezt most orvosolni?";
 "error locked" = "This action is unavailable when the app is in a locked state. Please unlock the app to proceed.";
+"error lock invalid" = "A valid PIN must be exactly 4 digits. Please try again.";
 
 "conn isssues header" = "Kapcsolódási problémák";
 "conn isssues slug" = "Kapcsolódási problémák. Kérjük, ellenőrizd a konfigurációt. Koppints a részletekért.";
@@ -495,7 +497,7 @@
 "universal status waiting for data" = "Waiting for data";
 "universal action disable" = "Disable";
 
-// Make it as short as possible
+// Translate just Unlock if the original is longer than 16 characters
 "lock action slide unlock" = "Slide to unlock";
 // The app will use this version if the Slide to unlock is too long
 "lock action slide unlock short" = "Slide";
@@ -543,6 +545,9 @@
 "family account link name" = "Set device name";
 "family account link qr header" = "Scan this QR code";
 "family account link qr body" = "This screen will close automatically once the new device has been detected.";
+
+// A button to unlink linked device
+"family account cta unlink" = "Unlink";
 
 "family account decide header" = "Add device";
 "family account decide link header" = "Link a device";

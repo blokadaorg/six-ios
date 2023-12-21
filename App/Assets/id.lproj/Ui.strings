@@ -12,6 +12,7 @@
 
 "error device offline" = "Perangkat Anda offline/tidak terkoneksi";
 "error account inactive" = "Akun Anda tidak aktif. Silakan aktifkan akun Anda supaya Anda bisa menggunakan BLOKADA+.";
+"error account inactive generic" = "Your account is inactive. Please activate your account in order to continue using Blokada.";
 "error account inactive after restore" = "Akun ini sepertinya tidak valid/aktif. Jika menurut Anda telah terjadi kesalahan, silakan hubungi kami dengan mengetuk ikon Bantuan di atas.";
 "error account invalid" = "ID akun ini sepertinya tidak valid.";
 "error creating account" = "Tidak bisa membuat akun baru. Silakan coba beberapa saat lagi.";
@@ -33,6 +34,7 @@
 "error unknown" = "Ada masalah. Pastikan perangkat Anda tersambung ke internet dan coba kembali. Jika masalah berlanjut silakan hubungi kami lewat ikon Bantuan di atas.";
 "error multiple apps" = "Ada lebih dari satu aplikasi Blokada di perangkat Anda. Hal ini bisa menyebabkan masalah koneksi. Apakah Anda ingin mengaturnya sekarang?";
 "error locked" = "Tindakan ini tidak bisa digunakan saat aplikasi terkunci. Silakan buka kunci aplikasi untuk melanjutkan.";
+"error lock invalid" = "A valid PIN must be exactly 4 digits. Please try again.";
 
 "conn isssues header" = "Ada masalah konektivitas";
 "conn isssues slug" = "Ada masalah koneksi. Harap periksa kembali pengaturan Anda. Ketuk untuk detail lebih lanjut.";
@@ -495,16 +497,16 @@
 "universal status waiting for data" = "Menunggu data";
 "universal action disable" = "Nonaktifkan";
 
-// Make it as short as possible
+// Translate just Unlock if the original is longer than 16 characters
 "lock action slide unlock" = "Geser untuk membuka";
 // The app will use this version if the Slide to unlock is too long
-"lock action slide unlock short" = "Slide";
+"lock action slide unlock short" = "Geser";
 "lock status too many attempts" = "Terlalu banyak percobaan yang salah. Silakan coba lagi nanti";
 "lock status enter to confirm" = "Masukkan kode pin lagi untuk mengkonfirmasi";
 "lock status enter or wait" = "Masukkan pin baru, atau tunggu untuk mengunci...";
-"lock change pin" = "Change pin";
+"lock change pin" = "Ubah pin";
 
-"family rename device" = "Rename device";
+"family rename device" = "Ubah nama perangkat";
 "family label this device" = "Perangkat ini (%@)";
 "family onboard header" = "Selamat datang di Keluarga Besar Blokada!";
 "family onboard body" = "Ikuti petunjuk di layar untuk mengatur perangkat pertama Anda.";
@@ -544,10 +546,13 @@
 "family account link qr header" = "Pindai Kode QR ini";
 "family account link qr body" = "Layar ini akan tertutup secara otomatis saat perangkat baru sudah terdeteksi.";
 
+// A button to unlink linked device
+"family account cta unlink" = "Unlink";
+
 "family account decide header" = "Tambah perangkat";
 "family account decide link header" = "Tautkan perangkat";
 "family account decide link body" = "Di Blokada, Anda cukup memindai kode QR untuk menautkan dan mengatur perangkat lain.";
-"family account decide separator" = "- or -";
+"family account decide separator" = "- atau -";
 "family account decide this header" = "Gunakan perangkat ini";
 "family account decide this body" = "Alternatif lain, Anda bisa mengkonfigurasikan Blokada untuk aktif di perangkat ini, dan menggunakan pin untuk menguncinya.";
 
@@ -555,6 +560,6 @@
 "family shields custom slug" = "Atur sendiri mana saja entri yang akan diblokir atau diizinkan.";
 
 // When a company name is other than the big ones
-"toplist company other" = "Other";
+"toplist company other" = "Lainnya";
 // When a domain is unknown
-"toplist tld unknown" = "unknown";
+"toplist tld unknown" = "tidak diketahui";

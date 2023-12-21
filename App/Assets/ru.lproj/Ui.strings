@@ -12,6 +12,7 @@
 
 "error device offline" = "Ваше устройство не в сети";
 "error account inactive" = "Ваш аккаунт неактивен. Пожалуйста, его, чтобы продолжить использовать BLOKADA+.";
+"error account inactive generic" = "Ваша учетная запись неактивна. Пожалуйста, активируйте свою учетную запись, чтобы продолжить использование Blokada.";
 "error account inactive after restore" = "Похоже, что это недействительный аккаунт. Если вы считаете, что это ошибка, пожалуйста, свяжитесь с нами, нажав на значок помощи в верхней части.";
 "error account invalid" = "Этот ID аккаунта кажется недействительным.";
 "error creating account" = "Не удалось создать новый аккаунт. Пожалуйста, попробуйте позже.";
@@ -33,6 +34,7 @@
 "error unknown" = "Возникла проблема. Убедитесь, что вы в сети, и повторите попытку позже. Если проблема сохраняется, свяжитесь с нами, нажав на значок помощи вверху.";
 "error multiple apps" = "На вашем устройстве установлено более одного приложения Blokada. Это может вызвать проблемы с подключением. Вы хотите исправить это сейчас?";
 "error locked" = "Это действие недоступно, если приложение заблокировано. Для продолжения разблокируйте.";
+"error lock invalid" = "Допустимый PIN-код должен содержать ровно 4 цифры. Пожалуйста, попробуйте еще раз.";
 
 "conn isssues header" = "Проблемы с подключением";
 "conn isssues slug" = "Проблемы с подключением. Проверьте конфигурацию. Нажмите для получения подробной информации.";
@@ -495,7 +497,7 @@
 "universal status waiting for data" = "Ожидание данных";
 "universal action disable" = "Отключено";
 
-// Make it as short as possible
+// Translate just Unlock if the original is longer than 16 characters
 "lock action slide unlock" = "Проведите для разблокировки";
 // The app will use this version if the Slide to unlock is too long
 "lock action slide unlock short" = "Слайд";
@@ -543,6 +545,9 @@
 "family account link name" = "Задать имя устройства";
 "family account link qr header" = "Сосканировать этот QR-код";
 "family account link qr body" = "Этот экран закроется автоматически после обнаружения нового устройства.";
+
+// A button to unlink linked device
+"family account cta unlink" = "Отвязать";
 
 "family account decide header" = "Добавить устройство";
 "family account decide link header" = "Привязать устройство";

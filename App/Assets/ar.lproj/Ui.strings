@@ -12,6 +12,7 @@
 
 "error device offline" = "جهازك غير متّصل بالإنترنت";
 "error account inactive" = "حسابك غير نَشِط. الرجاء تنشيط حسابك من أجل الإستمرار في استخدام BLOKADA+.";
+"error account inactive generic" = "حسابك غير نشط. يرجى تنشيط حسابك من أجل الاستمرار في استخدام بلوكادا.";
 "error account inactive after restore" = "لا يبدو أن هذا حساب نَشِط صالح. إذا كنت تعتقد أن هذا خطأ، الرجاء الاتصال بنا بالنقر على أيقونة المساعدة في الأعلى.";
 "error account invalid" = "يبدو أنّ مُعرِّف الحساب هذا غير صالح.";
 "error creating account" = "تَعذَّر إنشاء حساب جديد. الرجاء المحاولة مرّة أُخرى لاحقاً.";
@@ -33,6 +34,7 @@
 "error unknown" = "حدثت مشكلة. تأكّد من أنّك متّصل بالإنترنت، و حاول مرّة أُخرى لاحقاً. إذا استمرت المشكلة، الرجاء الاتصال بنا بالنقر على أيقونة المساعدة في الأعلى.";
 "error multiple apps" = "يوجد أكثر من تطبيق لبلوكادا على جهازك. قد يتسبب ذلك في مشاكل في الاتصال. هل ترغب في إصلاحه الآن؟";
 "error locked" = "هذا الإجراء غير متوفر عندما يكون التطبيق في حالة مقفلة. الرجاء فتح التطبيق للمتابعة.";
+"error lock invalid" = "يجب أن يكون رمز PIN صالح 4 أرقام بالضبط. الرجاء المحاولة مرة أخرى.";
 
 "conn isssues header" = "مشاكل في الاتصال";
 "conn isssues slug" = "مشاكل الاتصال. الرجاء التحقق من الإعدادات الخاصة بك. انقر للحصول على التفاصيل.";
@@ -495,7 +497,7 @@
 "universal status waiting for data" = "في انتظار البيانات";
 "universal action disable" = "تعطيل";
 
-// Make it as short as possible
+// Translate just Unlock if the original is longer than 16 characters
 "lock action slide unlock" = "اسحب لفتح القفل";
 // The app will use this version if the Slide to unlock is too long
 "lock action slide unlock short" = "الشريحة";
@@ -543,6 +545,9 @@
 "family account link name" = "تعيين اسم الجهاز";
 "family account link qr header" = "مسح رمز QR هذا";
 "family account link qr body" = "سيتم إغلاق هذه الشاشة تلقائياً بمجرد اكتشاف الجهاز الجديد.";
+
+// A button to unlink linked device
+"family account cta unlink" = "إلغاء الارتباط";
 
 "family account decide header" = "إضافة جهاز";
 "family account decide link header" = "ربط جهاز";

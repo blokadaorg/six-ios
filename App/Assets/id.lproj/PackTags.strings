@@ -44,22 +44,22 @@
 // One of the tags used for searching blocklists
 "spam" = "spam";
 // One of the tags used for searching blocklists
-"dating" = "dating";
+"dating" = "kencan";
 // One of the tags used for searching blocklists
-"piracy" = "piracy";
+"piracy" = "pembajakan";
 // One of the tags used for searching blocklists
 "torrent" = "torrent";
 // One of the tags used for searching blocklists
 "streaming" = "streaming";
 // One of the tags used for searching blocklists
-"apps" = "apps";
+"apps" = "aplikasi";
 // One of the tags used for searching blocklists
-"chat" = "chat";
+"chat" = "percakapan";
 // One of the tags used for searching blocklists
 "gaming" = "gaming";
 // One of the tags used for searching blocklists
-"games" = "games";
+"games" = "permainan";
 // One of the tags used for searching blocklists
 "e-commerce" = "e-commerce";
 // One of the tags used for searching blocklists
-"other" = "other";
+"other" = "lainnya";

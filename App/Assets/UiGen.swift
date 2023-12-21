@@ -294,6 +294,8 @@ internal enum L10n {
   internal static let errorAccountInactive = L10n.tr("Ui", "error account inactive")
   /// This does not seem to be a valid active account. If you believe this is a mistake, please contact us by tapping the help icon at the top.
   internal static let errorAccountInactiveAfterRestore = L10n.tr("Ui", "error account inactive after restore")
+  /// Your account is inactive. Please activate your account in order to continue using Blokada.
+  internal static let errorAccountInactiveGeneric = L10n.tr("Ui", "error account inactive generic")
   /// This account ID seems invalid.
   internal static let errorAccountInvalid = L10n.tr("Ui", "error account invalid")
   /// Could not create a new account. Please try again later.
@@ -304,6 +306,8 @@ internal enum L10n {
   internal static let errorFetchingData = L10n.tr("Ui", "error fetching data")
   /// Could not fetch locations.
   internal static let errorLocationFailedFetching = L10n.tr("Ui", "error location failed fetching")
+  /// A valid PIN must be exactly 4 digits. Please try again.
+  internal static let errorLockInvalid = L10n.tr("Ui", "error lock invalid")
   /// This action is unavailable when the app is in a locked state. Please unlock the app to proceed.
   internal static let errorLocked = L10n.tr("Ui", "error locked")
   /// There is more than one Blokada app on your device. This may cause connectivity issues. Do you wish to fix it now?
@@ -340,6 +344,8 @@ internal enum L10n {
   internal static let familyAccountAttachBody = L10n.tr("Ui", "family account attach body")
   /// Attach device
   internal static let familyAccountAttachHeader = L10n.tr("Ui", "family account attach header")
+  /// Unlink
+  internal static let familyAccountCtaUnlink = L10n.tr("Ui", "family account cta unlink")
   /// Add device
   internal static let familyAccountDecideHeader = L10n.tr("Ui", "family account decide header")
   /// In Blokada, you simply scan a QR code to link and manage another device.

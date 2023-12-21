@@ -24,6 +24,9 @@ struct PaymentView: View {
                 VStack {
                     if let trial = self.vm.product.trial {
                         Text(L10n.paymentPlanCtaTrialLength(trial))
+                        .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .multilineTextAlignment(.center)
                         .foregroundColor(getColor())
                         .font(.headline)
                         .padding(.bottom, 1)

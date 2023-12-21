@@ -57,7 +57,7 @@ struct PaymentGatewayView: View {
                                     PaymentFeaturesView(showSheet: self.$showPlusFeaturesSheet)
 
                                 }
-                                .padding(.top, 56)
+                                .padding(.top, 64)
                                 .padding(.bottom, 14)
                             }
                             

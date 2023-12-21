@@ -51,7 +51,7 @@ struct PaymentFeaturesView: View {
                                             .padding(.bottom)
 
                                         Text(L10n.familyPaymentFeaturesDevicesBody)
-                                            .lineLimit(5)
+                                            .lineLimit(7)
                                             .fixedSize(horizontal: false, vertical: true)
                                     }
                                     Spacer()
@@ -73,7 +73,7 @@ struct PaymentFeaturesView: View {
                                             .padding(.bottom)
 
                                         Text(L10n.familyPaymentFeaturesPerformanceBody)
-                                            .lineLimit(5)
+                                            .lineLimit(7)
                                             .fixedSize(horizontal: false, vertical: true)
                                     }
                                     Spacer()
@@ -96,7 +96,7 @@ struct PaymentFeaturesView: View {
                                             .padding(.bottom)
 
                                         Text(L10n.familyPaymentFeaturesDnsBody)
-                                            .lineLimit(5)
+                                            .lineLimit(7)
                                             .fixedSize(horizontal: false, vertical: true)
                                     }
                                     Spacer()
@@ -118,7 +118,7 @@ struct PaymentFeaturesView: View {
                                             .padding(.bottom)
 
                                         Text(L10n.familyPaymentFeaturesBatteryBody)
-                                            .lineLimit(5)
+                                            .lineLimit(7)
                                             .fixedSize(horizontal: false, vertical: true)
                                     }
                                     Spacer()
@@ -142,7 +142,7 @@ struct PaymentFeaturesView: View {
                                             .padding(.bottom)
 
                                         Text(L10n.paymentFeatureDescNoAds)
-                                            .lineLimit(5)
+                                            .lineLimit(7)
                                             .fixedSize(horizontal: false, vertical: true)
                                     }
                                     Spacer()
@@ -164,7 +164,7 @@ struct PaymentFeaturesView: View {
                                             .padding(.bottom)
 
                                         Text(L10n.paymentFeatureDescSupport)
-                                            .lineLimit(5)
+                                            .lineLimit(7)
                                             .fixedSize(horizontal: false, vertical: true)
                                     }
                                     Spacer()

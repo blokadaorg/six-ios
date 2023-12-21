@@ -25,74 +25,78 @@ struct SettingsFormNavView: View {
     @State private var newPin = ""
 
     var body: some View {
-        Form {
-            SettingsHeaderView()
-            
-            Section(header: Text(L10n.accountSectionHeaderPrimary)) {
-                SettingsItemView(
-                    title: L10n.accountActionMyAccount,
-                    image: Image.fAccount,
-                    selected: false
-                )
-                .background(NavigationLink("", value: "manage").opacity(0))
-
-                if (self.vm.type == .Plus) {
+        VStack {
+            Form {
+                SettingsHeaderView()
+                    .cornerRadius(8)
+                    .padding(.vertical, 12)
+                
+                Section(header: Text(L10n.accountSectionHeaderPrimary)) {
                     SettingsItemView(
-                        title: L10n.webVpnDevicesHeader,
-                        image: Image.fComputer,
+                        title: L10n.accountActionMyAccount,
+                        image: Image.fAccount,
                         selected: false
                     )
-                    .background(NavigationLink("", value: "leases").opacity(0))
-                }
-
-                if (self.vm.type != .Family) {
-                    SettingsItemView(
-                        title: L10n.activitySectionHeader,
-                        image: Image.fChart,
-                        selected: false
-                    )
-                    .background(NavigationLink("", value: "logRetention").opacity(0))
+                    .background(NavigationLink("", value: "manage").opacity(0))
+                    
+                    if (self.vm.type == .Plus) {
+                        SettingsItemView(
+                            title: L10n.webVpnDevicesHeader,
+                            image: Image.fComputer,
+                            selected: false
+                        )
+                        .background(NavigationLink("", value: "leases").opacity(0))
+                    }
+                    
+                    if (self.vm.type != .Family) {
+                        SettingsItemView(
+                            title: L10n.activitySectionHeader,
+                            image: Image.fChart,
+                            selected: false
+                        )
+                        .background(NavigationLink("", value: "logRetention").opacity(0))
+                    }
+                    
+                    if (self.vm.type == .Family) {
+                        Button(action: {
+                            self.showNewPin = true
+                            self.newPin = ""
+                        }) {
+                            SettingsItemView(
+                                title: L10n.lockChangePin,
+                                image: "lock.fill",
+                                selected: false
+                            )
+                        }
+                        .alert(L10n.lockChangePin, isPresented: self.$showNewPin) {
+                            TextField("", text: $newPin)
+                                .keyboardType(.decimalPad)
+                            Button(L10n.universalActionCancel, action: { self.showNewPin = false })
+                            Button(L10n.universalActionSave, action: submit)
+                        }
+                    }
                 }
                 
-                if (self.vm.type == .Family) {
+                Section(header: Text(L10n.accountSectionHeaderOther)) {
                     Button(action: {
-                        self.showNewPin = true
-                        self.newPin = ""
+                        self.contentVM.stage.showModal(.help)
                     }) {
                         SettingsItemView(
-                            title: L10n.lockChangePin,
-                            image: "lock.fill",
+                            title: L10n.universalActionSupport,
+                            image: Image.fHelp,
                             selected: false
                         )
                     }
-                    .alert(L10n.lockChangePin, isPresented: self.$showNewPin) {
-                        TextField("", text: $newPin)
-                            .keyboardType(.decimalPad)
-                        Button(L10n.universalActionCancel, action: { self.showNewPin = false })
-                        Button(L10n.universalActionSave, action: submit)
+                    
+                    Button(action: {
+                        self.contentVM.openLink(LinkId.credits)
+                    }) {
+                        SettingsItemView(
+                            title: L10n.accountActionAbout,
+                            image: Image.fAbout,
+                            selected: false
+                        )
                     }
-                }
-            }
-            
-            Section(header: Text(L10n.accountSectionHeaderOther)) {
-                Button(action: {
-                    self.contentVM.stage.showModal(.help)
-                }) {
-                    SettingsItemView(
-                        title: L10n.universalActionSupport,
-                        image: Image.fHelp,
-                        selected: false
-                    )
-                }
-
-                Button(action: {
-                    self.contentVM.openLink(LinkId.credits)
-                }) {
-                    SettingsItemView(
-                        title: L10n.accountActionAbout,
-                        image: Image.fAbout,
-                        selected: false
-                    )
                 }
             }
         }

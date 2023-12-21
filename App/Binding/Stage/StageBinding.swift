@@ -122,12 +122,14 @@ class StageBinding: StageOps {
             error.send(L10n.errorUnknown)
         } else if (modal == .faultLocked) {
             error.send(L10n.errorLocked)
+        } else if (modal == .faultLockInvalid) {
+            //error.send(L10n.errorLockInvalid)
         } else if (modal == .accountInitFailed) {
             error.send(L10n.errorUnknown)
         } else if (modal == .accountRestoreFailed) {
             error.send(L10n.errorPaymentInactiveAfterRestore)
         } else if (modal == .accountExpired) {
-            error.send(L10n.errorAccountInactive)
+            //error.send(L10n.errorAccountInactiveGeneric)
         } else if (modal == .plusTooManyLeases) {
             error.send(L10n.errorVpnTooManyLeases)
         } else if (modal == .plusVpnFailure) {

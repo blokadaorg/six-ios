@@ -19,13 +19,7 @@ struct BlokadaView: View {
 
     var body: some View {
         Rectangle()
-            .fill(
-                LinearGradient(
-                    gradient: Gradient(colors: [Color("Splash2"), Color("Splash3"), Color("Splash1")]),
-                    startPoint: .topTrailing,
-                    endPoint: .bottomLeading
-                )
-            )
+            .fill(.white)
             .mask(
                 Image(Image.iBlokada)
                     .resizable()

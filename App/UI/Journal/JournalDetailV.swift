@@ -143,6 +143,8 @@ struct JournalDetailView: View {
                         Text(L10n.activityDomainName)
                             .foregroundColor(.secondary)
                             .font(.footnote)
+                            .padding(.bottom, 8)
+
                         Text(self.vm.entry.entry.domainName)
                     }
 
@@ -152,6 +154,8 @@ struct JournalDetailView: View {
                         Text(L10n.activityTimeOfOccurrence)
                             .foregroundColor(.secondary)
                             .font(.footnote)
+                            .padding(.bottom, 8)
+
                         Text(self.vm.entry.time.human)
                     }
                     
@@ -161,6 +165,7 @@ struct JournalDetailView: View {
                         Text(L10n.activityNumberOfOccurrences)
                             .foregroundColor(.secondary)
                             .font(.footnote)
+                            .padding(.bottom, 8)
                         Text(String(self.vm.entry.entry.requests))
                     }
 
@@ -170,7 +175,15 @@ struct JournalDetailView: View {
                         Text(L10n.universalLabelDevice)
                             .foregroundColor(.secondary)
                             .font(.footnote)
-                        Text(self.vm.entry.entry.deviceName)
+                            .padding(.bottom, 8)
+                        HStack {
+                            ShieldIconView(id: self.vm.entry.entry.deviceName,  title: self.vm.entry.entry.deviceName, small: true)
+                                .frame(width: 32, height: 32)
+                                .mask(RoundedRectangle(cornerRadius: 8))
+                                .accessibilityLabel(self.vm.entry.entry.deviceName)
+
+                            Text(self.vm.entry.entry.deviceName)
+                        }
                     }
                 }
                 .padding()

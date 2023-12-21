@@ -91,7 +91,6 @@
 		4E1276292AE7D0FC00A94994 /* AppStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB355542A430A710096FD66 /* AppStart.swift */; };
 		4E12762A2AE7D0FC00A94994 /* CustomItemV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB3555B2A45C60F0096FD66 /* CustomItemV.swift */; };
 		4E12762B2AE7D0FC00A94994 /* RateBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEC49602A50205D001EF934 /* RateBinding.swift */; };
-		4E12762C2AE7D0FC00A94994 /* SettingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA189C127B5032600E57470 /* SettingsHeaderView.swift */; };
 		4E12762D2AE7D0FC00A94994 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEC49542A4E1417001EF934 /* Stats.swift */; };
 		4E12762E2AE7D0FC00A94994 /* NetworkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E02E30D2A56DA620014E884 /* NetworkCommand.swift */; };
 		4E12762F2AE7D0FC00A94994 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC013FD24606F6C001DF5F7 /* BadgeView.swift */; };
@@ -396,7 +395,6 @@
 		4E270D422A80EB8300D3484B /* KeychainSwiftDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E057E76244DBB7500995A6E /* KeychainSwiftDistrib.swift */; };
 		4E270D432A80EB8300D3484B /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EECA5022418D142003A2541 /* AccountView.swift */; };
 		4E270D442A80EB8300D3484B /* SupportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA105C3242BABC200559CBB /* SupportView.swift */; };
-		4E270D452A80EB8300D3484B /* SettingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA189C127B5032600E57470 /* SettingsHeaderView.swift */; };
 		4E270D462A80EB8300D3484B /* PlusLease.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E946E502A29CD170053943D /* PlusLease.swift */; };
 		4E270D472A80EB8300D3484B /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E356A8B24378CA80094EE27 /* Strings.swift */; };
 		4E270D482A80EB8300D3484B /* LeaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E63194C244743C300191C16 /* LeaseView.swift */; };
@@ -1054,6 +1052,9 @@
 		4E971F80246BCEA300809EA6 /* PaymentFeaturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E971F7E246BCEA300809EA6 /* PaymentFeaturesView.swift */; };
 		4E9EB99027B548420040F375 /* SettingsWideVerticalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9EB98F27B548420040F375 /* SettingsWideVerticalView.swift */; };
 		4E9EB99127B548420040F375 /* SettingsWideVerticalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9EB98F27B548420040F375 /* SettingsWideVerticalView.swift */; };
+		4EA0292F2B34591D00B689B4 /* SettingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA0292E2B34591D00B689B4 /* SettingsHeaderView.swift */; };
+		4EA029302B34591D00B689B4 /* SettingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA0292E2B34591D00B689B4 /* SettingsHeaderView.swift */; };
+		4EA029312B34591D00B689B4 /* SettingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA0292E2B34591D00B689B4 /* SettingsHeaderView.swift */; };
 		4EA105C2242B8A7900559CBB /* Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA105C1242B8A7900559CBB /* Transitions.swift */; };
 		4EA105C4242BABC200559CBB /* SupportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA105C3242BABC200559CBB /* SupportView.swift */; };
 		4EA189B927B4495B00E57470 /* PlaceholderPaneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA189B827B4495B00E57470 /* PlaceholderPaneView.swift */; };
@@ -1182,7 +1183,6 @@
 		4EBF3B432A80E55900F637BB /* KeychainSwiftDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E057E76244DBB7500995A6E /* KeychainSwiftDistrib.swift */; };
 		4EBF3B442A80E55900F637BB /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EECA5022418D142003A2541 /* AccountView.swift */; };
 		4EBF3B452A80E55900F637BB /* SupportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA105C3242BABC200559CBB /* SupportView.swift */; };
-		4EBF3B462A80E55900F637BB /* SettingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA189C127B5032600E57470 /* SettingsHeaderView.swift */; };
 		4EBF3B472A80E55900F637BB /* PlusLease.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E946E502A29CD170053943D /* PlusLease.swift */; };
 		4EBF3B482A80E55900F637BB /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E356A8B24378CA80094EE27 /* Strings.swift */; };
 		4EBF3B492A80E55900F637BB /* LeaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E63194C244743C300191C16 /* LeaseView.swift */; };
@@ -1832,6 +1832,7 @@
 		4E99A3BB2514986C0054BF69 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/PackTags.strings; sourceTree = "<group>"; };
 		4E99A3BC2514986C0054BF69 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Ui.strings; sourceTree = "<group>"; };
 		4E9EB98F27B548420040F375 /* SettingsWideVerticalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsWideVerticalView.swift; sourceTree = "<group>"; };
+		4EA0292E2B34591D00B689B4 /* SettingsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeaderView.swift; sourceTree = "<group>"; };
 		4EA105C1242B8A7900559CBB /* Transitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transitions.swift; sourceTree = "<group>"; };
 		4EA105C3242BABC200559CBB /* SupportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportView.swift; sourceTree = "<group>"; };
 		4EA189B827B4495B00E57470 /* PlaceholderPaneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderPaneView.swift; sourceTree = "<group>"; };
@@ -2173,7 +2174,6 @@
 				4E971F6A246935D100809EA6 /* WebView.swift */,
 				4E11D2E527206D810042385B /* NoLogRetentionView.swift */,
 				4EA189BE27B5018C00E57470 /* SettingsItemView.swift */,
-				4EA189C127B5032600E57470 /* SettingsHeaderView.swift */,
 				4EA189B827B4495B00E57470 /* PlaceholderPaneView.swift */,
 				4E2ECD0D245B2F38009040F1 /* GridStack.swift */,
 				4E2ECCF8245AFBCB009040F1 /* SpinnerView.swift */,
@@ -2342,6 +2342,7 @@
 				4E1275F12AE7D08400A94994 /* PaymentGatewayView.swift */,
 				4E1275F42AE7D0A100A94994 /* PaymentFeaturesView.swift */,
 				4E8B179D2B177EFE00D1D854 /* JournalFilterBarV.swift */,
+				4EA0292E2B34591D00B689B4 /* SettingsHeaderView.swift */,
 			);
 			path = Family;
 			sourceTree = "<group>";
@@ -2357,6 +2358,7 @@
 				4E971F7E246BCEA300809EA6 /* PaymentFeaturesView.swift */,
 				4E90BA3827BBB5B40051FD0C /* JournalFilterBarV.swift */,
 				4E88AA192B2B1B62006B16E7 /* SplashView.swift */,
+				4EA189C127B5032600E57470 /* SettingsHeaderView.swift */,
 			);
 			path = NotFamily;
 			sourceTree = "<group>";
@@ -3366,7 +3368,6 @@
 				4E1276292AE7D0FC00A94994 /* AppStart.swift in Sources */,
 				4E12762A2AE7D0FC00A94994 /* CustomItemV.swift in Sources */,
 				4E12762B2AE7D0FC00A94994 /* RateBinding.swift in Sources */,
-				4E12762C2AE7D0FC00A94994 /* SettingsHeaderView.swift in Sources */,
 				4E12762D2AE7D0FC00A94994 /* Stats.swift in Sources */,
 				4E12762E2AE7D0FC00A94994 /* NetworkCommand.swift in Sources */,
 				4E8B17A02B177EFE00D1D854 /* JournalFilterBarV.swift in Sources */,
@@ -3449,6 +3450,7 @@
 				4E12767C2AE7D0FC00A94994 /* Constants.swift in Sources */,
 				4E12767D2AE7D0FC00A94994 /* BenefitView.swift in Sources */,
 				4E12767E2AE7D0FC00A94994 /* JournalBinding.swift in Sources */,
+				4EA029312B34591D00B689B4 /* SettingsHeaderView.swift in Sources */,
 				4E12767F2AE7D0FC00A94994 /* TagView.swift in Sources */,
 				4E1276802AE7D0FC00A94994 /* Transitions.swift in Sources */,
 				4E1276812AE7D0FC00A94994 /* PackConfigView.swift in Sources */,
@@ -3648,7 +3650,6 @@
 				4E270D422A80EB8300D3484B /* KeychainSwiftDistrib.swift in Sources */,
 				4E270D432A80EB8300D3484B /* AccountView.swift in Sources */,
 				4E270D442A80EB8300D3484B /* SupportView.swift in Sources */,
-				4E270D452A80EB8300D3484B /* SettingsHeaderView.swift in Sources */,
 				4E270D462A80EB8300D3484B /* PlusLease.swift in Sources */,
 				4E270D472A80EB8300D3484B /* Strings.swift in Sources */,
 				4E270D482A80EB8300D3484B /* LeaseView.swift in Sources */,
@@ -3759,6 +3760,7 @@
 				4EA37D692B2C67AD00E4EC97 /* LinkBinding.swift in Sources */,
 				4EB496822B233CBE00926C85 /* ShieldsWideView.swift in Sources */,
 				4E270DAE2A80EB8300D3484B /* LevelView.swift in Sources */,
+				4EA0292F2B34591D00B689B4 /* SettingsHeaderView.swift in Sources */,
 				4E270DAF2A80EB8300D3484B /* AppDelegate.swift in Sources */,
 				4E270DB02A80EB8300D3484B /* PrivateKey.swift in Sources */,
 				4E270DB12A80EB8300D3484B /* Thread.swift in Sources */,
@@ -4295,7 +4297,6 @@
 				4EBF3B432A80E55900F637BB /* KeychainSwiftDistrib.swift in Sources */,
 				4EBF3B442A80E55900F637BB /* AccountView.swift in Sources */,
 				4EBF3B452A80E55900F637BB /* SupportView.swift in Sources */,
-				4EBF3B462A80E55900F637BB /* SettingsHeaderView.swift in Sources */,
 				4EBF3B472A80E55900F637BB /* PlusLease.swift in Sources */,
 				4EBF3B482A80E55900F637BB /* Strings.swift in Sources */,
 				4EBF3B492A80E55900F637BB /* LeaseView.swift in Sources */,
@@ -4407,6 +4408,7 @@
 				4EA37D6A2B2C67AD00E4EC97 /* LinkBinding.swift in Sources */,
 				4EB496832B233CBE00926C85 /* ShieldsWideView.swift in Sources */,
 				4EBF3BB02A80E55900F637BB /* LevelView.swift in Sources */,
+				4EA029302B34591D00B689B4 /* SettingsHeaderView.swift in Sources */,
 				4EBF3BB12A80E55900F637BB /* AppDelegate.swift in Sources */,
 				4EBF3BB22A80E55900F637BB /* PrivateKey.swift in Sources */,
 				4EBF3BB32A80E55900F637BB /* Thread.swift in Sources */,

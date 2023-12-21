@@ -21,17 +21,16 @@ struct SplashView: View {
                     Color("Splash3"),
                     Color("Splash3")
                 ]),
-                startPoint: .topTrailing,
+                startPoint: .topLeading,
                 endPoint: .bottom
             )
             LinearGradient(
                 gradient: Gradient(colors: [
                     Color.clear,
-                    Color.clear,
                     Color("Splash1"),
                 ]),
                 startPoint: .topTrailing,
-                endPoint: .bottom
+                endPoint: .bottomLeading
             )
             Spacer()
             Image(Image.iBlokada)

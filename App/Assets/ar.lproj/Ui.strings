@@ -563,3 +563,5 @@
 "toplist company other" = "اخرى";
 // When a domain is unknown
 "toplist tld unknown" = "غير معروف";
+
+"family notification subtitle" = "حماية الأسرة متوقف";

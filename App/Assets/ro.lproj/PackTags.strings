@@ -40,9 +40,9 @@
 "security" = "securitate";
 // Family tags below
 // One of the tags used for searching blocklists
-"malware" = "malware";
+"malware" = "program malițios";
 // One of the tags used for searching blocklists
-"spam" = "spam";
+"spam" = "nedorite";
 // One of the tags used for searching blocklists
 "dating" = "matrimonială";
 // One of the tags used for searching blocklists
@@ -50,7 +50,7 @@
 // One of the tags used for searching blocklists
 "torrent" = "torrent";
 // One of the tags used for searching blocklists
-"streaming" = "streaming";
+"streaming" = "transmisiune";
 // One of the tags used for searching blocklists
 "apps" = "aplicații";
 // One of the tags used for searching blocklists
@@ -62,4 +62,4 @@
 // One of the tags used for searching blocklists
 "e-commerce" = "Comerțul electronic";
 // One of the tags used for searching blocklists
-"other" = "altul";
+"other" = "alt";

@@ -48,7 +48,7 @@
 "This is the official blocklist from d3ward, the maker of the popular adblocker testing website. It is meant to achieve 100% score in the test. Keep in mind, this is a minimum list. You may want to use it together with another blocklist activated. If you wish to perform the test, just visit go.blokada.org/test" = "Това е официалният блокиращ списък от d3ward, създателя на популярния уебсайт за тестване на рекламни блокери. Целта е да се постигне 100% резултат в теста. Имайте предвид, че това е минимален списък. Може да искате да го използвате заедно с активиран друг блокиращ списък. Ако искате да направите тест, просто посетете go.blokada.org/test";
 // Family packs (shields) below
 // Name of the Ads shield
-"Ads" = "Ads";
+"Ads" = "Реклами";
 "Blocks advertisements and tracking" = "Blocks advertisements and tracking";
 "Eliminates intrusive advertisements and web tracking. Enhances browsing speed and safeguards user privacy." = "Eliminates intrusive advertisements and web tracking. Enhances browsing speed and safeguards user privacy.";
 // Name of the Malware shield

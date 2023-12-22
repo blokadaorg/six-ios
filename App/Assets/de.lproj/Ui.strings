@@ -563,3 +563,5 @@
 "toplist company other" = "Andere";
 // When a domain is unknown
 "toplist tld unknown" = "unbekannt";
+
+"family notification subtitle" = "Familienschutz aus";

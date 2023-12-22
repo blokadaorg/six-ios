@@ -547,7 +547,7 @@
 "family account link qr body" = "Acest ecran se va închide automat după ce noul dispozitiv a fost detectat.";
 
 // A button to unlink linked device
-"family account cta unlink" = "Deconectare";
+"family account cta unlink" = "Deconecta";
 
 "family account decide header" = "Adaugă dispozitiv";
 "family account decide link header" = "Leagă un dispozitiv";
@@ -563,3 +563,5 @@
 "toplist company other" = "Altele";
 // When a domain is unknown
 "toplist tld unknown" = "necunoscut";
+
+"family notification subtitle" = "Protecția familială este dezactivată";

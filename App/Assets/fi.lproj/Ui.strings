@@ -563,3 +563,5 @@
 "toplist company other" = "Muu";
 // When a domain is unknown
 "toplist tld unknown" = "tuntematon";
+
+"family notification subtitle" = "Perheiden suojelu on pois päältä";

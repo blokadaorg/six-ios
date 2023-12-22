@@ -563,3 +563,5 @@
 "toplist company other" = "Ostatní";
 // When a domain is unknown
 "toplist tld unknown" = "neznámé";
+
+"family notification subtitle" = "Ochrana rodiny je vypnuta";

@@ -563,3 +563,5 @@
 "toplist company other" = "anders";
 // When a domain is unknown
 "toplist tld unknown" = "Onbekend";
+
+"family notification subtitle" = "Gezinsbescherming is uitgeschakeld";

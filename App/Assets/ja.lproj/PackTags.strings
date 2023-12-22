@@ -40,13 +40,13 @@
 "security" = "セキュリティ";
 // Family tags below
 // One of the tags used for searching blocklists
-"malware" = "malware";
+"malware" = "マルウェア";
 // One of the tags used for searching blocklists
-"spam" = "迷惑メール|迷惑メール|迷惑メール|迷惑メール|迷惑メール|迷惑メール|迷惑メール|迷惑メール|迷惑メール|迷惑メール|";
+"spam" = "迷惑メール";
 // One of the tags used for searching blocklists
-"dating" = "デート";
+"dating" = "出会い系";
 // One of the tags used for searching blocklists
-"piracy" = "海賊行為|<unk>";
+"piracy" = "海賊版";
 // One of the tags used for searching blocklists
 "torrent" = "Torrent";
 // One of the tags used for searching blocklists
@@ -56,10 +56,10 @@
 // One of the tags used for searching blocklists
 "chat" = "チャット";
 // One of the tags used for searching blocklists
-"gaming" = "ゲーム";
+"gaming" = "ゲーム総合";
 // One of the tags used for searching blocklists
 "games" = "ゲーム";
 // One of the tags used for searching blocklists
-"e-commerce" = "e-コマースformat@@0";
+"e-commerce" = "ネットショッピング";
 // One of the tags used for searching blocklists
 "other" = "その他";

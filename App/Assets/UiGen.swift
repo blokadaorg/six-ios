@@ -382,6 +382,8 @@ internal enum L10n {
   internal static func familyLabelThisDevice(_ p1: Any) -> String {
     return L10n.tr("Ui", "family label this device", String(describing: p1))
   }
+  /// Family protection is off
+  internal static let familyNotificationSubtitle = L10n.tr("Ui", "family notification subtitle")
   /// Follow the instructions on screen to set up your first device.
   internal static let familyOnboardBody = L10n.tr("Ui", "family onboard body")
   /// Welcome to Blokada Family!

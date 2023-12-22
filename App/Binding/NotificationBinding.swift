@@ -53,7 +53,7 @@ func mapNotificationToUser(_ id: String) -> UNMutableNotificationContent {
         content.sound = .default
     } else if id == NOTIF_ACC_EXP_FAMILY {
         content.title = L10n.notificationAccHeader
-        content.subtitle = "Family protection is off"
+        content.subtitle = L10n.familyNotificationSubtitle
         content.body = L10n.notificationAccBody
         content.sound = .default
     } else {

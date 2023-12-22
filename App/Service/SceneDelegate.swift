@@ -80,6 +80,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
         homeVM.hideContent = false
+        foreground.onForeground(true)
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
@@ -94,11 +95,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func sceneWillEnterForeground(_ scene: UIScene) {
         UIApplication.shared.applicationIconBadgeNumber = 0
-        foreground.onForeground(true)
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
-        self.foreground.onForeground(false)
+        foreground.onForeground(false)
     }
 
     // Quick action selected by user

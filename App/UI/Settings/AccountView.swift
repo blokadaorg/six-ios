@@ -83,18 +83,20 @@ struct AccountView: View {
                     }
                 }
             }
-            Section(header: Text(L10n.universalLabelHelp)) {
-                HStack {
-                    Text(L10n.accountActionWhyUpgrade)
-                    Spacer()
-
-                    Button(action: {
-                        self.contentVM.openLink(LinkId.whyVpn)
-                    }) {
-                        Image(systemName: Image.fInfo)
-                            .imageScale(.large)
-                            .foregroundColor(Color.cAccent)
-                            .frame(width: 32, height: 32)
+            if (self.vm.type != .Family) {
+                Section(header: Text(L10n.universalLabelHelp)) {
+                    HStack {
+                        Text(L10n.accountActionWhyUpgrade)
+                        Spacer()
+                        
+                        Button(action: {
+                            self.contentVM.openLink(LinkId.whyVpn)
+                        }) {
+                            Image(systemName: Image.fInfo)
+                                .imageScale(.large)
+                                .foregroundColor(Color.cAccent)
+                                .frame(width: 32, height: 32)
+                        }
                     }
                 }
             }

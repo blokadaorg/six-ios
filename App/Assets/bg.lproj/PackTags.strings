@@ -40,26 +40,26 @@
 "security" = "защита";
 // Family tags below
 // One of the tags used for searching blocklists
-"malware" = "malware";
+"malware" = "зловреден софтуер";
 // One of the tags used for searching blocklists
-"spam" = "spam";
+"spam" = "спам";
 // One of the tags used for searching blocklists
-"dating" = "dating";
+"dating" = "запознанства";
 // One of the tags used for searching blocklists
-"piracy" = "piracy";
+"piracy" = "пиратство";
 // One of the tags used for searching blocklists
-"torrent" = "torrent";
+"torrent" = "торент";
 // One of the tags used for searching blocklists
-"streaming" = "streaming";
+"streaming" = "стрииминг";
 // One of the tags used for searching blocklists
-"apps" = "apps";
+"apps" = "приложения";
 // One of the tags used for searching blocklists
-"chat" = "chat";
+"chat" = "чат";
 // One of the tags used for searching blocklists
-"gaming" = "gaming";
+"gaming" = "играене";
 // One of the tags used for searching blocklists
-"games" = "games";
+"games" = "игри";
 // One of the tags used for searching blocklists
-"e-commerce" = "e-commerce";
+"e-commerce" = "електронна търговия";
 // One of the tags used for searching blocklists
-"other" = "other";
+"other" = "друго";

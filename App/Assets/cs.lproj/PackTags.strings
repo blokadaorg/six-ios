@@ -44,7 +44,7 @@
 // One of the tags used for searching blocklists
 "spam" = "spam";
 // One of the tags used for searching blocklists
-"dating" = "Seznamka";
+"dating" = "seznamka";
 // One of the tags used for searching blocklists
 "piracy" = "pirátství";
 // One of the tags used for searching blocklists
@@ -60,6 +60,6 @@
 // One of the tags used for searching blocklists
 "games" = "hry";
 // One of the tags used for searching blocklists
-"e-commerce" = "elektronický obchod";
+"e-commerce" = "elektronické obchodování";
 // One of the tags used for searching blocklists
-"other" = "Ostatní";
+"other" = "ostatní";

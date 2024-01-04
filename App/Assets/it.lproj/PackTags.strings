@@ -56,7 +56,7 @@
 // One of the tags used for searching blocklists
 "chat" = "chat";
 // One of the tags used for searching blocklists
-"gaming" = "gioco";
+"gaming" = "videogiochi";
 // One of the tags used for searching blocklists
 "games" = "giochi";
 // One of the tags used for searching blocklists

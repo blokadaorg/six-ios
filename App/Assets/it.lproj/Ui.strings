@@ -33,7 +33,7 @@
 "error location failed fetching" = "Impossibile ottenere la posizione.";
 "error unknown" = "Si è verificato un problema. Assicurati di essere online e riprova più tardi. Se il problema persiste, contattaci toccando l'icona di aiuto in alto.";
 "error multiple apps" = "C'è più di un'app Blokada sul tuo dispositivo. Ciò potrebbe causare problemi di connettività. Vuoi risolverli ora?";
-"error locked" = "Questa azione non è disponibile quando l'app è in uno stato bloccato. Si prega di sbloccare l'app per procedere.";
+"error locked" = "Questa azione non è disponibile quando l'app è bloccata. Si prega di sbloccare l'app per procedere.";
 "error lock invalid" = "Un PIN valido deve contenere esattamente 4 cifre. Riprova.";
 
 "conn isssues header" = "Problemi di connessione";
@@ -500,7 +500,7 @@
 // Translate just Unlock if the original is longer than 16 characters
 "lock action slide unlock" = "Scorri per sbloccare";
 // The app will use this version if the Slide to unlock is too long
-"lock action slide unlock short" = "Diapositive";
+"lock action slide unlock short" = "Scorri";
 "lock status too many attempts" = "Troppi tentativi errati. Prova di nuovo più tardi";
 "lock status enter to confirm" = "Inserisci nuovamente il codice pin per confermare";
 "lock status enter or wait" = "Inserisci il nuovo codice pin, o attendi per bloccare...";
@@ -564,4 +564,4 @@
 // When a domain is unknown
 "toplist tld unknown" = "sconosciuto";
 
-"family notification subtitle" = "La protezione della famiglia è spenta";
+"family notification subtitle" = "La protezione famiglia è disattivata";

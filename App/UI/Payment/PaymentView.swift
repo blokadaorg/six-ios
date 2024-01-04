@@ -52,7 +52,7 @@ struct PaymentView: View {
                     }
                 }
             }
-            .frame(height: 64)
+            .frame(height: 80)
 
             if self.vm.product.periodMonths > 1 {
                 Text(self.vm.description)

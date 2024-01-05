@@ -16,8 +16,6 @@ import Factory
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    private var quick: QuickActionsService?
-
     @Injected(\.env) private var env
     @Injected(\.flutter) private var flutter
     @Injected(\.commands) private var commands
@@ -60,7 +58,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         notification.attach(application)
 
-        Services.quickActions.start()
+        if !flutter.isFlavorFamily {
+            Services.quickActions.start()
+        }
 
         // A bunch of lazy, noone else refs this (early enough).
         payment.startObservingPayments()

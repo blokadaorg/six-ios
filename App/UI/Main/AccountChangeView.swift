@@ -23,18 +23,24 @@ struct AccountChangeView: View {
     @Injected(\.commands) var commands
     
     @State var appear = false
+    @State var showError = false
     
     @State private var token: String = ""
     @State private var isShowingScanner = false
 
     func handleScan(result: Result<ScanResult, ScanError>) {
-       self.isShowingScanner = false  // dismiss the scanner view
-       
        switch result {
        case .success(let code):
+           self.isShowingScanner = false  // dismiss the scanner view
            self.token = code.string
            self.commands.execute(CommandName.url, self.token)
        case .failure(let error):
+           self.isShowingScanner = false
+
+           DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+               self.showError = true
+           }
+
            print("Scanning failed: \(error.localizedDescription)")
        }
    }
@@ -114,12 +120,28 @@ struct AccountChangeView: View {
                 )
             }
             .padding([.leading, .trailing], 40)
+            .alert(isPresented: self.$showError) {
+                Alert(title: Text(L10n.alertErrorHeader), message: Text(L10n.familyStatusPermsBody),
+                      dismissButton: Alert.Button.default(
+                        Text(L10n.universalActionContinue), action: {
+                            self.isShowingScanner = false
+                            openAppSettings()
+                        }
+                    )
+                )
+            }
         }
         .opacity(self.appear ? 1 : 0)
         .navigationViewStyle(StackNavigationViewStyle())
         .accentColor(Color.cAccent)
         .onAppear {
             self.appear = true
+        }
+    }
+    
+    func openAppSettings() {
+        if let url = URL(string: UIApplication.openSettingsURLString) {
+            UIApplication.shared.open(url)
         }
     }
 }

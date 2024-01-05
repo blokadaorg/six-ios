@@ -68,6 +68,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         commands.execute(.url, incomingURL.absoluteString)
     }
+    
+    func scene(
+        _ scene: UIScene,
+        continue userActivity: NSUserActivity
+    ) {
+        guard let incomingURL = userActivity.webpageURL else {
+            return
+        }
+
+        commands.execute(.url, incomingURL.absoluteString)
+    }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

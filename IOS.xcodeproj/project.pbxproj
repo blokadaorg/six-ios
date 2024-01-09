@@ -120,7 +120,6 @@
 		4E1276472AE7D0FC00A94994 /* LoadingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2ECCF5245AF870009040F1 /* LoadingButtonView.swift */; };
 		4E1276482AE7D0FC00A94994 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E356A8B24378CA80094EE27 /* Strings.swift */; };
 		4E1276492AE7D0FC00A94994 /* Flutter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E673D2329E6AC2200A8A60D /* Flutter.swift */; };
-		4E12764A2AE7D0FC00A94994 /* AfterActivatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E45F4EC248E87FF002D4DD6 /* AfterActivatedView.swift */; };
 		4E12764B2AE7D0FC00A94994 /* Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECB8B512A08FE3C00048F6A /* Custom.swift */; };
 		4E12764C2AE7D0FC00A94994 /* SettingsWideVerticalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9EB98F27B548420040F375 /* SettingsWideVerticalView.swift */; };
 		4E12764D2AE7D0FC00A94994 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E971F6A246935D100809EA6 /* WebView.swift */; };
@@ -508,7 +507,6 @@
 		4E270DB82A80EB8300D3484B /* SKProduct+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E53CCBA244DFF99009B3CF0 /* SKProduct+Extensions.swift */; };
 		4E270DB92A80EB8300D3484B /* LoggerSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E42355B2451959F005A0779 /* LoggerSaver.swift */; };
 		4E270DBA2A80EB8300D3484B /* LocationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E42353C244F3D21005A0779 /* LocationListViewModel.swift */; };
-		4E270DBB2A80EB8300D3484B /* AfterActivatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E45F4EC248E87FF002D4DD6 /* AfterActivatedView.swift */; };
 		4E270DBC2A80EB8300D3484B /* PacksWideHorizontalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E61D8F827B3F77400C98D36 /* PacksWideHorizontalView.swift */; };
 		4E270DBD2A80EB8300D3484B /* SettingsWideHorizontalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E61D90427B438E600C98D36 /* SettingsWideHorizontalView.swift */; };
 		4E270DBE2A80EB8300D3484B /* SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E61D8F527B3DB2E00C98D36 /* SafeArea.swift */; };
@@ -1300,7 +1298,6 @@
 		4EBF3BBA2A80E55900F637BB /* SKProduct+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E53CCBA244DFF99009B3CF0 /* SKProduct+Extensions.swift */; };
 		4EBF3BBB2A80E55900F637BB /* LoggerSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E42355B2451959F005A0779 /* LoggerSaver.swift */; };
 		4EBF3BBC2A80E55900F637BB /* LocationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E42353C244F3D21005A0779 /* LocationListViewModel.swift */; };
-		4EBF3BBD2A80E55900F637BB /* AfterActivatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E45F4EC248E87FF002D4DD6 /* AfterActivatedView.swift */; };
 		4EBF3BBE2A80E55900F637BB /* PacksWideHorizontalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E61D8F827B3F77400C98D36 /* PacksWideHorizontalView.swift */; };
 		4EBF3BBF2A80E55900F637BB /* SettingsWideHorizontalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E61D90427B438E600C98D36 /* SettingsWideHorizontalView.swift */; };
 		4EBF3BC02A80E55900F637BB /* SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E61D8F527B3DB2E00C98D36 /* SafeArea.swift */; };
@@ -1356,6 +1353,9 @@
 		4ECB8B582A08FFC300048F6A /* CustomBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECB8B562A08FFC300048F6A /* CustomBinding.swift */; };
 		4ECB8B5A2A0928D500048F6A /* JournalItemVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECB8B592A0928D400048F6A /* JournalItemVM.swift */; };
 		4ECB8B5B2A0928D500048F6A /* JournalItemVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECB8B592A0928D400048F6A /* JournalItemVM.swift */; };
+		4ECFFEFF2B4D7DB700154DC1 /* AfterActivatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECFFEFE2B4D7DB700154DC1 /* AfterActivatedView.swift */; };
+		4ECFFF002B4D7DB700154DC1 /* AfterActivatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECFFEFE2B4D7DB700154DC1 /* AfterActivatedView.swift */; };
+		4ECFFF012B4D7DB700154DC1 /* AfterActivatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECFFEFE2B4D7DB700154DC1 /* AfterActivatedView.swift */; };
 		4ED3445623E1B0D90075B796 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED3445323E1B0A60075B796 /* NetworkExtension.framework */; };
 		4ED349C6246C6C0A00C843FA /* BlokadaPlusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED349C5246C6C0A00C843FA /* BlokadaPlusView.swift */; };
 		4ED349C7246C6C0A00C843FA /* BlokadaPlusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED349C5246C6C0A00C843FA /* BlokadaPlusView.swift */; };
@@ -1877,6 +1877,7 @@
 		4ECB8B512A08FE3C00048F6A /* Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Custom.swift; path = "six-common/libgen/ios/Custom.swift"; sourceTree = SOURCE_ROOT; };
 		4ECB8B562A08FFC300048F6A /* CustomBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBinding.swift; sourceTree = "<group>"; };
 		4ECB8B592A0928D400048F6A /* JournalItemVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalItemVM.swift; sourceTree = "<group>"; };
+		4ECFFEFE2B4D7DB700154DC1 /* AfterActivatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterActivatedView.swift; sourceTree = "<group>"; };
 		4ED3443E23E190910075B796 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		4ED3445323E1B0A60075B796 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		4ED3445523E1B0D90075B796 /* IOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IOS.entitlements; sourceTree = "<group>"; };
@@ -2348,6 +2349,7 @@
 				4E1275F42AE7D0A100A94994 /* PaymentFeaturesView.swift */,
 				4E8B179D2B177EFE00D1D854 /* JournalFilterBarV.swift */,
 				4EA0292E2B34591D00B689B4 /* SettingsHeaderView.swift */,
+				4ECFFEFE2B4D7DB700154DC1 /* AfterActivatedView.swift */,
 			);
 			path = Family;
 			sourceTree = "<group>";
@@ -2364,6 +2366,7 @@
 				4E90BA3827BBB5B40051FD0C /* JournalFilterBarV.swift */,
 				4E88AA192B2B1B62006B16E7 /* SplashView.swift */,
 				4EA189C127B5032600E57470 /* SettingsHeaderView.swift */,
+				4E45F4EC248E87FF002D4DD6 /* AfterActivatedView.swift */,
 			);
 			path = NotFamily;
 			sourceTree = "<group>";
@@ -2415,7 +2418,6 @@
 			children = (
 				4E61D8F227B3D30400C98D36 /* ContentView.swift */,
 				4E955DC42771D780008DE06F /* ContentViewModel.swift */,
-				4E45F4EC248E87FF002D4DD6 /* AfterActivatedView.swift */,
 				4E58C12F2AC1B196002CA1A3 /* AccountChangeView.swift */,
 				4E58C13E2AC2BB41002CA1A3 /* AccountLinkView.swift */,
 				4E58C14A2AC3025D002CA1A3 /* OnboardingAccountDecidedView.swift */,
@@ -3407,7 +3409,6 @@
 				4E1276472AE7D0FC00A94994 /* LoadingButtonView.swift in Sources */,
 				4E1276482AE7D0FC00A94994 /* Strings.swift in Sources */,
 				4E1276492AE7D0FC00A94994 /* Flutter.swift in Sources */,
-				4E12764A2AE7D0FC00A94994 /* AfterActivatedView.swift in Sources */,
 				4E12764B2AE7D0FC00A94994 /* Custom.swift in Sources */,
 				4E12764C2AE7D0FC00A94994 /* SettingsWideVerticalView.swift in Sources */,
 				4E12764D2AE7D0FC00A94994 /* WebView.swift in Sources */,
@@ -3492,6 +3493,7 @@
 				4E12769D2AE7D0FC00A94994 /* LocationListView.swift in Sources */,
 				4E12769E2AE7D0FC00A94994 /* CustomAddV.swift in Sources */,
 				4E12769F2AE7D0FC00A94994 /* Rate.swift in Sources */,
+				4ECFFF012B4D7DB700154DC1 /* AfterActivatedView.swift in Sources */,
 				4E1276A02AE7D0FC00A94994 /* VpnBinding.swift in Sources */,
 				4E1276A12AE7D0FC00A94994 /* PaymentBinding.swift in Sources */,
 				4E1276A22AE7D0FC00A94994 /* PlusVpn.swift in Sources */,
@@ -3748,6 +3750,7 @@
 				4E28ADDF2AB4670C007445C8 /* ShieldsView.swift in Sources */,
 				4E270D9D2A80EB8300D3484B /* JournalNarrowV.swift in Sources */,
 				4E270D9E2A80EB8300D3484B /* Deck.swift in Sources */,
+				4ECFFEFF2B4D7DB700154DC1 /* AfterActivatedView.swift in Sources */,
 				4E270D9F2A80EB8300D3484B /* CustomBinding.swift in Sources */,
 				4E270DA02A80EB8300D3484B /* PackDataSource.swift in Sources */,
 				4E58C14E2AC3025D002CA1A3 /* OnboardingAccountDecidedView.swift in Sources */,
@@ -3782,7 +3785,6 @@
 				4E270DB82A80EB8300D3484B /* SKProduct+Extensions.swift in Sources */,
 				4E270DB92A80EB8300D3484B /* LoggerSaver.swift in Sources */,
 				4E270DBA2A80EB8300D3484B /* LocationListViewModel.swift in Sources */,
-				4E270DBB2A80EB8300D3484B /* AfterActivatedView.swift in Sources */,
 				4E270DBC2A80EB8300D3484B /* PacksWideHorizontalView.swift in Sources */,
 				4E270DBD2A80EB8300D3484B /* SettingsWideHorizontalView.swift in Sources */,
 				4E270DBE2A80EB8300D3484B /* SafeArea.swift in Sources */,
@@ -4396,6 +4398,7 @@
 				4E28ADE02AB4670C007445C8 /* ShieldsView.swift in Sources */,
 				4EBF3B9F2A80E55900F637BB /* JournalNarrowV.swift in Sources */,
 				4EBF3BA02A80E55900F637BB /* Deck.swift in Sources */,
+				4ECFFF002B4D7DB700154DC1 /* AfterActivatedView.swift in Sources */,
 				4EBF3BA12A80E55900F637BB /* CustomBinding.swift in Sources */,
 				4EBF3BA22A80E55900F637BB /* PackDataSource.swift in Sources */,
 				4E58C14F2AC3025D002CA1A3 /* OnboardingAccountDecidedView.swift in Sources */,
@@ -4430,7 +4433,6 @@
 				4EBF3BBA2A80E55900F637BB /* SKProduct+Extensions.swift in Sources */,
 				4EBF3BBB2A80E55900F637BB /* LoggerSaver.swift in Sources */,
 				4EBF3BBC2A80E55900F637BB /* LocationListViewModel.swift in Sources */,
-				4EBF3BBD2A80E55900F637BB /* AfterActivatedView.swift in Sources */,
 				4EBF3BBE2A80E55900F637BB /* PacksWideHorizontalView.swift in Sources */,
 				4EBF3BBF2A80E55900F637BB /* SettingsWideHorizontalView.swift in Sources */,
 				4EBF3BC02A80E55900F637BB /* SafeArea.swift in Sources */,

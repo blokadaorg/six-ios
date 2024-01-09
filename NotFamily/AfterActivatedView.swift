@@ -44,11 +44,12 @@ struct AfterActivatedView: View {
                             .padding([.top, .bottom])
                         
                         VStack(spacing: 0) {
-                            if self.homeVM.accountType == .Family {
+                            // TODO: non family flavor where?
+                            if self.homeVM.accountType.isActive() {
                                 Button(action: {
                                 }) {
                                     HStack {
-                                        Image(systemName: Image.fCheckmark)
+                                        Image(systemName: Image.fInfo)
                                             .imageScale(.large)
                                             .foregroundColor(Color.cOk)
                                             .frame(width: 32, height: 32)

@@ -106,10 +106,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func sceneWillEnterForeground(_ scene: UIScene) {
         UIApplication.shared.applicationIconBadgeNumber = 0
+        foreground.onForeground(false)
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
-        foreground.onForeground(false)
     }
 
     // Quick action selected by user

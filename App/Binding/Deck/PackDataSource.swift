@@ -180,7 +180,7 @@ class PackDataSource {
                 ),
 
         Pack.mocked(id: "meta_adult", tags: [Pack.recommended],
-                    title: "Porn",
+                    title: "Adult Content",
                     slugline: "Blocks adult and pornographic content",
                     description: "This filter targets adult content for a safer online experience. It shields users from explicit materials and potential risks.",
                     creditName: "Various authors",

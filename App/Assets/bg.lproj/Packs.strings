@@ -56,7 +56,7 @@
 "Protects against malicious software" = "Защита от злонамерен софтуер";
 "Defends against malicious software and harmful websites. Provides a secure shield against a spectrum of cyber threats." = "Защитава от зловреден софтуер и вредни уебсайтове. Осигурява сигурен щит срещу широк спектър от киберзаплахи.";
 // Name of the Porn shield
-"Porn" = "Порно";
+"Adult Content" = "Съдържание за възрастни";
 "Blocks adult and pornographic content" = "Блокиране на съдържание за възрастни и порнографско съдържание";
 "This filter targets adult content for a safer online experience. It shields users from explicit materials and potential risks." = "Този филтър е насочен към съдържание за възрастни, за да е по-безопасно онлайн преживяването. Той предпазва потребителите от нецензурни материали и от възможни рискове.";
 // Name of the Dating shield

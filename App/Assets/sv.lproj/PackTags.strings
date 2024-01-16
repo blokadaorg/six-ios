@@ -31,7 +31,7 @@
 // One of the tags used for searching blocklists
 "fake news" = "fejknyheter";
 // One of the tags used for searching blocklists
-"gambling" = "spelande";
+"gambling" = "hasardspel";
 // One of the tags used for searching blocklists
 "youtube" = "youtube";
 // One of the tags used for searching blocklists
@@ -44,7 +44,7 @@
 // One of the tags used for searching blocklists
 "spam" = "spam";
 // One of the tags used for searching blocklists
-"dating" = "dejting";
+"dating" = "dating";
 // One of the tags used for searching blocklists
 "piracy" = "piratkopiering";
 // One of the tags used for searching blocklists

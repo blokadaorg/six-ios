@@ -56,7 +56,7 @@
 "Protects against malicious software" = "Suojaa haitallisilta ohjelmilta";
 "Defends against malicious software and harmful websites. Provides a secure shield against a spectrum of cyber threats." = "Suojelee pahansuopia ohjelmistoja ja haitallisia verkkosivustoja vastaan. Tarjoaa turvallisen suojan erilaisia kyberuhkia vastaan.";
 // Name of the Porn shield
-"Porn" = "Porn";
+"Adult Content" = "Adult Content";
 "Blocks adult and pornographic content" = "Lohkot aikuisten ja pornografinen sisältö";
 "This filter targets adult content for a safer online experience. It shields users from explicit materials and potential risks." = "Tämä suodatin kohdistaa aikuisten sisältöä turvallisempaan verkkoelämykseen. Se suojaa käyttäjiä eksplisiittisistä materiaaleista ja mahdollisista riskeistä.";
 // Name of the Dating shield

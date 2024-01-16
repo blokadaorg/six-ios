@@ -56,7 +56,7 @@
 "Protects against malicious software" = "Melindungi Anda dari perangkat lunak jahat";
 "Defends against malicious software and harmful websites. Provides a secure shield against a spectrum of cyber threats." = "Melindungi Anda dari perangkat lunak jahat dan situs berbahaya. Menyediakan perisai pengaman terhadap sejumlah ancaman siber.";
 // Name of the Porn shield
-"Porn" = "Pornografi";
+"Adult Content" = "Konten dewasa";
 "Blocks adult and pornographic content" = "Memblokir pornografi dan dan konten dewasa lainnnya";
 "This filter targets adult content for a safer online experience. It shields users from explicit materials and potential risks." = "Filter ini menyasar konten dewasa untuk pengalaman daring yang lebih aman. Melindungi pengguna dari konten dewasa dan resiko lainnya.";
 // Name of the Dating shield

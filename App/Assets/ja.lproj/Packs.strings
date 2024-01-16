@@ -56,7 +56,7 @@
 "Protects against malicious software" = "悪意のあるソフトウェアから保護します";
 "Defends against malicious software and harmful websites. Provides a secure shield against a spectrum of cyber threats." = "悪意のあるソフトウェアや有害なウェブサイトから保護します。サイバー空間の脅威から安全を確保する盾となります。";
 // Name of the Porn shield
-"Porn" = "ポルノ";
+"Adult Content" = "Adult Content";
 "Blocks adult and pornographic content" = "成人向けコンテンツとポルノをブロックします";
 "This filter targets adult content for a safer online experience. It shields users from explicit materials and potential risks." = "より安全なオンライン体験のための成人向けコンテンツを対象としたフィルターです。露骨な描写や潜在的なリスクからユーザーを保護します。";
 // Name of the Dating shield

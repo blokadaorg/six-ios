@@ -12,7 +12,7 @@
 
 "error device offline" = "Ваше устройство не в сети";
 "error account inactive" = "Ваш аккаунт неактивен. Пожалуйста, его, чтобы продолжить использовать BLOKADA+.";
-"error account inactive generic" = "Ваша учетная запись неактивна. Пожалуйста, активируйте свою учетную запись, чтобы продолжить использование Blokada.";
+"error account inactive generic" = "Ваша учетная запись неактивна. Пожалуйста, активируйте ее, чтобы продолжить использование Blokada.";
 "error account inactive after restore" = "Похоже, что это недействительный аккаунт. Если вы считаете, что это ошибка, пожалуйста, свяжитесь с нами, нажав на значок помощи в верхней части.";
 "error account invalid" = "Этот ID аккаунта кажется недействительным.";
 "error creating account" = "Не удалось создать новый аккаунт. Пожалуйста, попробуйте позже.";
@@ -500,7 +500,7 @@
 // Translate just Unlock if the original is longer than 16 characters
 "lock action slide unlock" = "Проведите для разблокировки";
 // The app will use this version if the Slide to unlock is too long
-"lock action slide unlock short" = "Слайд";
+"lock action slide unlock short" = "Свайп";
 "lock status too many attempts" = "Слишком много неправильных попыток. Повторите позже";
 "lock status enter to confirm" = "Для подтверждения введите пин-код еще раз";
 "lock status enter or wait" = "Введите новый пин-код или дождитесь блокировки...";

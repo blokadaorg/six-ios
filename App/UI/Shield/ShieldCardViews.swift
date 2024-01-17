@@ -18,12 +18,47 @@ struct ShieldCardView: View {
     @ObservedObject var vm: PackDetailViewModel
 
     var action: (String) -> Void = { it in }
+    
+    @State var safeSearchTag: [String] = []
 
     var body: some View {
         ZStack {
             let tag = "\(self.vm.pack.id)/\(self.vm.pack.configs.first!)"
-
-            if vm.pack.configs.count == 1 {
+            
+            if vm.pack.id == "meta_safe_search" {
+                // A special case where we mix a pack and a device setting
+                // TODO: a better model for this
+                ShieldCardSafeSearchView(
+                    id: vm.pack.id,
+                    headerText: vm.pack.tags.joined(separator: ", "),
+                    mainTitle: vm.pack.meta.title.tr(),
+                    descriptionText: vm.pack.meta.description.tr(),
+                    items: ["safe search"] + vm.pack.configs,
+                    selected: self.safeSearchTag + self.vm.pack.status.config,
+                    action: { item in
+                        if item == "safe search" {
+                            if self.vm.isSafeSearch() {
+                                self.safeSearchTag = []
+                            } else {
+                                self.safeSearchTag = ["meta_safe_search/safe search"]
+                            }
+                            self.vm.toggleSafeSearch()
+                            
+                        } else {
+                            self.vm.changeConfig(config: item, fail: { error in
+                                self.packsVM.showError = true
+                            })
+                        }
+                    }
+                )
+                .onAppear {
+                    if self.vm.isSafeSearch() {
+                        self.safeSearchTag = ["meta_safe_search/safe search"]
+                    } else {
+                        self.safeSearchTag = []
+                    }
+                }
+            } else if vm.pack.configs.count == 1 {
                 ShieldCardOneView(
                     id: vm.pack.id,
                     headerText: vm.pack.tags.joined(separator: ", "),
@@ -183,6 +218,81 @@ struct ShieldCardManyView: View {
                 }
             }
             .padding()
+        }
+        .padding(.bottom, 8)
+        .fixedSize(horizontal: false, vertical: true)
+    }
+}
+
+struct ShieldCardSafeSearchView: View {
+    var id = ""
+    var headerText: String = "adblocking"
+    var mainTitle: String = "Ads"
+    var descriptionText: String = "The Ads shield, available in both Standard and Restrictive variants, is focused on eliminating intrusive advertisements, pop-ups, and banners from your web experience."
+    var items: [String] = ["standard", "restrictive"]
+    var selected: [String] = []
+    var action: (String) -> Void = { it in }
+
+    @Environment(\.colorScheme) var colorScheme
+
+    var body: some View {
+        ZStack(alignment: .topLeading) {
+            // Background
+            ZStack(alignment: .top) {
+                Rectangle()
+                    .foregroundColor(colorScheme == .dark ? Color.cSecondaryBackground : Color.cBackground)
+
+                Rectangle()
+                    .fill(LinearGradient(
+                        gradient: Gradient(colors: [Color(UIColor.systemGray5), Color(UIColor.systemGray3)]),
+                        startPoint: .bottomTrailing, endPoint: .leading
+                    ))
+                    .overlay(Color.cSafeSearchCard.blendMode(.color))
+            }
+            .cornerRadius(10)
+            .shadow(color: Color.black.opacity(0.05), radius: 5, x: 10, y: 10)
+            .shadow(color: Color.black.opacity(0.05), radius: 5, x: -5, y: -5)
+
+            VStack {
+                VStack(alignment: .leading, spacing: 8) {
+                    HStack {
+                        Text(headerText.uppercased())
+                            .font(.subheadline)
+                            .fontWeight(.medium)
+                            .foregroundColor(Color.secondary)
+                    }
+                    .padding(.top, 8)
+
+                    Text(mainTitle)
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                    
+                    Text(descriptionText)
+                        .font(.body)
+                        .padding(.bottom, 24)
+                }
+                .padding()
+
+                VStack {
+                    ForEach(items, id: \.self) { item in
+                        let tag = "\(id)/\(item)"
+
+                        if item != "safe search" {
+                            Divider()
+                        }
+                        ShieldItemView(id: item, title: item.capitalizingFirstLetter(),
+                                       selected: self.selected.contains(tag),
+                                       action: { self.action(item) }
+                        )
+                        .onTapGesture {
+                            self.action(item)
+                        }
+                    }
+                }
+                .padding()
+                .background(.regularMaterial)
+                .cornerRadius(10, corners: [.bottomLeft, .bottomRight])
+            }
         }
         .padding(.bottom, 8)
         .fixedSize(horizontal: false, vertical: true)

@@ -31,7 +31,7 @@ class DeviceBinding: DeviceOps {
     var blocklistsHot: AnyPublisher<CloudBlocklists, Never> {
         self.writeBlocklists.compactMap { $0 }.removeDuplicates().eraseToAnyPublisher()
     }
-    
+
     // User selected activity retention (may be empty for "no retention")
     var activityRetentionHot: AnyPublisher<CloudActivityRetention, Never> {
         self.writeRetention.compactMap { $0 }.removeDuplicates().eraseToAnyPublisher()
@@ -42,7 +42,12 @@ class DeviceBinding: DeviceOps {
         self.writePaused.compactMap { $0 }.removeDuplicates().eraseToAnyPublisher()
     }
 
+    var safeSearchHot: AnyPublisher<Bool, Never> {
+        self.writeSafeSearch.compactMap { $0 }.removeDuplicates().eraseToAnyPublisher()
+    }
+
     var deviceAlias = ""
+    var safeSearch = false
 
     @Published var nameProposals: Array<String> = []
 
@@ -61,6 +66,7 @@ class DeviceBinding: DeviceOps {
     fileprivate let writeBlocklists = CurrentValueSubject<CloudBlocklists?, Never>(nil)
     fileprivate let writeRetention = CurrentValueSubject<String?, Never>(nil)
     fileprivate let writePaused = CurrentValueSubject<Bool?, Never>(nil)
+    fileprivate let writeSafeSearch = CurrentValueSubject<Bool?, Never>(nil)
 
     private let bgQueue = DispatchQueue(label: "CloudRepoBgQueue")
     private var cancellables = Set<AnyCancellable>()
@@ -114,6 +120,13 @@ class DeviceBinding: DeviceOps {
     func doNameProposalsChanged(names: Array<String>, completion: @escaping (Result<Void, Error>) -> Void) {
         self.nameProposals = names
         completion(.success(()))
+    }
+
+    func doSafeSearchEnabled(enabled: Bool,
+                        completion: @escaping (Result<Void, Error>) -> Void) {
+        writeSafeSearch.send(enabled)
+        self.safeSearch = enabled
+        completion(Result.success(()))
     }
 
     private func onDeviceTagChangeUpdateEnv() {

@@ -37,6 +37,7 @@ extension Color {
     static let cSemiTransparent = Color("SemiTransparent")
 
     static let cTextFieldBgLight = Color("TextFieldBackgroundLight")
+    static let cSafeSearchCard = Color("Splash3")
 }
 
 extension Image {

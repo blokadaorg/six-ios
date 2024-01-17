@@ -160,7 +160,16 @@ class PackDataSource {
         ),
 
         // Meta packs for the Family flavor
-        
+
+        Pack.mocked(id: "meta_safe_search", tags: [Pack.recommended],
+                    title: "Safe search",
+                    slugline: "Secure Online Browsing",
+                    description: "Enable safe search to filter out inappropriate search results in search engines, also provides the option to block unsupported search engines that cannot be filtered.",
+                    creditName: "Various authors",
+                    creditUrl: "https://blokada.org",
+                    configs: ["block unsupported"]
+                ),
+
         Pack.mocked(id: "meta_ads", tags: ["adblocking", "tracking"],
                     title: "Ads",
                     slugline: "Blocks advertisements and tracking",
@@ -288,6 +297,6 @@ class PackDataSource {
                 ),
     ]
 
-    let version = 35
+    let version = 36
     
 }
